@@ -663,7 +663,7 @@ body{
 
 /* 遮罩------- */
 .shade{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -675,10 +675,15 @@ body{
 	display: none;
 }
 .shade-nav{
+    position: absolute;
     z-index: 2;
 }
 .shade-sidebar{
+    position: absolute;
     z-index: 5;
+}
+.shade-footer{
+    position: absolute;
 }
 .boxshowing{
 	overflow: hidden;
