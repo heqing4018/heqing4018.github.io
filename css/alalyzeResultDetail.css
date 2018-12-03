@@ -1,0 +1,64 @@
+.secmain{
+    background: transparent;
+    border-color: transparent;
+    padding: 0;
+}
+.mncont{
+    padding: 30px 20px 0;
+}
+.mncleft{
+    float: left;
+    width: 400px;
+}
+.mncleft p{
+    color: #a8a8b2;
+    line-height: 35px;
+}
+.davalue{
+    color: #e0e0e0;
+    display: inline-block;
+    float: right;
+    max-width: 200px;
+    overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.cldadv{
+    height: 550px;
+    margin: 0 0 45px 0;
+    border: 1px solid #393C47;
+    position: relative;
+    width: 100%;
+    padding: 20px 50px;
+    border-radius: 2px;
+}
+.tglsdv{
+    height: 120px;
+}
+.blktitle{
+    position: absolute;
+    top: -16px;
+    left: 20px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: #1F2024;
+    color: #e0e0e0;
+    padding: 0 5px;
+}
+.mncright{
+    float: left;
+    width: 980px;
+    height: 550px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 0 0 70px;
+    border: 1px solid #393C47;
+}
+.itembtndv{
+    padding: 25px 0 0 0;
+}
+.itembtndv .obtn{
+    width: 140px;
+    margin: 0 40px 0 0;
+}
