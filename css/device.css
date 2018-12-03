@@ -1,0 +1,190 @@
+html,body{
+    min-width: auto !important;
+}
+/* 视频摄像头搜索结果默认隐藏 */
+.videoResult{
+    display: none;
+}
+/* 实时抓拍 */
+.tjlist dl{
+    width: 255px;
+    height: 180px;
+    color: #e0e0e0;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    background: #27282E;
+    margin: 0 18px 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 0 #16171A;
+}
+.tjlist dl:nth-child(6n){
+    margin-right: 0;
+}
+.tjlist dt{
+    height: 145px;
+    overflow: hidden;
+    background: url('../img/carno.png') center no-repeat;
+}
+.tjlist dd{
+    line-height: 35px;
+}
+.tjlist img{
+    width: 100%;
+    height: 100%;
+}
+.zptime{
+    max-width: 210px;
+    display: inline-block;
+}
+
+/* 实时视频 */
+.videoSecmain{
+    padding: 0;
+}
+.videoSecmain .topTitl .htzhlb{
+    float: right;
+}
+.sec4{
+    height: 527px;
+}
+.maincont{
+    width: 1500px;
+    height: 100%;
+}
+.vdContainer{
+    width: 808px;
+    height: 100%;
+    border: 1px solid #000;
+    float: left;
+}
+.deviceimgshow{
+    width: 560px;
+    height: 100%;
+    border: 1px solid #1492FF;
+    background: #16171A;
+    float: left;
+    margin: 0 0 0 60px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.dvcimgdv{
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: #E6E6E6 url('../img/carno.png') no-repeat;
+    background-position: center;
+}
+.dvcimgdv img{
+    width: 100%;
+    height: 100%;
+}
+.dvcimginfo{
+    background: #27282E;
+}
+.dvcimginfo p{
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid #373941;
+}
+.dvcimginfo .tbldv{
+    height: 80px;
+    padding: 10px 20px;
+}
+.dvcimginfo table{
+    font-size: 12px;
+    line-height: 30px;
+    width: 100%;
+}
+.dvcimginfo .dvctitle{
+    color: #909099;
+}
+.w40{
+    width: 40px;
+}
+.w60{
+    width: 60px;
+}
+.w65{
+    width: 65px;
+}
+.w90{
+    width: 80px;
+}
+.maxW150{
+    max-width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.dvcmenu{
+    height: 75px;
+    text-align: center;
+    /* line-height: 75px; */
+    background: #16171A;
+	padding: 18px 0 0 0;
+}
+.dvcmenu a{
+    color: #fff;
+    width: 115px;
+    height: 38px;
+    line-height: 38px;
+    background: #1492FF;
+    border: 1px solid #1492FF;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 40px;
+    cursor: pointer;
+}
+.sec5{
+    padding: 15px 0 0 0;
+}
+.deviceimglist{
+    display: flex;
+    justify-content: space-between;
+}
+.deviceimglist li{
+    /* position: relative; */
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.deviceimglist .imgdv{
+    width: 240px;
+    height: 135px;
+    background: #E6E6E6 url('../img/carno.png') no-repeat;
+    background-position: center;
+}
+.imglstinifo{
+    color: #fff;
+    line-height: 20px;
+    font-size: 12px;
+    /* position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5); */
+    background: #27282E;
+    padding: 5px 15px;
+    text-align: center;
+}
+.imglstinifo .imgcarid{
+    font-size: 14px;
+}
+.imglstinifo p{
+    height: 20px;
+}
+.deviceimglist .imgdv img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.deviceimglist .curimg{
+    border-color: #1492FF;
+}
