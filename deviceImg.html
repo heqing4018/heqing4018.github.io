@@ -26,25 +26,23 @@
             <hr/>
         </div>
         <!-- 菜单栏 -->
-        <table class="menutb">
-            <tr>
-                <td>
-                    <div class="datadv">
-                        <i></i>
-                        <input type="text" onclick="WdatePicker()" placeholder="起始时间">
-                    </div>
-                    <div class="hline" style="vertical-align:middle;">一</div>
-                    <div class="datadv">
-                        <i></i>
-                        <input type="text" onclick="WdatePicker()" placeholder="结束时间">
-                    </div>
-                </td>
-                <td class="padLeft">
-                    <button class="obtn searchbtn">查询</button>
-                    <input class="obtn resetbtn" type="reset" value="重置" />
-                </td>
-            </tr>
-        </table>
+        <form class="form-inline form-menu">
+            <div class="form-group">
+                <div class="datadv">
+                    <i></i>
+                    <input type="text" onclick="WdatePicker()" placeholder="起始时间">
+                </div>
+                <div class="hline" style="vertical-align:middle;">一</div>
+                <div class="datadv">
+                    <i></i>
+                    <input type="text" onclick="WdatePicker()" placeholder="结束时间">
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="obtn searchbtn">查询</button>
+                <input class="obtn resetbtn" type="reset" value="重置" /> 
+            </div>
+        </form>
         <!-- 信息列表 -->
         <div class="tjlist clear">
             <dl>
