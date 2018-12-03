@@ -1,0 +1,99 @@
+.logDv{
+    position: relative;
+    width: 600px;
+    padding: 20px 0 0 0;
+}
+.infoTblitl{
+    color: #a8a8b2;
+    width: 100%;
+    text-align: center;
+}
+.infoTblitl thead{
+    color: #fff;
+    font-weight: bolder;
+}
+.infoTblitl td{
+    width: 50%;
+    height: 40px;
+    border: 1px solid #393C47;
+}
+.infoTblitl .rtbkipt{
+    display: none;
+    width: 30px;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    border: none;
+    padding-right: 5px;
+    background: transparent;
+    margin: 0 2px 0 0;
+}
+
+.infoTblitl tbody td:last-child{
+    position: relative;
+    text-align: left;
+    padding: 0 10px 0 20px;
+}
+.tips{
+    display: none;
+    color: #1cba9a;
+    font-size: 12px;
+    padding: 0 0 0 20px;
+}
+.btndv{
+    position: absolute;
+    top: 6px;
+    right: -140px;
+    display: none;
+}
+.btndv .obtn{
+    width: 60px;
+    height: 28px;
+    line-height: 26px;
+    font-size: 12px;
+    padding: 0;
+}
+.btndv .cancelbtn{
+    background: #545966;
+    border-color: #545966;
+}
+.editico{
+    float: right;
+    cursor: pointer;
+}
+
+/* 当前编辑的一行 */
+.editTr .valSpan{
+    display: none;
+}
+.editTr .rtbkipt{
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    border-bottom: 1px solid #393C47;
+}
+.editTr .tips{
+    display: inline-block;
+}
+.editTr .editico{
+    display: none;
+}
+.editTr .btndv{
+    display: block;
+}
+.tipBox{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    width: 500px;
+    z-index: 999;
+    margin-left: -250px;
+    text-align: center;
+}
+.tipContent{
+    color: #FF5662;
+    padding: 10px 30px;
+    background: #1F2024;
+    display: inline-block;
+    border: 1px solid #FF5662;
+}
