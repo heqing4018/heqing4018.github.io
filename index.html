@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script>
+        $.ajaxSetup ({ 
+            cache: false //关闭AJAX相应的缓存 
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><i class="logo"></i>云鹰 · 结构化平台</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="toInfo"><a href="personalCenter.html"><i class="user_ico icons"></i>admin</a></li>
+                    <li><a href="#" class="exit-btn"><i class="exit_ico icons"></i>退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="shade shade-nav"></div>
+    </nav>
+    <div class="container-fluid">
+        <div class="sidebar">
+            <div class="left-bar">
+                <ul class="lb-listouter">
+                    <li>
+                        <p><a hrefto="home.html">
+                            <i class="lbl-sy lbl-icon" title="首页"></i>
+                            <span class="mname">首页</span>
+                        </a></p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="lbl-xtjk lbl-icon" title="系统监控"></i>
+                            <span class="mname">系统监控</span>
+                        </p>
+                        <i class="lbl-right lbl-icon"></i>
+                        <ol class="lb-listinner">
+                            <li class="lbldot">
+                                <a hrefto="storageControl.html">
+                                    存储空间监控
+                                </a>
+                            </li>
+                            <li class="lbldot">
+                                <a hrefto="systemControl.html">
+                                    系统负载监控
+                                </a>
+                            </li>
+                            <li class="lbldot">
+                                <a hrefto="taskControl.html">
+                                    任务状态监控
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="lbl-sjll lbl-icon" title="数据浏览"></i>
+                            <span class="mname">数据浏览</span>
+                        </p>
+                        <i class="lbl-right lbl-icon"></i>
+                        <ol class="lb-listinner">
+                            <li class="lbldot">
+                                <a hrefto="carInfo.html">
+                                    车辆信息
+                                </a>
+                            </li>
+                            <!-- <li class="lbldot">
+                                <a href=".html">
+                                    行人信息
+                                </a>
+                            </li>
+                            <li class="lbldot">
+                                <a href=".html">
+                                    活动目标
+                                </a>
+                            </li>
+                            <li class="lbldot">
+                                <a href=".html">
+                                    人脸识别
+                                </a>
+                            </li> -->
+                        </ol>
+                    </li>
+                    <!-- <li>
+                        <p><a hrefto="applicationMng.html">
+                            <i class="lbl-yygl lbl-icon" title="应用管理"></i>
+                            <span class="mname">应用管理</span>
+                        </a></p>
+                    </li> -->
+                    <li>
+                        <p>
+                            <i class="lbl-sjygl lbl-icon" title="数据源管理"></i>
+                            <span class="mname">数据源管理</span>
+                        </p>
+                        <i class="lbl-right lbl-icon"></i>
+                        <ol class="lb-listinner">
+                            <li class="lbldot">
+                                <a hrefto="device.html">
+                                    摄像头管理
+                                </a>
+                            </li>
+                            <!-- <li class="lbldot">
+                                <a href=".html">
+                                    视频文件
+                                </a>
+                            </li> -->
+                        </ol>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="lbl-ddgl lbl-icon" title="地点管理"></i>
+                            <span class="mname">地点管理</span>
+                        </p>
+                        <i class="lbl-right lbl-icon"></i>
+                        <ol class="lb-listinner">
+                            <li class="lbldot">
+                                <a hrefto="site.html">
+                                    地点管理
+                                </a>
+                            </li>
+                            <li class="lbldot">
+                                <a hrefto="siteGroup.html">
+                                    地点分组
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="lbl-xtpz lbl-icon" title="系统配置"></i>
+                            <span class="mname">系统配置</span>
+                        </p>
+                        <i class="lbl-right lbl-icon"></i>
+                        <ol class="lb-listinner">
+                            <li class="lbldot">
+                                <a hrefto="storageSet.html">
+                                    存储设置
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="lbl-xtgl lbl-icon" title="系统管理"></i>
+                            <span class="mname">系统管理</span>
+                        </p>
+                        <i class="lbl-right lbl-icon"></i>
+                        <ol class="lb-listinner">
+                            <li class="lbldot">
+                                <a hrefto="operationLog.html">
+                                    操作日志
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <div class="shade shade-sidebar"></div>
+        </div>
+        <!-- <div class="shade"></div> -->
+        <div class="row row-main">
+            <div class="main">
+                <iframe src="home.html" id="iframeMain" name="iframeMain" frameborder="no" style="width:100%;">
+                    
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2013-2018 北京时代云英科技有限公司</p>
+    </div>
+    <i id="tip_center" style="position: absolute;top: 100px; left: 50%;"></i>
+    <script>
+
+        $(function(){
+            changeFrameHeight();
+        });
+
+        function changeFrameHeight(){
+		    var ifm= document.getElementById("iframeMain"); 
+			ifm.style.height=document.documentElement.clientHeight-120+"px";
+			// 125是顶部和底部所占高度，需根据实际情况调整
+        }
+        
+		window.onresize=function(){  
+		    changeFrameHeight();
+		}
+         
+
+        // 阻止默认行为
+        $('.lb-listouter').on('click', 'a', function(e){
+            e.preventDefault();
+        });
+
+        function menuclick(e){
+            e.stopPropagation();
+            if($(this).children('ol').length > 0){
+                $(this).toggleClass('curitem');
+            }else{
+                $(this).closest('ul').find('li').removeClass('curli');
+                $(this).addClass('curli');
+
+
+                //切换页面
+                iframeTo($(this).find('a').attr('hrefto'));
+            }
+        }
+
+        var oli = $('li','.lb-listouter');
+        oli.each(function(){
+            $(this)[0].addEventListener('click', menuclick, false);
+        });
+
+        // 退出，页面跳转
+        $('.exit-btn').on('click' , function(){
+
+            $(location).attr('href', 'login.html');
+
+        });
+
+        // admin，页面跳转
+        $('#toInfo').on('click' ,'a', function(e){
+
+            e.preventDefault();
+            iframeTo($(this).attr('href'));
+        });
+
+        
+    </script>
+</body>
+</html>
