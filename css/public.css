@@ -693,7 +693,7 @@ body{
 	top: 50%;
 	left: 50%;
 	margin-top: -300px;
-	margin-left: -300px;	/* 具体弹框位置具体定 */
+	margin-left: -360px;	/* 具体弹框位置具体定 */
 	border: 1px solid #393C47;
     z-index: 9999;
     overflow: hidden;
@@ -823,7 +823,7 @@ body{
 }
 #delBox, #delplBox, #resetpwdBox{
     margin-top: -200px;
-    margin-left: -230px;
+    margin-left: -300px;
 }
 
 /* 查看原图 */
