@@ -121,12 +121,12 @@
 	
 		// 添加应用
 		$('.addbtn').on('click', function(){
-			$('.main').load('applicationAdd.html');
+			PrtIframeTo('applicationAdd.html');
 		});
 
 		// 编辑应用
 		$('.yylist').on('click', '.editico', function(){
-			$('.main').load('applicationEdit.html');
+			PrtIframeTo('applicationEdit.html');
 		});
 
         var odelBox = $('#delBox'),  //删除应用
