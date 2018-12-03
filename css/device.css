@@ -14,12 +14,9 @@ html,body{
     overflow: hidden;
     float: left;
     background: #27282E;
-    margin: 0 18px 20px 0;
+    margin: 10px 18px 10px 0;
     border-radius: 5px;
     box-shadow: 0 5px 0 0 #16171A;
-}
-.tjlist dl:nth-child(6n){
-    margin-right: 0;
 }
 .tjlist dt{
     height: 145px;
