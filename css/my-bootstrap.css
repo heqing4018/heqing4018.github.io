@@ -1,0 +1,133 @@
+.container-fluid{
+    height: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+.btn{
+    color: #fff;
+    height: 38px;
+    line-height: 36px;
+    width: 90px;
+    background: #1492FF;
+    padding: 0;
+    margin: 0 0 0 5px;
+}
+.btn-default{
+    color: #1492FF;
+    background: transparent;
+    border: 1px solid #1492FF;
+    margin: 0 0 0 30px;
+}
+.btn.active, .btn:active{
+    /* background-image:none;删除了此项 */
+}
+.btn.focus, .btn:focus, .btn:hover{
+    color: #fff;
+}
+.btn-default:hover{
+    color: #1492FF;
+    background-color: transparent;
+    border-color: #1492FF;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
+    outline: none;
+}
+.table>thead>tr>th{
+    border-bottom: 0;
+}
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th{
+    vertical-align: middle;
+}
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th{
+    border-top: 0;
+}
+th{
+    text-align: center;
+}
+.form-control{
+    height: 38px;
+    color: #c0c0cc;
+    font-size: 12px;
+    background-color: #2E2E38;
+    border: 1px solid #2E2E38;
+    border-radius: 0px;
+    float: auto;
+    display: inline-block;
+}
+textarea.form-control{
+    height: 80px;
+}
+a{
+    color: #a8a8b2;
+}
+a:focus, a:hover{
+    color: #a8a8b2;
+}
+.h1, .h2, .h3, h1, h2, h3{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+p{
+    margin: 0;
+}
+label{
+    font-weight: normal;
+}
+input[type=checkbox], input[type=radio]{
+    margin: -1px 5px 0 0;
+    vertical-align: middle;
+}
+.form-control:focus{
+    border: 1px solid #222642;
+    box-shadow: none;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, 
+.col-lg-12, .col-lg-2, .col-lg-3, 
+.col-lg-4, .col-lg-5, .col-lg-6, 
+.col-lg-7, .col-lg-8, .col-lg-9, 
+.col-md-1, .col-md-10, .col-md-11, 
+.col-md-12, .col-md-2, .col-md-3, 
+.col-md-4, .col-md-5, .col-md-6, 
+.col-md-7, .col-md-8, .col-md-9, 
+.col-sm-1, .col-sm-10, .col-sm-11, 
+.col-sm-12, .col-sm-2, .col-sm-3, 
+.col-sm-4, .col-sm-5, .col-sm-6, 
+.col-sm-7, .col-sm-8, .col-sm-9, 
+.col-xs-1, .col-xs-10, .col-xs-11, 
+.col-xs-12, .col-xs-2, .col-xs-3, 
+.col-xs-4, .col-xs-5, .col-xs-6, 
+.col-xs-7, .col-xs-8, .col-xs-9{
+    padding-right: 0;
+    padding-left: 0;
+}
+hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* placeholder颜色 */
+input.form-control::-webkit-input-placeholder{
+    color:#c0c0cc;
+}
+input.form-control::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#c0c0cc;
+}
+input.form-control:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#c0c0cc;
+}
+input.form-control:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#c0c0cc;
+}
