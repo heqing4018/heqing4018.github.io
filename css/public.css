@@ -724,7 +724,17 @@ body{
     cursor: pointer;
 }
 .sdbcont{
-	padding: 20px;
+    padding: 10px 20px;
+    max-height: 500px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+@media (max-width: 1166px) {
+    .sdbcont{
+        max-height: 350px;
+        overflow: hidden;
+        overflow-y: auto;
+    }
 }
 .shadeBox .sdbfoot{
 	position: absolute;
