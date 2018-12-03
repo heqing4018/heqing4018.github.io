@@ -10,9 +10,6 @@
     margin: 10px 18px 15px 0;
     box-shadow: 0 5px 0 0 #16171A;
 }
-.tjlist dl:nth-child(6n){
-    margin-right: 0;
-}
 .tjlistAll dl{
     height: 373px;
 }
@@ -61,4 +58,10 @@
     overflow: hidden;
 	white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+@media (max-width: 1166px) {
+    .tjlist dl{
+        margin-right: 21px;
+    }
 }
