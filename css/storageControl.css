@@ -1,0 +1,103 @@
+.secmain{
+    padding-bottom: 0;
+}
+.sec2{
+   margin: 10px 0 35px 0; 
+}
+.tldv{
+    color: #e0e0e0;
+    font-size: 18px;
+    padding: 0 0 15px 10px;
+}
+.cckjlst li{
+    position: relative;
+    float: left;
+    color: #333;
+    width: 340px;
+    height: 200px;
+    text-align: center;
+    padding: 25px 25px;
+    margin: 0 25px 0 0;
+    background: #27282E;
+    overflow: hidden;
+}
+.btmborder{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    display: inline-block;
+    background: -webkit-linear-gradient(to right, #0E71FF, #1AB3FF); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to right, #0E71FF, #1AB3FF); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to right, #0E71FF, #1AB3FF); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #0E71FF, #1AB3FF); /* 标准的语法 */
+}
+.cckjlst .li6 .rldv{
+    font-size: 32px;
+}
+.cckjlst .rldv{
+    color: #fff;
+    font-size: 32px;
+    height: 60px;
+    margin: 10px 0 0 0;
+    max-width: 290px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;    
+}
+.cckjlst .kindv{
+    color: #a8a8b2;
+    font-size: 16px;
+    text-align: center;
+}
+.cckj_ico{
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+.li1_ico{
+    background-image: url('../img/cckji.png');
+}
+.li2_ico{
+    background-image: url('../img/yycckji.png');
+}
+.li3_ico{
+    background-image: url('../img/wycckji.png');
+}
+.cckjlst .li4{
+    width: 523px;
+    line-height: 65px;
+    padding: 35px 55px 0 65px;
+    margin: 0;
+}
+.li4 .rldv{
+    float: right;
+    margin: 0;
+    max-width: 255px;
+}
+.li4 .kindv{
+    float: left
+}
+.sec3{
+    margin: 20px 0 0 0;
+}
+.sec3lft, .sec3rt{
+    float: left;
+    height: 455px;
+    padding: 20px 20px 0 20px;
+    background: #27282E;
+    overflow: hidden;
+}
+.sec3lft{
+    width: 1070px;
+    margin: 0 25px 0 0;
+}
+.sec3rt{
+    width: 523px;
+}
+.secTitl{
+    font-size: 16px;
+}
+
