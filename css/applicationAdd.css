@@ -1,0 +1,426 @@
+#xzpzydv{
+    width: 770px;
+    display: none;
+}
+/* #tjpzxxdv{
+    display: none;
+} */
+.tjyysec, .tjyypzysec{
+    margin: 0 40px;
+}
+.tjyysec{
+    width: 770px;
+}
+.secinfor{
+    padding: 0 0 0 40px;
+}
+.secinfor td{
+    padding: 8px 0;
+}
+.secinfor label{
+    margin: 0 0 0 20px;
+}
+.progrs{
+    width: 430px;
+    position: relative;
+    margin: 30px auto;
+}
+.lfcl, .rtcl{
+    width: 85px;
+    text-align: center;
+    display: inline-block;
+    line-height: 40px;
+}
+.rtcl{
+    float: right;
+}
+.circl{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    background: #333640;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 3px 0 0 0;
+}
+.circlbd{
+    width: 39px;
+    height: 39px;
+    line-height: 35px;
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #76767E;
+}
+.cline{
+    width: 300px;
+    height: 2px;
+    background: #393C47;
+    display: inline-block;
+    position: absolute;
+    left: 65px;
+    top: 23px;
+}
+.curcl{
+    background: #1492ff;
+    cursor: initial;
+}
+.curcl .circlbd{
+    color: #fff;
+    border-color: #fff;
+}
+.yyidiptdv{
+    position: relative;
+    width: 630px;
+    height: 35px;
+    background: #2E2E38;
+}
+.yyidiptdv .yyidipt{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #2E2E38;
+    padding-right: 40px;
+}
+.yyidiptdv i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 35px;
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+}
+.tysectt{
+    padding: 30px 0;
+}
+.bluedotbf{
+    font-size: 16px;
+    color: #1492ff;
+}
+.tipspan{
+    position: relative;
+}
+.ttip{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    cursor: pointer;
+    background: url('../img/tipi.png') no-repeat;
+}
+.tips{
+    position: absolute;
+    left: 25px;
+    top: 0;
+    width: 180px;
+    padding: 8px 5px;
+    line-height: 20px;
+    color: #1CBA9A;
+    border: 1px solid #1CBA9A;
+    background: #1F2024;
+    display: inline-block;
+    display: none;
+}
+.tipCls{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url('../img/tipCls.png') no-repeat;
+    cursor: pointer;
+}
+.sect_sjsc{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #1492ff;
+}
+.time_ico{
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../img/time_ico.png') center no-repeat;
+}
+.bluedotbf::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    background: #1492ff;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+}
+.lineaft::after {
+    content: '';
+    width: 680px;
+    height: 1px;
+    display: inline-block;
+    background: #393C47;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
+.next_btn{
+    font-size: 14px;
+    width: 150px;
+    margin: 50px 0 0 0;
+}
+/* 开关按钮样式------------ */
+.kg_btn{
+    float: right;
+}
+/* 复选框组  小尺寸*/
+.htzhlb{
+	cursor: pointer;
+	display: inline-block;
+}
+.ckbox{
+    position: relative;
+    top: 3px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin: 1px 5px 0 0;
+    vertical-align: middle;
+}
+.htzhlb input{
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 0;
+	opacity: 0;
+}
+.ckbox i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url('../img/icons.png') no-repeat;
+    background-position: -227px -369px;
+}
+.htzhlb input:checked + i{
+    background-position: -185px -369px;
+}
+.txt_right{
+    text-align: right;
+}
+/* 算法选择---------------- */
+.sjsftd{
+    width: 400px;
+    height: 160px; 
+    text-align: right;
+    vertical-align: top; 
+    padding: 0;
+}
+.sfcont{
+    position: relative;
+    width: 310px;
+    text-align: left;
+    display: inline-block;
+    min-height: 32px;
+    margin: 0 0 5px 0;
+}
+.sfcont input[type='checkbox']{
+    margin: -3px 3px 0 0;
+    vertical-align: middle;
+}
+.sfcont .sfcshow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 32px;
+    border: 1px solid #2E2E38;
+    border-radius: 16px;
+    background:#2E2E38 url('../img/selectarow.png') no-repeat;
+    background-position: 280px center;
+    padding: 5px 40px 0 0;
+    cursor: pointer;
+}
+.sfcont .curshow{
+    border-color: #2E2E38;
+}
+.sfcont .sfqxc{
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border: 1px solid #2E2E38;
+    border-radius: 0 0 5px 5px;
+    padding: 22px 20px 10px;
+    display: none;
+    background: #fff;
+}
+.sfqxc label{
+    color: #333;
+    width: 32%;
+    margin: 5px 0 0;
+    font-size: 12px;
+    display: inline-block;
+    overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.sfqxbtns{
+    margin: 0 0 5px 0;
+}
+.qxreverse{
+    margin: 0 0 0 20px;
+}
+.sfqxbtns .qxbtn{
+    color: #1492ff;
+    background: #fff;
+    border: none;
+    outline: none;
+}
+.qxsure, .qxcancel{
+    float: right;
+}
+.qxsure{
+    margin: 0 20px 0 0;
+}
+
+/* 日期控件---------------- */
+.datadv{
+    width: 138px;
+    height: 32px;
+    border: 1px solid #2E2E38;
+    border-radius: 16px;
+    padding: 0 0 0 4px;
+}
+.datadv input{
+    width: 100px;
+    height: 30px;
+}
+.datadv i{
+    width: 30px;
+    height: 32px;
+    float: right;
+    background: url('../img/calender.png') no-repeat;
+    background-position: left center;
+}
+/* ------------------------------------------------- */
+.pzxxDv{
+    width: 760px;
+    height: 520px;
+    padding: 10px 0;
+    background: #27282E;
+}
+.pzytitle{
+    position: relative;
+    padding: 0 30px;
+    border-bottom: 1px solid #393C47;
+}
+.selbtnDv{
+    position: absolute;
+    right: 20px;
+    top: 3px;
+}
+.seledNum{
+    color: #1CBA9A;
+    padding: 0 5px;
+}
+.selbtnDv .obtn{
+    width: 60px;
+    height: 30px;
+    line-height: 28px;
+    font-size: 12px;
+}
+.pzytitle li{
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    padding: 0 10px;
+    border-bottom: 2px solid transparent;
+    margin: 0 10px -1px 0;
+    cursor: pointer;
+}
+.pzytitle .curtitl{
+    color: #1492ff;
+    border-color: #1492ff;
+}
+.pzymain{
+    height: 465px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.pzymain>li{
+    display: none;
+    padding: 25px 35px;
+}
+.pzymain .curmain{
+    display: block;
+}
+.pzymain input[type='checkbox']{
+    margin: 0 5px 0 0;
+}
+.pzymain ol{
+    margin: 15px 0 0 0;
+}
+.pzymain ol li{
+    float: left;
+    margin: 0 60px 15px 40px;
+    width: 105px;
+    overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.savebtns{
+    padding: 15px 0 0 0;
+}
+.savebtns .obtn{
+    width: 120px;
+    height: 40px;
+    line-height: 38px;
+    margin: 0 20px 0 0;
+}
+.btngray{
+    background: #545866;
+    border-color: #545866;
+}
+/* 编辑页样式------------------------------------- */
+.edtyytl {
+    padding: 0 20px;
+}
+.edtyytl li{
+    float: left;
+    font-size: 16px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 35px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.edtyytl .curedtli{
+    color: #1492ff;
+    border-bottom: 3px solid #1492ff;
+}
+.edtyymain>li{
+    display: none;
+    padding: 40px 0 0 0;
+}
+.edtyymain .curedtmain{
+    display: block;
+}
+/* 最近选项默认隐藏 */
+#zjtm{
+    display: none;
+}
+.iptzjtm{
+    width: 120px;
+    height: 32px;
+    margin: 0 5px 0 0;
+    padding: 0 20px !important;
+    border-radius: 16px;
+    border: 1px solid #2E2E38;
+}
