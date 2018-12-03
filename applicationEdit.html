@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>编辑应用</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/applicationAdd.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    
+</head>
+<body>
+    <section class="sec3">
+        <!-- 标题 -->
+        <div class="topTitl backTitl">
+            <h2><i class="goBack"></i>编辑应用</h2>
+            <hr/>
+        </div>
+        <div id="tjpzxxdv">
+            <section class="tjyysec">
+                <div class="progrs clear">
+                    <span class="rtcl">
+                        <i class="circl" id="xzpzyi">
+                            <span class="circlbd">2</span>
+                        </i></br>
+                        选择数据源
+                    </span>
+                    <span class="lfcl">
+                        <i class="circl curcl">
+                            <span class="circlbd">1</span>
+                        </i></br>
+                        添加配置信息
+                    </span>
+                    <span class="cline"></span>
+                </div>
+                <div class="secinfor">
+                    <table>
+                        <tr>
+                            <td style="width:95px; padding:15px 0;"><span class="redStart">应用名称：</span></td>
+                            <td>
+                                <div class="yyidiptdv">
+                                    <input type="text" class="yyidipt" />
+                                    <i>12</i>
+                                </div>
+                            </td>
+                            <td><span class="tipzw" id="yymctip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>AppId：</td>
+                            <td>352164hfchvbjnkml</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>SecretKey：</td>
+                            <td>hjfvkt84bjnkml</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section class="tjyysec">
+                <div class="tysectt">
+                    <span class="bluedotbf lineaft">功能权限</span>
+                </div>
+                <div class="secinfor">
+                    <table style="width:100%;">
+                        <tr>
+                            <td>数据下载：</td>
+                            <td>
+                                <span class="kg_btn kg_btn_unck">
+                                    <span class="spdot">
+                                        <i></i>
+                                        <input type="checkbox"/>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>上传图片、视频：
+                                <span class="tipspan">
+                                    <i class="ttip"></i>
+                                    <span class="tips">
+                                        （上传视频时需默认有选择算法的权限，还可以对文件进行编辑和查看）
+                                        <i class="tipCls"></i>
+                                    </span>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="kg_btn">
+                                    <span class="spdot">
+                                        <i></i>
+                                        <input type="checkbox" checked/>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>查看任务状态：</td>
+                            <td>
+                                <span class="kg_btn">
+                                    <span class="spdot">
+                                        <i></i>
+                                        <input type="checkbox" checked/>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>编辑结构化数据：</td>
+                            <td>
+                                <span class="kg_btn">
+                                    <span class="spdot">
+                                        <i></i>
+                                        <input type="checkbox" checked/>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>视频剪辑：</td>
+                            <td>
+                                <span class="kg_btn">
+                                    <span class="spdot">
+                                        <i></i>
+                                        <input type="checkbox" checked/>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section class="tjyysec">
+                <div class="tysectt">
+                    <span class="bluedotbf lineaft">数据权限</span>
+                </div>
+                <div class="secinfor">
+                    <table style="width:100%;">
+                        <tr>
+                            <td>数据类型：</td>
+                            <td>
+                                <span class="tipspan">
+                                    <i class="ttip"></i>
+                                    <span class="tips">
+                                        （元数据默认被选）
+                                        <i class="tipCls"></i>
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="txt_right">
+                                <label class="htzhlb">
+                                    <span class="ckbox">
+                                        <input type="checkbox"/>
+                                        <i></i>
+                                    </span>图片
+                                </label>
+                                <label class="htzhlb">
+                                    <span class="ckbox">
+                                        <input type="checkbox" checked />
+                                        <i></i>
+                                    </span>元数据 
+                                </label>
+                            </td>
+                            <td><span class="tipzw" id="sjlxtip"></span></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top; width:80px;">数据算法：</td>
+                            <td style="vertical-align: top">
+                                <span class="tipspan">
+                                    <i class="ttip"></i>
+                                    <span class="tips">
+                                            请先勾选算法，然后点击下拉按钮选择算法对应权限
+                                        <i class="tipCls"></i>
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="sjsftd">
+                                <!-- 车辆分析算法 -->
+                                <div class="sfcont" style="z-index:10">
+                                    <div class="sfcshow">
+                                        <label class="htzhlb">
+                                            <span class="ckbox">
+                                                <input type="checkbox" name="sfname" />
+                                                <i></i>
+                                            </span>车辆分析算法
+                                        </label>
+                                    </div>
+                                    <div class="sfqxc">
+                                        <div class="sfqxbtns clear">
+                                            <input class="qxall qxbtn" type="button" value="全选"/>
+                                            <input class="qxreverse qxbtn" type="button" value="反选"/>
+                                            <!-- <input class="qxcancel qxbtn" type="button" value="取消"/>
+                                            <input class="qxsure qxbtn" type="button" value="确定"/> -->
+                                        </div>
+                                        <div class="qxcs">
+                                            <label class="htzhlb" title="车牌号">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" name="sfname" />
+                                                    <i></i>
+                                                </span>车牌号
+                                            </label>
+                                            <label class="htzhlb" title="车品牌">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" name="sfname" />
+                                                    <i></i>
+                                                </span>车品牌
+                                            </label>
+                                            <label class="htzhlb" title="车系">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" name="sfname" />
+                                                    <i></i>
+                                                </span>车系
+                                            </label>
+                                            <label class="htzhlb" title="车型">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" name="sfname" />
+                                                    <i></i>
+                                                </span>车型
+                                            </label>
+                                            <label class="htzhlb" title="车颜色">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" name="sfname" />
+                                                    <i></i>
+                                                </span>车颜色
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 目标跟踪算法 -->
+                                <div class="sfcont" style="z-index:9">
+                                    <div class="sfcshow">
+                                        <label class="htzhlb">
+                                            <span class="ckbox">
+                                                <input type="checkbox" name="sfname" />
+                                                <i></i>
+                                            </span>目标跟踪算法
+                                        </label>
+                                    </div>
+                                    <div class="sfqxc">
+                                        <div class="sfqxbtns clear">
+                                            <input class="qxall qxbtn" type="button" value="全选"/>
+                                            <input class="qxreverse qxbtn" type="button" value="反选"/>
+                                        </div>
+                                        <div class="qxcs">
+                                            <label class="htzhlb" title="坐标">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>坐标
+                                            </label>
+                                            <label class="htzhlb" title="分类">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>分类
+                                            </label>
+                                            <label class="htzhlb" title="分类得分">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>分类得分
+                                            </label>
+                                            <label class="htzhlb" title="特征距离">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>特征距离
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 人物分析算法 -->
+                                <div class="sfcont" style="z-index:8">
+                                    <div class="sfcshow">
+                                        <label class="htzhlb" title="性别">
+                                            <span class="ckbox">
+                                                <input type="checkbox" name="sfname"/>
+                                                <i></i>
+                                            </span>人物分析算法
+                                        </label>
+                                    </div>
+                                    <div class="sfqxc">
+                                        <div class="sfqxbtns clear">
+                                            <input class="qxall qxbtn" type="button" value="全选"/>
+                                            <input class="qxreverse qxbtn" type="button" value="反选"/>
+                                        </div>
+                                        <div class="qxcs">
+                                            <label class="htzhlb" title="性别">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>性别
+                                            </label>
+                                            <label class="htzhlb" title="年龄">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>年龄
+                                            </label>
+                                            <label class="htzhlb" title="推/拖地物品">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>推/拖地物品
+                                            </label>
+                                            <label class="htzhlb" title="帽子">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>帽子
+                                            </label>
+                                            <label class="htzhlb" title="视角">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>视角
+                                            </label>
+                                            <label class="htzhlb" title="单肩挎">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>单肩挎
+                                            </label>
+                                            <label class="htzhlb" title="口罩">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>口罩
+                                            </label>
+                                            <label class="htzhlb" title="眼镜">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>眼镜
+                                            </label>
+                                            <label class="htzhlb" title="双肩背">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>双肩背
+                                            </label>
+                                            <label class="htzhlb" title="头发">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>头发
+                                            </label>
+                                            <label class="htzhlb" title="打伞">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>打伞
+                                            </label>
+                                            <label class="htzhlb" title="背/抱小孩">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>背/抱小孩
+                                            </label>
+                                            <label class="htzhlb" title="体型">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>体型
+                                            </label>
+                                            <label class="htzhlb" title="正抱">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>正抱
+                                            </label>
+                                            <label class="htzhlb" title="上衣款式">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>上衣款式
+                                            </label>
+                                            <label class="htzhlb" title="手拎">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>手拎
+                                            </label>
+                                            <label class="htzhlb" title="下衣款式">
+                                                <span class="ckbox">
+                                                    <input type="checkbox" />
+                                                    <i></i>
+                                                </span>下衣款式
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="vertical-align: top"><span class="tipzw" id="sjsftip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>数据时长：&nbsp;&nbsp;
+                            </td>
+                            <td>
+                                <label class="rdlb">
+                                    <span class="rdbox">
+                                        <input type="radio" name="rdsjsc" value="1" checked />
+                                        <i></i>
+                                    </span>
+                                    时间段
+                                </label>
+                                <label class="rdlb">
+                                    <span class="rdbox">
+                                        <input type="radio" name="rdsjsc" value="2" />
+                                        <i></i>
+                                    </span>
+                                    最近
+                                </label>
+                                <!-- <label style="margin-left: 0;">
+                                    <input class="rdsjsc" id="rdsjd" type="radio" name="rdsjsc" checked/>
+                                    时间段
+                                </label>
+                                <label>
+                                    <input class="rdsjsc" id="rdzj" type="radio" name="rdsjsc" />
+                                    最近
+                                </label> -->
+                            </td>
+                            <td class="txt_right">
+                                <div id="sjdtm">
+                                    <div class="datadv">
+                                        <i></i>
+                                        <input type="text"  onClick="WdatePicker()" placeholder="起始日期"/>
+                                    </div>
+                                    <span style="padding: 0 5px;">一</span>
+                                    <div class="datadv">
+                                        <i></i>
+                                        <input type="text"  onClick="WdatePicker()" placeholder="结束日期"/>
+                                    </div>
+                                </div>
+                                <div id="zjtm">
+                                    <!-- <select class="selzjtm">
+                                        <option value="">7天</option>
+                                        <option value="">15天</option>
+                                        <option value="">30天</option>
+                                        <option value="">60天</option>
+                                        <option value="">90天</option>
+                                    </select> -->
+                                    <input type="text" class="iptzjtm"/>天
+                                </div>
+                            </td>
+                            <td><span class="tipzw" id="sjsctip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>实时数据：</td>
+                            <td>&nbsp;</td>
+                            <td>
+                                <span class="kg_btn">
+                                    <span  class="spdot">
+                                        <i></i>
+                                        <input type="checkbox" checked/>
+                                    </span>
+                                </span>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="savebtns">
+                    <button class="obtn">保存</button>
+                    <button class="obtn btngray">取消</button>
+                </div>
+            </section>
+        </div>
+        <div id="xzpzydv">
+            <section class="tjyypzysec">
+                <div class="progrs clear">
+                    <span class="rtcl">
+                        <i class="circl curcl">
+                            <span class="circlbd">2</span>
+                        </i></br>
+                        选择数据源
+                    </span>
+                    <span class="lfcl">
+                        <i class="circl" id="tjpzxxi">
+                            <span class="circlbd">1</span>
+                        </i></br>
+                        添加配置信息
+                    </span>
+                    <span class="cline"></span>
+                </div>
+                <div class="pzxxDv">
+                    <ul class="pzytitle clear">
+                        <li class="curtitl">摄像头</li>
+                        <li>视频文件</li>
+                        <div class="selbtnDv">
+                            已选<span class="seledNum">80</span>
+                            <button class="obtn btngray">全选</button>
+                            <button class="obtn btngray">反选</button>
+                        </div>
+                    </ul>
+                    <ul class="pzymain">
+                        <li class="curmain">
+                            <!-- 摄像头内容 -->
+                            <section>
+                                <label class="htzhlb">
+                                    <span class="ckbox">
+                                        <input type="checkbox" />
+                                        <i></i>
+                                    </span>分组1 摄像头内容
+                                </label>
+                                <ol class="clear">
+                                    <li>
+                                        <label class="htzhlb" title="其他车辆算法">
+                                            <span class="ckbox">
+                                                <input type="checkbox" />
+                                                <i></i>
+                                            </span>其他车辆算法
+                                        </label>
+                                    </li>
+                                </ol>
+                            </section>
+                            <section>
+                                <label class="htzhlb">
+                                    <span class="ckbox">
+                                        <input type="checkbox" />
+                                        <i></i>
+                                    </span>分组2
+                                </label>
+                                <ol class="clear">
+                                    <li>
+                                        <label class="htzhlb" title="其他车辆算法">
+                                            <span class="ckbox">
+                                                <input type="checkbox" />
+                                                <i></i>
+                                            </span>其他车辆算法
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="htzhlb" title="其他车辆算法">
+                                            <span class="ckbox">
+                                                <input type="checkbox" />
+                                                <i></i>
+                                            </span>其他车辆算法
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="htzhlb" title="其他车辆算法">
+                                            <span class="ckbox">
+                                                <input type="checkbox" />
+                                                <i></i>
+                                            </span>其他车辆算法
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="htzhlb" title="其他车辆算法">
+                                            <span class="ckbox">
+                                                <input type="checkbox" />
+                                                <i></i>
+                                            </span>其他车辆算法
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="htzhlb" title="其他车辆算法">
+                                            <span class="ckbox">
+                                                <input type="checkbox" />
+                                                <i></i>
+                                            </span>其他车辆算法
+                                        </label>
+                                    </li>
+                                </ol>
+                            </section>
+                            <section>
+                                <label class="htzhlb">
+                                    <span class="ckbox">
+                                        <input type="checkbox" />
+                                        <i></i>
+                                    </span>分组3
+                                </label>
+                                <ol class="clear">
+                                    <li>
+                                        <label class="htzhlb" title="其他车辆算法">
+                                            <span class="ckbox">
+                                                <input type="checkbox" />
+                                                <i></i>
+                                            </span>其他车辆算法
+                                        </label>
+                                    </li>
+                                </ol>
+                            </section>
+                        </li>
+                        <li>
+                            <!-- 视频文件内容 -->
+                            <section>
+                                <label class="htzhlb">
+                                    <span class="ckbox">
+                                        <input type="checkbox" />
+                                        <i></i>
+                                    </span>分组1 视频文件内容
+                                </label>
+                                <ol class="clear">
+                                    <li>
+                                        <label class="htzhlb" title="其他车辆算法">
+                                            <span class="ckbox">
+                                                <input type="checkbox" />
+                                                <i></i>
+                                            </span>其他车辆算法
+                                        </label>
+                                    </li>
+                                </ol>
+                            </section>
+                        </li>
+                    </ul>
+                </div>
+                <div class="savebtns">
+                    <button class="obtn">保存</button>
+                    <button class="obtn btngray">取消</button>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script type="text/javascript">
+
+        // 返回按钮
+        $('.goBack').on('click', function(){
+            PrtIframeTo('applicationMng.html');
+        });
+
+        // 提示信息
+        $('.ttip').on('click', function(){
+            $(this).siblings('.tips').show();
+        });
+
+        // 提示关闭
+        $('.tipCls').on('click', function(){
+            $(this).closest('.tips').hide();
+        });
+    
+		//开关按钮
+		$('.kg_btn').off('click', '**');	//绑定事件之前先删除一次，不然开发那边火狐会走两次事件
+		$('.kg_btn').on('click', '.spdot', function(e){
+            var ckval = $(this).find('input').prop('checked');
+            $(this).closest('.kg_btn').toggleClass('kg_btn_unck');
+			$(this).find('input').prop('checked', !ckval);
+		});
+
+		// 算法选择部分----------------------------
+		$('.sfcshow').on('click', function(e){
+			e.stopPropagation();
+			
+			var isVisible = $(this).siblings('.sfqxc').is(":visible");
+
+			$('.sfqxc').hide();
+			$('.sfcshow').removeClass('curshow');
+
+			//如果之前是不可见的，接下来可见
+			if(!isVisible){
+				$(this).siblings('.sfqxc').show();
+
+				//判断然后设置全选、反选、子菜单是否可用
+				var ipts = $(this).closest('.sfcont').find('.qxcs').find('input[type="checkbox"]');
+				var iptqxall = $(this).closest('.sfcont').find('.qxall');
+				var iptqxreverse = $(this).closest('.sfcont').find('.qxreverse');
+				if(!$('input[type="checkbox"]', this).prop('checked')){
+					ipts.each(function(){
+						$(this).prop('disabled', true);
+						$(this).prop('checked', false);
+					});
+					iptqxall.prop('disabled', true);
+					iptqxreverse.prop('disabled', true);
+				}else{
+					ipts.each(function(){
+						$(this).prop('disabled', false);
+					});
+					iptqxall.prop('disabled', false);
+					iptqxreverse.prop('disabled', false);
+				}
+				$(this).addClass('curshow');
+			}
+		});
+
+		$('.sfqxc').on('click',  function(e){
+			e.stopPropagation();
+		});
+
+		$('body').on('click', function(){
+			$('.sfqxc').hide();
+			$('.sfcshow').removeClass('curshow');
+		});
+
+		//算法名字选择
+		$('.sjsftd').on('click', 'input[name="sfname"]', function(e){
+			e.stopPropagation();
+			var ipts = $(this).closest('.sfcont').find('.qxcs').find('input[type="checkbox"]');
+			var iptqxall = $(this).closest('.sfcont').find('.qxall');
+			var iptqxreverse = $(this).closest('.sfcont').find('.qxreverse');
+			if(!$(this).prop('checked')){
+				ipts.each(function(){
+					$(this).prop('disabled', true);
+					$(this).prop('checked', false);
+				});
+				iptqxall.prop('disabled', true);
+				iptqxreverse.prop('disabled', true);
+			}else{
+				ipts.each(function(){
+					$(this).prop('disabled', false);
+				});
+				iptqxall.prop('disabled', false);
+				iptqxreverse.prop('disabled', false);
+			}
+		});
+		//全选
+		$('.qxall').on('click', function(){
+			var ipts = $(this).closest('.sfcont').find('.qxcs').find('input[type="checkbox"]');
+			ipts.each(function(){
+				$(this).prop('checked', true);
+			});
+		});
+
+		//反选
+		$('.qxreverse').on('click', function(){
+			var ipts = $(this).closest('.sfcont').find('.qxcs').find('input[type="checkbox"]');
+			ipts.each(function(){
+				var ck = $(this).prop('checked');
+				$(this).prop('checked', !ck);
+			});
+		});
+		//---------------------------------------
+		var oXzpzydv = $('#xzpzydv'),//选择数据源
+			oTjpzxxdv = $('#tjpzxxdv'),//添加配置信息
+			oSjdtm = $('#sjdtm'),//时间段选项
+			oZjtm = $('#zjtm');//最近选项
+
+		//选择数据源和添加配置信息切换
+		//在第一步，点击选择数据源
+		$('#xzpzyi').on('click', function(){
+			oXzpzydv.show();
+			oTjpzxxdv.hide();
+		});
+		//在第二步，点击添加配置信息
+		$('#tjpzxxi').on('click', function(){
+			oXzpzydv.hide();
+			oTjpzxxdv.show();
+		});
+
+		//数据时长切换,点击时间段rdsjsc
+		$('input[name="rdsjsc"]').on('click', function(){
+            var oval = $(this).val(); //1是时间段，2是最近
+            if(oval==1){
+                oSjdtm.show();
+                oZjtm.hide();
+            }else if(oval==2){
+                oSjdtm.hide();
+                oZjtm.show();
+            }
+		});
+		
+		//----------------------------------------------------------
+		//tab菜单切换
+		$('.pzytitle').on('click', 'li', function(){
+
+			// 菜单项样式改变
+			$(this).addClass('curtitl');
+			$(this).siblings('li').removeClass('curtitl');
+
+			// 对应块儿的内容显示
+			var oli = $(this).closest('.pzytitle').siblings('.pzymain').children('li').eq($(this).index());
+			oli.siblings('li').hide();
+            oli.show();
+		});
+	</script>
+</body>
+</html>

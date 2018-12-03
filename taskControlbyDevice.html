@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>任务状态监控</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/taskControl.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    
+</head>
+<body>
+    <section class="secmain">
+        <!-- 标题 -->
+        <div class="topTitl">
+            <h2 >任务状态监控</h2>
+            <hr/>
+            <div class="tptbtns">
+                <label class="rdlb">
+                    <span class="rdbox">
+                        <input type="radio" name="deviceType" value="0"  checked/>
+                        <i></i>
+                    </span>
+                    按设备
+                </label>
+                <label class="rdlb">
+                    <span class="rdbox">
+                        <input type="radio" name="deviceType" value="1" />
+                        <i></i>
+                    </span>
+                    按算法
+                </label>
+            </div>
+        </div>
+        <!-- 菜单栏 -->
+        <form class="form-inline form-menu">
+            <div class="form-group">
+                <input type="text" class="mnipt" placeholder="请输入摄像头名称">
+            </div>
+            <div class="form-group">
+                <select class="mnipt defaultSel">
+                    <option>请选择数据分组</option>
+                    <option value="">分组1</option>
+                    <option value="">分组2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="mnipt defaultSel">
+                    <option>请选择上级分组</option>
+                    <option value="">上级分组1</option>
+                    <option value="">上级分组2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="mnipt defaultSel">
+                    <option>请选择工作状态</option>
+                    <option value="">工作状态1</option>
+                    <option value="">工作状态2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input class="obtn searchbtn" type="button" value="查询" />
+                <input class="obtn resetbtn" type="reset" value="重置" />
+            </div>
+        </form>
+        <!-- 数据列表 -->
+        <table class="datatb">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>摄像头名称</th>
+                    <th>上级分组</th>
+                    <th>所属分组</th>
+                    <th>所属地点</th>
+                    <th class="w350">管理</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>摄像头1</td>
+                    <td>分组1</td>
+                    <td>分组1</td>
+                    <td>牡丹园</td>
+                    <td>
+                        <a class="tptbtn ckdetailico">查看详情</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pagegation">
+            <ul>
+                <li>
+                    <a class="curpage">1</a>
+                </li>
+                <li>
+                    <a>2</a>
+                </li>
+                <li>
+                    <a>3</a>
+                </li>
+                <li>
+                    <a>4</a>
+                </li>
+                <li>
+                    <a>5</a>
+                </li>
+                <li>
+                    <a>···</a>
+                </li>
+                <li>
+                    <a>10</a>
+                </li>
+                <li>
+                    <a>11</a>
+                </li>
+                <li>
+                    <a>&gt;</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script type="text/javascript">
+
+        $(function(){
+
+            //普通select2初始化
+			$(".defaultSel").select2({
+				//隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 220
+            });
+
+            // select2 赋值
+            //$('#id选择器').val('所要赋的值').trigger("change");
+            
+        });
+
+        // 按设备和按算法切换查询
+        $('input[name="deviceType"]').on('click', function(){
+
+            var oval = $(this).val(); //value=0 是按设备，value=1 是按算法 可以根据需求修改
+
+            if(oval==1){
+                PrtIframeTo('taskControl.html');
+            }
+
+        });
+        
+        // 查看详情
+        $('.datatb').on('click', '.ckdetailico', function(){
+            PrtIframeTo('taskControlDetail.html');
+        });
+
+	</script>
+</body>
+</html>

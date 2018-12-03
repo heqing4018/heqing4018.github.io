@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>应用管理</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/applicationMng.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+</head>
+<body>
+    <section class="secmain">
+        <!-- 标题 -->
+        <div class="topTitl">
+            <h2>应用管理</h2>
+            <hr/>
+            <div class="tptbtns">
+                <a class="tptbtn addbtn"><i class="icons tptadd"></i>添加应用</a>
+            </div>
+        </div>
+        <ul class="yylist clear">
+            <li>
+                <p class="spanw yytt" title="南岸二期项目">南岸二期项目</p>
+                <div class="yyinfo">
+                    <p>
+                        <span class="yyid spanw" title="352164hfchvbjnkml">352164hfchvbjnk</span>
+                        AppId：
+                    </p>
+                    <p>
+                        <span  class="yykey spanw" title="hjfvkt84bjnkml84bj">hjfvkt84bjnkml</span>
+                        SecretKey：
+                    </p>
+                </div>
+                <div class="yyopr">
+                    <a class="tblbtn delico">删除</a>
+                    <a class="tblbtn editico">编辑</a>
+                </div>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>				
+        </ul>
+        <!-- 分页 -->
+        <div class="pagegation">
+            <ul>
+                <li>
+                    <a class="curpage">1</a>
+                </li>
+                <li>
+                    <a>2</a>
+                </li>
+                <li>
+                    <a>3</a>
+                </li>
+                <li>
+                    <a>4</a>
+                </li>
+                <li>
+                    <a>5</a>
+                </li>
+                <li>
+                    <a>···</a>
+                </li>
+                <li>
+                    <a>10</a>
+                </li>
+                <li>
+                    <a>11</a>
+                </li>
+                <li>
+                    <a>&gt;</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 遮罩 -->
+    <div class="shade"></div>
+    <!-- 密码验证 -->
+    <div class="shadeBox" id="pwdBox">
+        <div class="sdbcont pwdcont">
+            <p class="pwdp">请输入登录密码进行身份验证</p>
+            <input class="pwdyzipt" type="password" />
+        </div>
+        <div class="sdbfoot">
+            <input id="pwdsurn" class="obtn" type="button" value="确认"/>
+            <input id="pwdcancel" class="obtn obtnBl" type="button" value="取消"/>
+        </div>
+    </div>
+    <!-- 删除应用 -->
+    <div class="shadeBox" id="delBox">
+        <h2>
+            <i class="sdbxclose" id="delclose"></i>
+            删除
+        </h2>
+        <div class="sdbcont delcont">
+                <i class="sdtipdeli "></i>确认删除此应用？
+        </div>
+        <div class="sdbfoot">
+            <input id="delsurn" class="obtn" type="button" value="确认"/>
+            <input id="delcancel" class="obtn obtnBl" type="button" value="取消"/>
+        </div>
+    </div>
+	<script type="text/javascript">
+	
+		// 添加应用
+		$('.addbtn').on('click', function(){
+			$('.main').load('applicationAdd.html');
+		});
+
+		// 编辑应用
+		$('.yylist').on('click', '.editico', function(){
+			$('.main').load('applicationEdit.html');
+		});
+
+        var odelBox = $('#delBox'),  //删除应用
+            opwdBox = $('#pwdBox'); //密码验证
+
+        // 删除时，先弹出密码验证-------------------------------------
+        $('.yylist').on('click', '.delico', function(){
+            ShadeShow(opwdBox);
+            $('.pwdyzipt').focus();
+        });
+
+        //密码验证，确认
+        $('#pwdsurn').on('click', function(){
+
+            ///验证成功后，删除应用确认框打开
+            ShadeShow(odelBox);
+            ShadeClose(opwdBox);
+        });
+        //密码验证，取消
+        $('#pwdcancel').on('click', function(){
+            ShadeClose(opwdBox);
+        });
+
+        //删除应用，确认
+        $('#delsurn').on('click', function(){
+            ShadeClose(odelBox);
+        });
+        //删除应用，取消
+        $('#delcancel').on('click', function(){
+            ShadeClose(odelBox);
+        });
+        // 删除应用，关闭
+        $('#delclose').on('click', function(){
+            ShadeClose(odelBox);
+        });
+
+        
+
+		
+	</script>
+</body>
+</html>

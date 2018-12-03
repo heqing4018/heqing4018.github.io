@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>车辆鸣笛详情</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/carInfoDetail.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/jquery.magnify.css" >
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+</head>
+<body>
+    <section class="secmain">
+        <div class="contentTab">
+            <!-- 标题 -->
+            <div class="topTitl backTitl nohrTitl">
+                <h2><i class="goBack"></i>详情</h2>
+                <hr/>
+            </div>
+            <div class="mncont clear">
+                <div class="mncleft">
+                    <div class="cldadv">
+                        <span class="blktitle">详情信息</span>
+                        <p>车辆车牌：<span class="davalue">渝A-58639</span></p>
+                        <p>车辆类别：<span class="davalue">轿车</span></p>
+                        <p>车辆品牌：<span class="davalue">大众</span></p>
+                        <p>车辆款式：<span class="davalue">帕萨特</span></p>
+                        <p>车辆颜色：<span class="davalue">红色</span></p>
+
+                        <p style="margin-top:30px;">数&nbsp;据&nbsp;&nbsp;源：<span class="davalue">5s</span></p>
+                        <p>上级分组：<span class="davalue">--</span></p>
+                        <p>地点分组：<span class="davalue">--</span></p>
+                        <p>抓拍地点：<span class="davalue">牡丹园</span></p>
+                        <p>抓拍时间：<span class="davalue">2018-05-13 11:42:42</span></p>
+                    </div>
+                </div>
+                <a id="magnifyClick" data-magnify="gallery" href="./img/zoomFullScreen.jpg"></a>
+                <div class="mncright">
+                    <div id="magnifyImgContainer" style="width:980px; height:550px; position:relative;">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script type="text/javascript" src="plugins/magnify-master/jquery.magnify.js"></script>
+    <script type="text/javascript">
+
+        // 返回
+        $('.goBack').on('click', function(){
+
+            $('.main').load('carInfo.html');
+
+        });
+
+        $('[data-magnify]').magnify({
+            footToolbar: [
+            'zoomIn',
+            'zoomOut'
+            ],
+            modalWidth: '100%',
+            modalHeight: '100%'
+        });
+
+        $('#magnifyClick').click();
+        
+
+
+	</script>
+</body>
+</html>

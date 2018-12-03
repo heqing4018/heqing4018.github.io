@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>实时视频</title>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/swiper-4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/device.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/swiper-4.3.3/js/swiper.min.js"></script>
+</head>
+<body>
+    <section class="secmain videoSecmain">
+        <!-- 标题 -->
+        <div class="topTitl backTitl">
+            <label class="htzhlb" for="refresh">
+                <span class="ckbox">
+                    <input type="checkbox" id="refresh" checked>
+                    <i></i>
+                </span>
+                实时刷新
+            </label>
+            <h2><i class="goBack"></i>实时视频</h2>
+            <hr/>
+        </div>
+        <div class="maincont">
+            <section class="sec4 clear">
+                <!-- 视频容器 -->
+                <div class="vdContainer"></div>
+                <!-- 图片展示 -->
+                <div class="deviceimgshow">
+                    <div class="dvcimgdv">
+                        <img src="./img/car1.jpg"/>
+                    </div>
+                    <div class="dvcimginfo">
+                        <p>
+                            <span style="float:right;">京A12345</span>
+                            <span style="color:#909099;">设备名称：</span>
+                            会议室摄像头
+                        </p>
+                        <div class="tbldv">
+                            <table>
+                                <tr>
+                                    <td class="dvctitle w40">车型：</td>
+                                    <td class="w90">轿车</td>
+                                    <td class="dvctitle w40">品牌：</td>
+                                    <td class="w90">长安</td>
+                                    <td class="dvctitle">抓拍时间：</td>
+                                    <td>2017-10-29 10:37:37</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="dvctitle">颜色：</td>
+                                    <td>白</td>
+                                    <td class="dvctitle">车款：</td>
+                                    <td>Z系列</td>
+                                    <td class="dvctitle">抓拍地点：</td>
+                                    <td><span class="maxW180">北京市海淀区花园东路15号</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="dvcmenu">
+                        <a class="preitem">上一条</a>
+                        <a class="nextitem">下一条</a>
+                    </div>
+                </div>
+            </section>
+            <section class="sec5">
+                <!-- 图片列表 -->
+                <ul class="deviceimglist">
+                    <li class="curimg">
+                        <div class="imgdv">
+                            <img src="./img/car1.jpg" />
+                        </div>
+                        <div class="imglstinifo">
+                            <p class="imgcarid">京A12034</p>
+                            <p>2017-11-01 19：02：02</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgdv">
+                            <img src="./img/car1.jpg" />
+                        </div>
+                        <div class="imglstinifo">
+                            <p class="imgcarid">京A12034</p>
+                            <p>2017-11-01 19：02：02</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgdv">
+                            <img src="./img/car1.jpg" />
+                        </div>
+                        <div class="imglstinifo">
+                            <p class="imgcarid">京A12034</p>
+                            <p>2017-11-01 19：02：02</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgdv">
+                            <img src="./img/car1.jpg" />
+                        </div>
+                        <div class="imglstinifo">
+                            <p class="imgcarid">京A12034</p>
+                            <p>2017-11-01 19：02：02</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgdv">
+                            <img src="./img/car1.jpg" />
+                        </div>
+                        <div class="imglstinifo">
+                            <p class="imgcarid">京A12034</p>
+                            <p>2017-11-01 19：02：02</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgdv">
+                            <img src="./img/car1.jpg" />
+                        </div>
+                        <div class="imglstinifo">
+                            <p class="imgcarid">京A12034</p>
+                            <p>2017-11-01 19：02：02</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        <div>
+    </section>
+    <script type="text/javascript">
+
+        // 底部列表点击
+        $('.deviceimglist').on('click', '.imgdv', function(){
+            $(this).closest('li').addClass('curimg').siblings('li').removeClass('curimg');
+            $('#refresh').prop('checked', false);
+        });
+
+        // 上一页下一页点击效果
+        $('.dvcmenu').on('click', 'a', function(){
+
+            $('#refresh').prop('checked', false);
+            $('li', '.deviceimglist').removeClass('curimg').eq(2).addClass('curimg');
+            
+        });
+
+	</script>
+</body>
+</html>

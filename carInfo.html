@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>车辆信息</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/carInfo.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script> 
+</head>
+<body>
+    <section class="secmain">
+        <!-- 标题 -->
+        <div class="topTitl">
+            <h2>车辆信息</h2>
+            <hr/>
+            <div class="tptbtns">
+                <div class="oprbtndv">
+                    <input class="oprbtn oprgreenbtn" type="button" value="导出"/>
+                    <input id="selDelbtn" class="oprbtn oprredbtn" type="button" value="删除"/>
+                    <input id="selAllbtn" class="oprbtn" type="button" value="全选"/>
+                    <input id="selBackSelbtn" class="oprbtn" type="button" value="反选"/>
+                    <input id="selCancelbtn" class="oprbtn" type="button" value="取消"/>
+                </div>
+                <a class="tptbtn selectbtn"><i class="icons tptselect"></i>批量选择</a>
+            </div>
+        </div>
+        <!-- 菜单栏 -->
+        <form class="form-inline form-menu">
+            <div class="form-group">
+                <input type="text" class="mnipt" placeholder="请输入车牌号">
+            </div>
+            <div class="form-group">
+                <input type="text" class="mnipt" placeholder="请输入数据源名称">
+            </div>
+            <div class="form-group">
+                <div class="datadv">
+                    <i></i>
+                    <input type="text" onclick="WdatePicker()" placeholder="起始时间">
+                </div>
+                <div class="hline" style="vertical-align:middle;">一</div>
+                <div class="datadv">
+                    <i></i>
+                    <input type="text" onclick="WdatePicker()" placeholder="结束时间">
+                </div>
+            </div>
+            <div class="form-group">
+                <select class="mnipt defaultSel">
+                    <option>请选择地点</option>
+                    <option value="">地点1</option>
+                    <option value="">地点2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="obtn searchbtn">查询</button>
+                <input class="obtn resetbtn" type="reset" value="重置" />
+            </div>
+        </form>
+        <!-- 信息列表 -->
+        <div class="tjlist clear">
+            <dl>
+                <dt>
+                    <div class="tjimgdv">
+                        <img src="./img/car1.jpg"/>
+                        <label class="htzhlb">
+                            <span class="ckbox">
+                                <input type="checkbox" name="itemCk"/>
+                                <i></i>
+                            </span>
+                        </label>
+                    </div>
+                    <p class="tjtitle" title="渝A-30013">
+                        渝A-30013
+                    </p>
+                </dt>
+                <dd>
+                    <p class="tjifp">数据源：
+                        <span class="tjinfo" title="校内车辆">校内车辆</span>
+                    </p>
+                    <p class="tjifp">抓拍地点：
+                        <span class="tjinfo" title="摄像头1">摄像头1</span>
+                    </p>
+                    <p class="tjifp">抓拍时间：
+                        <span class="tjinfo" title="2017-10-09  10:20:30">2017-10-09 10:20:30</span>
+                    </p>
+                    
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <div class="tjimgdv">
+                        <img src="./img/car1.jpg"/>
+                        <label class="htzhlb">
+                            <span class="ckbox">
+                                <input type="checkbox" name="itemCk"/>
+                                <i></i>
+                            </span>
+                        </label>
+                    </div>
+                    <p class="tjtitle" title="渝A-30013">
+                        渝A-30013
+                    </p>
+                </dt>
+                <dd>
+                    <p class="tjifp">数据源：
+                        <span class="tjinfo" title="校内车辆">校内车辆</span>
+                    </p>
+                    <p class="tjifp">抓拍地点：
+                        <span class="tjinfo" title="摄像头1">摄像头1</span>
+                    </p>
+                    <p class="tjifp">抓拍时间：
+                        <span class="tjinfo" title="2017-10-09  10:20:30">2017-10-09 10:20:30</span>
+                    </p>
+                    
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <div class="tjimgdv">
+                        <img src="./img/carno.png"/>
+                        <label class="htzhlb">
+                            <span class="ckbox">
+                                <input type="checkbox" name="itemCk"/>
+                                <i></i>
+                            </span>
+                        </label>
+                    </div>
+                    <p class="tjtitle" title="渝A-30013">
+                        渝A-30013
+                    </p>
+                </dt>
+                <dd>
+                    <p class="tjifp">数据源：
+                        <span class="tjinfo" title="校内车辆">校内车辆</span>
+                    </p>
+                    <p class="tjifp">抓拍地点：
+                        <span class="tjinfo" title="摄像头1">摄像头1</span>
+                    </p>
+                    <p class="tjifp">抓拍时间：
+                        <span class="tjinfo" title="2017-10-09  10:20:30">2017-10-09 10:20:30</span>
+                    </p>
+                    
+                </dd>
+            </dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+            <dl></dl>
+        </div>
+        <!-- 分页 -->
+        <div class="pagegation">
+            <ul>
+                <li>
+                    <a class="curpage">1</a>
+                </li>
+                <li>
+                    <a>2</a>
+                </li>
+                <li>
+                    <a>3</a>
+                </li>
+                <li>
+                    <a>4</a>
+                </li>
+                <li>
+                    <a>5</a>
+                </li>
+                <li>
+                    <a>···</a>
+                </li>
+                <li>
+                    <a>10</a>
+                </li>
+                <li>
+                    <a>11</a>
+                </li>
+                <li>
+                    <a>&gt;</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 遮罩 -->
+    <div class="shade"></div>
+    <!-- 删除 -->
+    <div class="shadeBox" id="delBox">
+        <h2>
+            <i class="sdbxclose" id="delclose"></i>
+            删除
+        </h2>
+        <div class="sdbcont delcont">
+                <i class="sdtipdeli "></i>确认删除所选中信息？
+        </div>
+        <div class="sdbfoot">
+            <input id="delsurn" class="obtn" type="button" value="确认"/>
+            <input id="delcancel" class="obtn obtnBl" type="button" value="取消"/>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $(function(){
+
+            //普通select2初始化
+			$(".defaultSel").select2({
+				//隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 220
+			});
+
+            
+        });
+        
+        var oSelectbtn = $('.selectbtn'), //批量选择按钮
+            oOprbtndv = $('.oprbtndv'), //操作按钮
+            odelBox = $('#delBox');   //删除
+
+        // 批量选择
+        $('.selectbtn').on('click', function(){
+            $(this).hide();
+            oOprbtndv.show();
+            $('.htzhlb', '.tjimgdv').show();
+        });
+
+        // 全选
+        $('#selAllbtn').on('click', function(){
+            $('input[name=itemCk]').prop('checked', true);
+        });
+
+        // 反选
+        $('#selBackSelbtn').on('click', function(){
+            $('input[name=itemCk]').each(function(e){
+                oval = $(this).prop('checked');
+                $(this).prop('checked', !oval);
+            });
+        });
+
+        // 取消批量选择
+        $('#selCancelbtn').on('click', function(){
+            oSelectbtn.show();
+            oOprbtndv.hide();
+            $('.htzhlb', '.tjimgdv').hide();
+            $('input[name=itemCk]').prop('checked', false);
+        });
+
+        // 删除
+        $('#selDelbtn').on('click', function(){
+            ShadeShow(odelBox);
+        });
+
+        //删除分组，确认
+        $('#delsurn').on('click', function(){
+            ShadeClose(odelBox);
+        });
+        //删除分组，取消
+        $('#delcancel').on('click', function(){
+            ShadeClose(odelBox);
+        });
+        // 删除分组，关闭
+        $('#delclose').on('click', function(){
+            ShadeClose(odelBox);
+        });
+
+        // 点击图片跳转到详情
+        $('.tjlist').on('click', 'img', function(e){
+            e.preventDefault();
+            PrtIframeTo('carInfoDetail.html');
+        });
+        
+	</script>
+</body>
+</html>

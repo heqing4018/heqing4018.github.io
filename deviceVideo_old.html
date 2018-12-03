@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>实时视频</title>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/swiper-4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/device.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/swiper-4.3.3/js/swiper.min.js"></script>
+</head>
+<body>
+    <section class="secmain videoSecmain">
+        <!-- 标题 -->
+        <div class="topTitl backTitl">
+            <h2><i class="goBack"></i>实时视频</h2>
+            <hr/>
+        </div>
+        <!-- 视频容器 -->
+        <div class="vdContainer">
+
+        </div>
+        <!-- 日期、时间选择 -->
+        <div class="dttmdv">
+            <!-- 日期选择 -->
+            <div class="dtDv swiper-container">
+                <div class="dtUl swiper-wrapper">
+                    <div class="swiper-slide" self-date="2018-7-9">7/9(星期一)</div>
+                    <div class="swiper-slide" self-date="2018-7-10">7/10(星期二)</div>
+                    <div class="swiper-slide" self-date="2018-7-11">7/11(星期三)</div>
+                    <div class="swiper-slide" self-date="2018-7-12">7/12(星期四)</div>
+                    <div class="swiper-slide" self-date="2018-7-13">7/13(星期五)</div>
+                    <div class="swiper-slide" self-date="2018-7-14">7/14(星期六)</div>
+                    <div class="swiper-slide" self-date="2018-7-15">7/15(星期日)</div>
+                    <div class="swiper-slide" self-date="2018-7-16">7/16(星期一)</div>
+                    <div class="swiper-slide" self-date="2018-7-17">7/17(星期二)</div>
+                    <div class="swiper-slide" self-date="2018-7-18">7/18(星期三)</div>
+                    <div class="swiper-slide" self-date="2018-7-19">7/19(星期四)</div>
+                    <div class="swiper-slide" self-date="2018-7-20">7/20(星期五)</div>
+                    <div class="swiper-slide" self-date="2018-7-21">7/21(星期六)</div>
+                    <div class="swiper-slide" self-date="2018-7-22">7/22(星期日)</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <!-- 时间选择 -->
+            <section class="dragContin" id="dragContin">
+                <div class="tmDv">
+                    <ul class="tmUl">
+                        <li><span class="tmNum">0</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">2</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">4</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">6</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">8</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">10</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">12</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">14</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">16</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">18</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">20</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">22</span></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><span class="tmNum">24</span></li>
+                    </ul>
+                </div>
+                <div class="tmTo" id="draggable">
+                    <i class="tmLine"></i>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script type="text/javascript">
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 7,
+            spaceBetween: 3,
+            slidesPerGroup: 1, //每次翻页挪动的个数
+            slidesOffsetBefore: 45,
+            slidesOffsetAfter: 180,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        $(function() {
+            $( "#draggable" ).draggable({ 
+                axis: "x" ,
+                containment: "#dragContin",
+                //当前是拖拽过程中时刻获取秒数，也可改为拖拽结束后获取
+                // 使用教程 http://www.runoob.com/jqueryui/example-draggable.html
+                drag: function(e) {
+                    var otdw = e.target.offsetLeft; //otdw是拖动的像素值，9是拖动按钮原来偏离的像素值
+                    var osecond = getTm(otdw);
+                    console.log( osecond );
+                    // 当前只是或秒数osecond，比如凌晨1点的时候 秒数是3660 
+                }
+            });
+        });
+
+        // 返回按钮
+        $('.goBack').on('click', function(){
+            parent.$('.main').load('device.html');
+        });
+
+        // 日期往前翻页
+        $('.prebtn').on('click', function(){
+
+        });
+
+        // 日期往后翻页
+        $('.nextbtn').on('click', function(){
+            
+        });
+        
+        // 日期选择
+        $('.dtUl').on('click', 'div', function(){
+            $(this).addClass('curDt');
+            $(this).siblings('div').removeClass('curDt');
+            var odt = $(this).attr('self-date');
+            console.log(odt);
+        });
+
+        // 获取时间点
+        function getTm(x){
+            var ozw = $('.tmUl').outerWidth()-1;  //总长度 ozw px
+            var ozSecond = 24*60*60;    //总秒数时长 ozSecond s
+            var opers = ozSecond/ozw;  //每像素代表秒时长 opers s
+            var ovalSecond = opers*x;
+            return ovalSecond;
+        }
+
+	</script>
+</body>
+</html>

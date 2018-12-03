@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>操作日志</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+</head>
+<body>
+    <section class="secmain">
+        <!-- 标题 -->
+        <div class="topTitl">
+            <h2 >操作日志</h2>
+            <hr/>
+            <div class="tptbtns">
+                <a class="tptbtn importbtn"><i class="icons tptexport"></i>导出日志</a>
+            </div>
+        </div>
+        <!-- 菜单栏 -->
+        <form class="form-inline form-menu">
+            <div class="form-group">
+                <input type="text" class="mnipt" id="" placeholder="请输入账号">
+            </div>
+            <div class="form-group">
+                <select class="mnipt defaultSel">
+                    <option>请选择操作功能</option>
+                    <option value="">功能1</option>
+                    <option value="">功能2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="mnipt defaultSel">
+                    <option>请选择操作结果</option>
+                    <option value="">结果1</option>
+                    <option value="">结果2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div class="datadv">
+                    <i></i>
+                    <input type="text" onclick="WdatePicker()" placeholder="起始时间">
+                </div>
+                <div class="hline" style="vertical-align:middle;">一</div>
+                <div class="datadv">
+                    <i></i>
+                    <input type="text" onclick="WdatePicker()" placeholder="结束时间">
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="obtn searchbtn" type="button" value="查询" />
+                <input class="obtn resetbtn" type="reset" value="重置" />
+            </div>
+        </form>
+        <!-- 数据列表 -->
+        <table class="datatb">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>账号</th>
+                    <th>操作功能</th>
+                    <th>操作内容</th>
+                    <th>操作时间</th>
+                    <th>IP</th>
+                    <th>操作结果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <span class="redDot">失败</span>
+                        <!-- <span class="greenDot">成功</span> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>zhagnsan</td>
+                    <td>车辆统计</td>
+                    <td>更改了紧急状态切换方式</td>
+                    <td>2017-10-10 20.23</td>
+                    <td>255.255.255.255</td>
+                    <td>
+                        <!-- <span class="redDot">失败</span> -->
+                        <span class="greenDot">成功</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pagegation">
+            <ul>
+                <li>
+                    <a class="curpage">1</a>
+                </li>
+                <li>
+                    <a>2</a>
+                </li>
+                <li>
+                    <a>3</a>
+                </li>
+                <li>
+                    <a>4</a>
+                </li>
+                <li>
+                    <a>5</a>
+                </li>
+                <li>
+                    <a>···</a>
+                </li>
+                <li>
+                    <a>10</a>
+                </li>
+                <li>
+                    <a>11</a>
+                </li>
+                <li>
+                    <a>&gt;</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script type="text/javascript">
+
+        $(function(){
+
+            //普通select2初始化
+			$(".defaultSel").select2({
+				//隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 220
+            });
+
+            // select2 赋值
+            //$('#id选择器').val('所要赋的值').trigger("change");
+            
+		});
+	</script>
+</body>
+</html>
