@@ -9,6 +9,10 @@
     font-size: 18px;
     padding: 0 0 15px 10px;
 }
+.cckjlst, .flexsec{
+    display: flex;
+    justify-content: space-between;
+}
 .cckjlst li{
     position: relative;
     float: left;
@@ -41,7 +45,7 @@
     font-size: 32px;
     height: 60px;
     margin: 10px 0 0 0;
-    max-width: 290px;
+    max-width: 95%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;    
@@ -69,13 +73,14 @@
 .cckjlst .li4{
     width: 523px;
     line-height: 65px;
-    padding: 35px 55px 0 65px;
+    padding: 35px 45px 0 50px;
     margin: 0;
 }
 .li4 .rldv{
     float: right;
+    font-size: 24px;
     margin: 0;
-    max-width: 255px;
+    max-width: 150px;
 }
 .li4 .kindv{
     float: left
@@ -84,18 +89,18 @@
     margin: 20px 0 0 0;
 }
 .sec3lft, .sec3rt{
-    float: left;
+    /* float: left; */
     height: 455px;
     padding: 20px 20px 0 20px;
     background: #27282E;
     overflow: hidden;
 }
 .sec3lft{
-    width: 1070px;
+    width: 65%;
     margin: 0 25px 0 0;
 }
 .sec3rt{
-    width: 523px;
+    width: 35%;
 }
 .secTitl{
     font-size: 16px;
