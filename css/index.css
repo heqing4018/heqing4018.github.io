@@ -228,6 +228,9 @@ html,body{
     left: 200px;
     right: 0;
     bottom: 0;
-    border-top: 1px solid #32353E;
+    padding: 0 20px;
     background: #1F2024;
+}
+.footer p{
+    border-top: 1px solid #32353E;
 }
