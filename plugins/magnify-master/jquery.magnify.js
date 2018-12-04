@@ -567,7 +567,7 @@ Magnify.prototype = {
     // Fixed modal position bug
     if (!$('.magnify-modal').length && this.options.fixedContent) {
 
-      $('html').css({ 'overflow': 'hidden' });
+    //   $('html').css({ 'overflow': 'hidden' }); //20181204,hqq注释掉（车辆详情页面需要滚动条）
 
       if (hasScrollbar()) {
         var scrollbarWidth = getScrollbarWidth();
