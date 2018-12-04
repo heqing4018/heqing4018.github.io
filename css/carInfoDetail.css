@@ -1,35 +1,37 @@
 .secmain{
     background: transparent;
     border-color: transparent;
-    padding: 0;
+    /* padding: 0; */
 }
 .mncont{
-    padding: 30px 20px 0;
+    padding: 10px 20px 0;
 }
 .mncleft{
-    float: left;
-    width: 400px;
+    /* float: left; */
+    width: 980px;
 }
 .mncleft p{
+    width: 33%;
+    float: left;
     color: #a8a8b2;
+    padding: 0 20px 0 0;
     line-height: 35px;
 }
 .davalue{
     color: #e0e0e0;
     display: inline-block;
     float: right;
-    max-width: 200px;
+    max-width: 190px;
     overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 .cldadv{
-    height: 550px;
-    margin: 0 0 45px 0;
+    margin: 0 0 35px 0;
     border: 1px solid #393C47;
     position: relative;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 40px;
     border-radius: 2px;
 }
 .tglsdv{
@@ -47,12 +49,11 @@
     padding: 0 5px;
 }
 .mncright{
-    float: left;
+    /* float: left; */
     width: 980px;
     height: 550px;
     border-radius: 2px;
     overflow: hidden;
-    margin: 0 0 0 70px;
     border: 1px solid #393C47;
 }
 .itembtndv{
