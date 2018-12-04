@@ -2,14 +2,12 @@
     position: relative;
     width: 100%;
     height: 100%;
-    min-width: 1600px;
-    min-height: 780px;
-    padding: 220px 0 0 0;
+    min-width: 1366px;
+    padding: 10% 0 0 0;
     background: #1F2028 url('../img/lgbg.png') left bottom no-repeat;
 }
 .loginOutoer{
     width: 380px;
-    height: 500px;
     margin: 0 auto;
 }
 .sysName{
