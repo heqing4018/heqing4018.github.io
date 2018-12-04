@@ -259,7 +259,12 @@
             };
             
             OsjzzChart.setOption(optionSjzz); //数据增长概览,图表加载数据
-			Occkjchart.setOption(optionCckj);  //存储空间概览，加载数据
+            Occkjchart.setOption(optionCckj);  //存储空间概览，加载数据
+            
+            window.onresize=function(){  
+                OsjzzChart.resize();
+                Occkjchart.resize();
+		    }
         });
 	</script>
 </body>
