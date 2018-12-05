@@ -3,18 +3,18 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>实时视频</title>
-    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/css/jquery-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="plugins/swiper-4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/device.css">
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script language="javascript" type="text/javascript" src="plugins/swiper-4.3.3/js/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/deviceVideo.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/public.js"></script>
 </head>
 <body>
-    <section class="secmain videoSecmain">
+    <section class="secmain">
         <!-- 标题 -->
         <div class="topTitl backTitl">
             <label class="htzhlb" for="refresh">
@@ -37,37 +37,24 @@
                         <img src="./img/car1.jpg"/>
                     </div>
                     <div class="dvcimginfo">
-                        <p>
+                        <p class="infotlt">
                             <span style="float:right;">京A12345</span>
                             <span style="color:#909099;">设备名称：</span>
-                            会议室摄像头
+                            <span class="dvcname" title="会议室摄像头">会议室摄像头</span>
                         </p>
-                        <div class="tbldv">
-                            <table>
-                                <tr>
-                                    <td class="dvctitle w40">车型：</td>
-                                    <td class="w90">轿车</td>
-                                    <td class="dvctitle w40">品牌：</td>
-                                    <td class="w90">长安</td>
-                                    <td class="dvctitle">抓拍时间：</td>
-                                    <td>2017-10-29 10:37:37</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td class="dvctitle">颜色：</td>
-                                    <td>白</td>
-                                    <td class="dvctitle">车款：</td>
-                                    <td>Z系列</td>
-                                    <td class="dvctitle">抓拍地点：</td>
-                                    <td><span class="maxW180">北京市海淀区花园东路15号</span></td>
-                                </tr>
-                            </table>
+                        <div class="tbldv clear">
+                            <p class="dvctitle">车辆车型：<span class="dvcval">轿车测试测试</span></p>
+                            <p class="dvctitle">车辆品牌：<span class="dvcval">长安</span></p>
+                            <p class="dvctitle wdtlt">抓拍时间：<span class="dvcval wdval">2017-10-29 10:37:37</span></p>
+                            <p class="dvctitle">车辆颜色：<span class="dvcval">白</span></p>
+                            <p class="dvctitle">车辆类别：<span class="dvcval">Z系列</span></p>
+                            <p class="dvctitle wdtlt">抓拍地点：<span class="dvcval wdval">北京市海淀区花园东路15号</span></p>
                         </div>
                     </div>
-                    <div class="dvcmenu">
+                    <!-- <div class="dvcmenu">
                         <a class="preitem">上一条</a>
                         <a class="nextitem">下一条</a>
-                    </div>
+                    </div> -->
                 </div>
             </section>
             <section class="sec5">
@@ -118,7 +105,7 @@
                             <p>2017-11-01 19：02：02</p>
                         </div>
                     </li>
-                    <li>
+                    <!-- <li>
                         <div class="imgdv">
                             <img src="./img/car1.jpg" />
                         </div>
@@ -126,7 +113,7 @@
                             <p class="imgcarid">京A12034</p>
                             <p>2017-11-01 19：02：02</p>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </section>
         <div>
