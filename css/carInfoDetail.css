@@ -1,7 +1,7 @@
 .secmain{
     background: transparent;
     border-color: transparent;
-    /* padding: 0; */
+    padding-bottom: 30px;
 }
 .mncont{
     padding: 10px 20px 0;
@@ -17,14 +17,16 @@
     padding: 0 20px 0 0;
     line-height: 35px;
 }
-.davalue{
+.davalue{    
     color: #e0e0e0;
     display: inline-block;
-    float: right;
+    vertical-align: middle;
+    margin: -4px 0 0 0;
+    padding: 0 0 0 5px;
     max-width: 190px;
     overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .cldadv{
     margin: 0 0 35px 0;
