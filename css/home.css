@@ -45,7 +45,7 @@
     font-size: 32px;
     height: 60px;
     margin: 10px 0 0 0;
-    max-width: 95%;
+    max-width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;    
@@ -175,4 +175,22 @@
     width: 25%;
     height: 50px;
     border: 1px solid #1F2024;
+}
+
+@media (max-width: 1700px) {
+    .tohide{
+        display: none;
+    }
+    .dvbox .scmndv img{
+        display: block;
+        margin: 0 auto;
+    }
+    .infolist{
+        display: block;
+        margin: 20px auto 0;
+    }
+    .dvbox .scmndv{
+        height: 400px;
+        padding: 25px 43px;
+    }
 }
