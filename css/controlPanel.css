@@ -5,6 +5,8 @@ html,body{
     max-width: 1920px !important;
     min-width: 1366px !important;
     /* overflow: hidden; */
+    overflow: hidden;
+    overflow-y: auto;
     background:#0B0B38;
 }
 .outer{
