@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>新建派出所</title>
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/orgManage_add.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="orgManage.html">机构管理</a>
+                <a href="orgManage_add.html">/ 新建派出所</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p><i class="goBack"></i>新建派出所</p>
+            </div>
+            <div class="contBox">
+                <section class="infoSec">
+                    <div class="seCont">
+                        <table class="basicInfo">
+                            <tr>
+                                <td>所属市局:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <a class="mngbtn" id="cityLevelBtn">市局管理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>所属分局:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <a class="mngbtn" id="substationBtn">分局管理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>派出所名称:</td>
+                                <td>
+                                    <input id="hotelId" class="bckipt" type="text" />
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>服务电话:</td>
+                                <td>
+                                    <input id="hotelId" class="bckipt" type="text" />
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <div class="btndv">
+                    <button id="saveInfo" class="obtn">保存</button>
+                    <button class="obtn obtnBl">取消</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 遮罩  style="display:block"-->
+    <div class="shade"></div>
+    <!-- 市局管理 -->
+    <div class="shadeBox infoCard" id="cityLevelBox">
+        <h2>
+            <i class="sdbxclose" id="cityLevelclose"></i>
+            市局管理
+        </h2>
+        <div class="ifcont">
+            <div class="inftop">
+                <div class="searchDv">
+                    <input class="seaript" type="text" placeholder="请输入市局名称" />
+                    <i class="seari">添加</i>
+                </div>
+            </div>
+            <div class="tbdv">
+                <div class="tbtitle clear">
+                    <span class="cell">序号</span>
+                    <span class="cell">市局名称</span> 
+                    <span class="cell">操作</span>  
+                </div>
+                <ul class="dvclist">
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">1</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">2</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">3</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">4</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">5</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">6</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">7</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">8</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sdbfoot">
+            <input id="cityLevelsurn" class="obtn" type="button" value="确定">
+            <input id="cityLevelcancel" class="obtn obtnBl" type="button" value="取消">
+        </div>
+    </div>
+    <!-- 分局管理 -->
+    <div class="shadeBox infoCard" id="substationBox">
+        <h2>
+            <i class="sdbxclose" id="substationclose"></i>
+            分局管理
+        </h2>
+        <div class="ifcont">
+            <div class="inftop">
+                <div class="topleft">
+                    <select class="boxSel">
+                        <option>所属市局</option>
+                        <option>市局1</option>
+                        <option>市局2</option>
+                    </select>
+                </div>
+                <div class="searchDv">
+                    <input class="seaript" type="text" placeholder="请输入分局名称" />
+                    <i class="seari">添加</i>
+                </div>
+            </div>
+            <div class="tbdv">
+                <div class="tbtitle clear">
+                    <span class="cell">序号</span>
+                    <span class="cell">市局名称</span> 
+                    <span class="cell">分局名称</span> 
+                    <span class="cell">操作</span>  
+                </div>
+                <ul class="dvclist">
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">1</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">2</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">3</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">4</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">5</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">6</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">7</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">8</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="clear dvcitem">
+                        <label>
+                            <span class="cell">9</span>
+                            <span class="cell">重庆市公安局</span>
+                            <span class="cell">南岸分局</span>
+                            <span class="cell">
+                                <a class="tblbtn delico">删除</a>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sdbfoot">
+            <input id="substationsurn" class="obtn" type="button" value="确定">
+            <input id="substationcancel" class="obtn obtnBl" type="button" value="取消">
+        </div>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
+    <script type="text/javascript">
+
+        $(function(){
+
+            //普通select2初始化
+            $(".defaultSel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 340
+            });
+
+            //普通select2初始化
+            $(".boxSel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 200
+            });
+
+            // select2 赋值
+            //$('#id选择器').val('所要赋的值').trigger("change");
+            
+        });
+
+        //返回
+        $('.goBack').on('click', function(e){
+            PrtIframeTo('orgManage.html');
+        });
+        
+
+        var ocityLevelBox = $('#cityLevelBox'), //市局管理
+            osubstationBox = $('#substationBox'); //分局管理
+
+        // 市局管理--------------------------------
+        $('#cityLevelBtn').on('click', function(){
+            ShadeShow(ocityLevelBox);
+        });
+
+        //市局管理,关闭
+        $('#cityLevelclose').on('click', function(){
+            ShadeClose(ocityLevelBox);
+        });
+
+        //市局管理,确定
+        $('#cityLevelsurn').on('click', function(){
+            ShadeClose(ocityLevelBox);
+        });
+
+        //市局管理,取消
+        $('#cityLevelcancel').on('click', function(){
+            ShadeClose(ocityLevelBox);
+        });
+
+        // 分局管理-----------------------
+        $('#substationBtn').on('click', function(){
+            ShadeShow(osubstationBox);
+        });
+
+        //分局管理,关闭
+        $('#substationclose').on('click', function(){
+            ShadeClose(osubstationBox);
+        });
+
+        //分局管理,确定
+        $('#substationsurn').on('click', function(){
+            ShadeClose(osubstationBox);
+        });
+
+        //分局管理,取消
+        $('#substationcancel').on('click', function(){
+            ShadeClose(osubstationBox);
+        });
+
+    </script>
+</body>
+</html>

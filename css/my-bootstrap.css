@@ -10,24 +10,12 @@
     width: 90px;
     background: #1492FF;
     padding: 0;
-    margin: 0 0 0 5px;
-}
-.btn-default{
-    color: #1492FF;
-    background: transparent;
-    border: 1px solid #1492FF;
-    margin: 0 0 0 30px;
 }
 .btn.active, .btn:active{
     /* background-image:none;删除了此项 */
 }
 .btn.focus, .btn:focus, .btn:hover{
     color: #fff;
-}
-.btn-default:hover{
-    color: #1492FF;
-    background-color: transparent;
-    border-color: #1492FF;
 }
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
     outline: none;
@@ -51,15 +39,12 @@
 .table>thead>tr>th{
     border-top: 0;
 }
-th{
-    text-align: center;
-}
 .form-control{
     height: 38px;
     color: #c0c0cc;
     font-size: 12px;
-    background-color: #2E2E38;
-    border: 1px solid #2E2E38;
+    background-color: #222642;
+    border: 1px solid #222642;
     border-radius: 0px;
     float: auto;
     display: inline-block;
@@ -76,6 +61,9 @@ a:focus, a:hover{
 .h1, .h2, .h3, h1, h2, h3{
     margin-top: 0;
     margin-bottom: 0;
+}
+a:focus, a:visited, a:active{
+    outline: none;
 }
 p{
     margin: 0;
@@ -113,21 +101,4 @@ input[type=checkbox], input[type=radio]{
 .col-xs-7, .col-xs-8, .col-xs-9{
     padding-right: 0;
     padding-left: 0;
-}
-hr{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-/* placeholder颜色 */
-input.form-control::-webkit-input-placeholder{
-    color:#c0c0cc;
-}
-input.form-control::-moz-placeholder{   /* Mozilla Firefox 19+ */
-    color:#c0c0cc;
-}
-input.form-control:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-    color:#c0c0cc;
-}
-input.form-control:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-    color:#c0c0cc;
 }

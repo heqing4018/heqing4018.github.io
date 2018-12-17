@@ -1,0 +1,89 @@
+.secmain{
+    padding-bottom: 0;
+}
+.contBox{
+    padding: 40px 0 0 50px;
+}
+.secondStep{
+    width: 580px;
+}
+.grzxifp{
+    margin: 0 0 30px 0;
+}
+.grzxTbl{
+    width: 100%;
+    text-align: left;
+    margin: 0 0 15px 0;
+}
+.grzxTbl tr:last-child{
+    border: none;
+}
+.grzxTbl:last-child{
+    margin-bottom: 0;
+}
+.grzxTbl td{
+    height: 50px;
+}
+.grzxTbl td:nth-child(2n+1){
+    width: 180px;
+}
+.grzxTbl td:nth-child(2n){
+    text-align: right;
+}
+.grzxTbl .htzhlb{
+    margin: 0 0 0 30px;
+}
+.infoTblitl{
+    width: 100%;
+    margin: 0 0 80px 0;
+}
+.infoTblitl td{
+    width: 33%;
+    height: 40px;
+    padding: 0 0 0 15px;
+    border: 1px solid #ebebeb;
+}
+.infoTblitl .rtbkipt{
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    background: transparent;
+    border: none;
+}
+.infoTblitl td:last-child{
+    position: relative;
+}
+.infoTblitl .oprdv{
+    position: absolute;
+    right: -45px;
+    top: 12px;
+}
+.tsi{
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.tsdel{
+    background: url('../img/del2.png') no-repeat center;
+}
+.tsadd{
+    background: url('../img/add2.png') no-repeat center;
+}
+.w210{
+    width: 210px;
+}
+.ifospan{
+    width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.btndv .obtn{
+    width: 120px;
+    height: 40px;
+    line-height: 38px;
+    margin: 0 30px 0 0;
+}

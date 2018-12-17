@@ -1,33 +1,53 @@
-/* 个人中心样式 */
-.grzxtbl{
-    margin: 30px 0 0 20px;
+.contBox{
+    padding: 35px 40px;
 }
-.grzxtbl td{
-    height: 45px;
+.infoSec{
+    margin: 0 0 30px 0;
 }
-#zhinfo{
+.seCont{
+    padding: 15px 0 0 0;
+}
+.titlp{
+    font-size: 16px;
+}
+.basicInfo{
+    margin: 10px 0 0 40px;
+}
+.basicInfo td{
+    height: 50px;
+}
+.basicInfo td:first-child{
+    color: #666;
+    width: 90px;
+}
+.bckipt{
     width: 340px;
+    height: 34px;
+    border: 1px solid #E6E8EB;
+    border-radius: 3px;
+    background: #FCFDFF;
 }
-#editpwd td:last-child, #zhinfo td:last-child{
-    padding: 0 0 0 10px;
+.bckipt:read-only{
+    background: #F5F5F5;
+    border-color: #F5F5F5;
 }
-.grzxtbl input{
-    width: 260px;
-    height: 32px;
-    line-height: 32px;
-    border: 1px solid #2E2E38;
+.mngbtn{
+    color: #1492ff;
+    margin: 0 0 0 30px;
+    cursor: pointer;
 }
-.grzxsel{
-    width: 260px;
-    height: 32px;
-    line-height: 32px;
-    border: 1px solid #2E2E38;
+
+.btndv{
+    padding: 20px 0 0 45px;
 }
-.grzxtbl .obtn{
-    width: 140px;
-    margin: 30px 0 0 0;
+.btndv .obtn{
+    width: 120px;
+    height: 38px;
+    line-height: 36px;
+    margin: 0 30px 0 0;
 }
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #2E2E38 inset;  /* 背景填充颜色 */
-    -webkit-text-fill-color: #c0c0cc;  /* 字体颜色 */
+.select2-container--default .select2-selection--single{
+    height: 34px;
+    background: #FCFDFF;
+    border: 1px solid #E6E8EB;
 }

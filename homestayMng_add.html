@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>添加民宿</title>
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/homestayMng_edit.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>  
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="homestayMng.html">民宿管理</a>
+                <a href="homestayMng_add.html">/ 添加民宿</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p><i class="goBack"></i>添加民宿</p>
+            </div>
+            <div class="contBox">
+                <section class="infoSec">
+                    <p class="infoTitl">基本信息</p>
+                    <div class="seCont">
+                        <table class="basicInfo policeInfo">
+                            <tr>
+                                <td>民宿ID:</td>
+                                <td>
+                                    <!-- ID自动生成，不可更改 -->
+                                    <input id="" class="dftipt" type="text" value="SK-123456789"  readonly/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>民宿名称:</td>
+                                <td>
+                                    <input id="" class="dftipt" type="text" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>所在地区:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>详细地址:</td>
+                                <td>
+                                    <textarea class="dftxtar"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section class="infoSec">
+                    <p class="infoTitl">绑定派出所</p>
+                    <div class="seCont">
+                        <table class="basicInfo policeInfo">
+                            <tr>
+                                <td>所属市局:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>所属分局:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>所属派出所:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>详细地址:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <div class="btndv">
+                    <input class="obtn" type="button" value="保存" />
+                    <input class="obtn obtnBl" type="button" value="取消" />
+                </div>
+            </div>
+        </section>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
+    <script type="text/javascript">
+
+        $(function(){
+
+            //普通select2初始化
+            $(".defaultSel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 340
+            });
+
+            // select2 赋值
+            //$('#id选择器').val('所要赋的值').trigger("change");
+            
+        });
+
+
+        //返回
+        $('.goBack').on('click', function(e){
+            PrtIframeTo('homestayMng.html');
+        });
+
+    </script>
+</body>
+</html>

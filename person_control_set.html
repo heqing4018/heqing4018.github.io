@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>布控设置</title>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/person_control_set.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/magnify-master/jquery.magnify.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="person_control.html">人员布控</a>
+                <a href="#">/ 布控设置</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p><i class="goBack"></i>设置</p>
+            </div>
+            <div class="contBox clear">
+                <div class="secondStep">
+                    <table class="grzxTbl">
+                        <tr>
+                            <td><span class="cerclyl bluebf">布控警报推送方式：</span></td>
+                            <td>
+                                <label class="htzhlb">
+                                    <span class="ckbox">
+                                        <input type="checkbox" name="tstypeck" >
+                                        <i></i>
+                                    </span>微信
+                                </label>
+                                <label class="htzhlb">
+                                    <span class="ckbox">
+                                        <input type="checkbox" name="tstypeck" checked>
+                                        <i></i>
+                                    </span>邮件
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="grzxifp">
+                        <span class="bluebf">布控警报推送人：</span>
+                    </p>
+                    <table class="infoTblitl">
+                        <tr>
+                            <td>姓名</td>
+                            <td>手机号</td>
+                            <td>邮箱号
+                                <div class="oprdv">
+                                    <i class="tsadd tsi"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="rtbkipt" name="" value="张三" /></td>
+                            <td><input class="rtbkipt" name="" value="12569875428" /></td>
+                            <td><input class="rtbkipt" name="" value="12569875428@qq.com" />
+                                <div class="oprdv">
+                                    <i class="tsdel tsi"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="rtbkipt" name="" value="张三" /></td>
+                            <td><input class="rtbkipt" name="" value="12569875428" /></td>
+                            <td><input class="rtbkipt" name="" value="12569875428@qq.com" />
+                                <div class="oprdv">
+                                    <i class="tsdel tsi"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btndv">
+                        <input class="obtn surebtn" type="button" value="确定">
+                        <input class="obtn obtnBl cancelbtn" type="button" value="取消">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
+    <!-- 遮罩 -->
+    <div class="shade"></div>
+    <script type="text/javascript">
+
+        //返回
+        $('.goBack').on('click', function(e){
+            PrtIframeTo('person_control.html');
+        });
+
+        // 添加
+        $('.infoTblitl').on('click', '.tsadd', function(){
+            var otr = '<tr>\
+                            <td><input class="rtbkipt" name="" value="" /></td>\
+                            <td><input class="rtbkipt" name="" value="" /></td>\
+                            <td><input class="rtbkipt" name="" value="" />\
+                                <div class="oprdv">\
+                                    <i class="tsdel tsi"></i>\
+                                </div>\
+                            </td>\
+                        </tr>';
+            $('.infoTblitl').append(otr);
+        });
+
+        // 删除
+        $('.infoTblitl').on('click', '.tsdel', function(){
+            $(this).closest('tr').remove();
+        });
+        
+
+    </script>
+</body>
+</html>

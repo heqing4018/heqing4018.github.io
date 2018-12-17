@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>异常抓拍</title>
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="#">异常抓拍</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p>异常抓拍</p>
+            </div>
+            <div class="contBox">
+                <!-- 菜单栏 -->
+                <table class="menutb">
+                    <tr>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入旅店名称">
+                        </td>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入所有者姓名">
+                        </td>
+                        <td class="wmntd">
+                            <select class="mnipt defaultSel">
+                                <option>请选择所属市局</option>
+                                <option value="">市局1</option>
+                                <option value="">市局2</option>
+                            </select>
+                        </td>
+                        <td class="wmntd">
+                                <select class="mnipt defaultSel">
+                                    <option>请选择所属分局</option>
+                                    <option value="">分局1</option>
+                                    <option value="">分局2</option>
+                                </select>
+                            </td>
+                        <td class="wmntd">
+                            <select class="mnipt defaultSel">
+                                <option>请选择所属派出所</option>
+                                <option value="">派出所1</option>
+                                <option value="">派出所2</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wmntd">
+                                <select class="mnipt defaultSel">
+                                    <option>请选择异常类别</option>
+                                    <option value="">异常1</option>
+                                    <option value="">异常2</option>
+                                </select>
+                            </td>
+                        <td>
+                            <input class="obtn searchbtn" type="button" value="查询">
+                            <input class="obtn resetbtn" type="reset" value="重置">
+                        </td>
+                    </tr>
+                </table>
+                <!-- 数据列表 -->
+                <table class="datatb">
+                    <thead>
+                        <tr>
+                            <th class="wNumid">序号</th>
+                            <th>旅馆名称</th>
+                            <th>异常类别</th>
+                            <th>地址</th>
+                            <th>所有者</th>
+                            <th>联系电话</th>
+                            <th>所属市局</th>
+                            <th>所属分局</th>
+                            <th>所属派出所</th>
+                            <th>最近提交时间</th>
+                            <th class="w150">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>齐家大院</td>
+                            <td>抓拍时间异常</td>
+                            <td>重庆市南岸区广福大道</td>
+                            <td>张三</td>
+                            <td>13698547896</td>
+                            <td>重庆市</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>2017-10-10 20:23:23</td>
+                            <td><a class="tblbtn ckdetailico">抓拍详情</a></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <!-- 无数据时的占位图 -->
+                <!-- <div class="nodatadv"> 
+                    暂无数据
+                </div> -->
+                <!-- 分页 -->
+                <div class="pagegation">
+                    <ul>
+                        <li>
+                            <a class="curpage">1</a>
+                        </li>
+                        <li>
+                            <a>2</a>
+                        </li>
+                        <li>
+                            <a>3</a>
+                        </li>
+                        <li>
+                            <a>4</a>
+                        </li>
+                        <li>
+                            <a>5</a>
+                        </li>
+                        <li>
+                            <a>···</a>
+                        </li>
+                        <li>
+                            <a>10</a>
+                        </li>
+                        <li>
+                            <a>11</a>
+                        </li>
+                        <li>
+                            <a>&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
+    <script>
+        
+        $(function(){
+
+            //普通select2初始化
+            $(".defaultSel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 210
+            });
+           
+        });  
+
+
+        //查看
+        $('.datatb').on('click', '.ckdetailico', function(){
+            PrtIframeTo('unusual_detail.html');
+        });
+        
+    </script>
+</body>
+</html>

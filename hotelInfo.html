@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>旅馆资料管理</title>
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="#">旅馆资料管理</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p>旅馆资料管理</p>
+                <div class="tptbtns">
+                    <!-- <a class="tptbtn importbtn"><i class="icons tptimport"></i>导入酒店资料</a> -->
+                    <a class="tptbtn addbtn"><i class="icons tptadd"></i>添加旅馆</a>
+                </div>
+            </div>
+            <div class="contBox">
+                <!-- 菜单栏 -->
+                <table class="menutb">
+                    <tr>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入旅馆名称">
+                        </td>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入所有者姓名">
+                        </td>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入酒店ID">
+                        </td>
+                        <td>
+                            <input class="obtn searchbtn" type="button" value="查询" />
+                            <input class="obtn resetbtn" type="reset" value="重置" />
+                        </td>
+                    </tr>
+                </table>
+                <!-- 数据列表 -->
+                <table class="datatb">
+                    <thead>
+                        <tr>
+                            <th class="wNumid">序号</th>
+                            <th>旅馆ID</th>
+                            <th>旅馆名称</th>
+                            <th>地址</th>
+                            <th>所有者</th>
+                            <th>所属分组</th>
+                            <th>所属派出所</th>
+                            <th>所属分局</th>
+                            <th>旅馆状态</th>
+                            <th>提交日期</th>
+                            <th class="w180">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>SK2-9378767</td>
+                            <td>张家大院</td>
+                            <td>牡丹园花园路10号</td>
+                            <td>张三</td>
+                            <td>南坪商业大厦</td>
+                            <td>南坪派出所</td>
+                            <td>南岸分局</td>
+                            <td><span class="greenFt">营业中</span></td>
+                            <td>2017-10-10 20:23:23</td>
+                            <td>
+                                <a class="tblbtn ckdetailico">查看</a>
+                                <a class="tblbtn freezeico">冻结</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>SK2-9378767</td>
+                            <td>张家大院</td>
+                            <td>牡丹园花园路10号</td>
+                            <td>张三</td>
+                            <td>南坪商业大厦</td>
+                            <td>南坪派出所</td>
+                            <td>南岸分局</td>
+                            <td><span class="orgFt">已冻结</span></td>
+                            <td>2017-10-10 20:23:23</td>
+                            <td>
+                                <a class="tblbtn ckdetailico">查看</a>
+                                <a class="tblbtn nofreezeico">解冻</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 无数据时的占位图 -->
+                <!-- <div class="nodatadv"> 
+                    暂无数据
+                </div> -->
+                <!-- 分页 -->
+                <div class="pagegation">
+                    <ul>
+                        <li>
+                            <a class="curpage">1</a>
+                        </li>
+                        <li>
+                            <a>2</a>
+                        </li>
+                        <li>
+                            <a>3</a>
+                        </li>
+                        <li>
+                            <a>4</a>
+                        </li>
+                        <li>
+                            <a>5</a>
+                        </li>
+                        <li>
+                            <a>···</a>
+                        </li>
+                        <li>
+                            <a>10</a>
+                        </li>
+                        <li>
+                            <a>11</a>
+                        </li>
+                        <li>
+                            <a>&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 遮罩 -->
+    <div class="shade"></div>
+    <!-- 冻结 -->
+    <div class="shadeBox" id="freezBox">
+        <h2>
+            <i class="sdbxclose" id="freezclose"></i>
+            冻结
+        </h2>
+        <div class="sdbcont delcont" style="width: 540px;">
+            <i class="sdtipfreezi "></i>是否冻结酒店，以及相关人员账号使用？
+        </div>
+        <div class="sdbfoot">
+            <input id="freezsurn" class="obtn" type="button" value="确认"/>
+            <input id="freezcancel" class="obtn obtnBl" type="button" value="取消"/>
+        </div>
+    </div>
+    <!-- 解冻 -->
+    <div class="shadeBox" id="freeznoBox">
+        <h2>
+            <i class="sdbxclose" id="freeznoclose"></i>
+            解冻
+        </h2>
+        <div class="sdbcont delcont" style="width: 540px;">
+            <i class="sdtipfreeznoi "></i>是否解冻酒店，以及相关人员账号使用？
+        </div>
+        <div class="sdbfoot">
+            <input id="freeznosurn" class="obtn" type="button" value="确认"/>
+            <input id="freeznocancel" class="obtn obtnBl" type="button" value="取消"/>
+        </div>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
+    <script type="text/javascript">
+
+        $(function(){
+
+            //表头select2初始化
+            $(".dtsel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 100
+            });
+
+            // select2 赋值
+            //$('#id选择器').val('所要赋的值').trigger("change");
+            
+        });
+
+        //添加旅馆
+        $('.addbtn').on('click', function(){
+            PrtIframeTo('hotelInfo_add.html');
+        });
+
+        //查看
+        $('.datatb').on('click', '.ckdetailico', function(){
+            PrtIframeTo('hotelInfo_edit.html');
+        });
+
+        var ofreezBox = $('#freezBox'),     //冻结
+            ofreeznoBox = $('#freeznoBox');   //解冻
+
+        //冻结--------------------------------------
+        $('.datatb').on('click', '.freezeico', function(){
+            ShadeShow(ofreezBox);
+        });
+        //冻结，确认
+        $('#freezsurn').on('click', function(){
+            ShadeClose(ofreezBox);
+        });
+        //冻结，取消
+        $('#freezcancel').on('click', function(){
+            ShadeClose(ofreezBox);
+        });
+        //冻结，关闭
+        $('#freezclose').on('click', function(){
+            ShadeClose(ofreezBox);
+        });
+
+        //解冻--------------------------------------
+        $('.datatb').on('click', '.nofreezeico', function(){
+            ShadeShow(ofreeznoBox);
+        });
+        //解冻，确认
+        $('#freeznosurn').on('click', function(){
+            ShadeClose(ofreeznoBox);
+        });
+        //解冻，取消
+        $('#freeznocancel').on('click', function(){
+            ShadeClose(ofreeznoBox);
+        });
+        //解冻，关闭
+        $('#freeznoclose').on('click', function(){
+            ShadeClose(ofreeznoBox);
+        });
+
+    </script>
+</body>
+</html>

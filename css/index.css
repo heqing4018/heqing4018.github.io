@@ -4,48 +4,18 @@ html,body{
     overflow-y: hidden;
     min-width: 1366px !important;
 }
-/* 头部 */
+body{
+    padding-bottom: 0;
+}
 .logo{
-    /* width: 94px;
+    width: 94px;
     height: 28px;
     display: inline-block;
     background: url('../img/logo.png') center no-repeat;
     vertical-align: middle;
-    margin: -3px 10px 0 20px; */
+    margin: -3px 10px 0 20px;
 }
-.user_ico{
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    background-image: url('../img/admin.png');
-    vertical-align: middle;
-    margin: 0 5px 0 0;
-}
-.exit-btn{
-    color: #ccc;
-    line-height: 20px;
-    /* margin: 0 30px; */
-}
-.exit_ico{
-    width: 18px;
-    height: 14px;
-    display: inline-block;
-    background-position: -15px -325px;
-    vertical-align: middle;
-}
-.hd-right img{
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin: 0 3px 0 0;
-}
-.hd-right ul{
-    float: left;
-}
-.hd-right li{
-    line-height: 20px;
-    float: left;
-}
+
 /* 左侧菜单 */
 .left-bar{
     position: fixed;
@@ -55,13 +25,12 @@ html,body{
     z-index: 1;
     color: #a8a8b2;
     width: 200px;
-    background: #27282E;
+    background: #1F2126;
 }
 .left-bar a{
     color: #a8a8b2;
 }
 .lb-listinner a{
-    cursor: pointer;
     color: #a8a8b2;
 }
 .left-bar li{
@@ -113,62 +82,89 @@ html,body{
 /* ------------------------------------ */
 .lbl-icon{
     width: 14px;
-    height: 16px;
+    height: 14px;
     display: inline-block;
-    background:url('../img/leftbar.png') no-repeat;
+    background:url('../img/lft_bar.png') no-repeat;
     vertical-align: middle;
     margin: -1px 5px 0 0;
 }
-.lbl-sy{
-    background-position: -128px -20px;
+.lbl-lgrl{
+    margin: -2px 5px 0 0;
+    background:url('../img/lft_bar/lft_claim.png') no-repeat;
 }
-.lb-listouter li:hover .lbl-sy{
-    background-position: -20px -77px;
+.left-bar .curli .lbl-lgrl{
+    background:url('../img/lft_bar/lft_claim2.png') no-repeat;
 }
-.left-bar .curli .lbl-sy{
-    background-position: -20px -77px;
+.lb-listouter li:hover .lbl-lgrl{
+    background:url('../img/lft_bar/lft_claim2.png') no-repeat;
 }
-.lbl-xtjk{
-    background-position: -74px -184px;
+.lbl-yclg{
+    margin: -2px 5px 0 0;
+    background:url('../img/lft_bar/lft_yclg.png') no-repeat;
 }
-.lbl-sjll{
-    background-position: -182px -184px;
+.left-bar .curli .lbl-yclg{
+    background:url('../img/lft_bar/lft_yclg2.png') no-repeat;
 }
-.lbl-yygl{
-    background-position: -74px -77px;
+.lbl-xxtz{
+    margin: -2px 5px 0 0;
+    background:url('../img/lft_bar/lft_msg.png') no-repeat;
 }
-.lb-listouter li:hover .lbl-yygl{
-    background-position: -128px -77px;
+.left-bar .curli .lbl-xxtz{
+    background:url('../img/lft_bar/lft_msg2.png') no-repeat;
 }
-.left-bar .curli .lbl-yygl{
-    background-position: -128px -77px;
+.lb-listouter li:hover .lbl-xxtz{
+    background:url('../img/lft_bar/lft_msg2.png') no-repeat;
 }
-.lbl-sjygl{
-    background-position: -182px -20px;
+.lbl-rzmk{
+    background-position: -78px -10px;
 }
-.lbl-ddgl{
-    background-position: -20px -20px;
+.left-bar .curli .lbl-rzmk{
+    background-position: -10px -45px;
 }
-.lbl-xtpz{
-    background-position: -128px -131px;
+.lbl-zkjk{
+    height: 11px;
+    background-position: -10px -79px;
 }
-.lbl-xtgl{
-    background-position: -20px -131px;
+.left-bar .curli .lbl-zkjk{
+    background-position: -44px -79px;
+}
+.lbl-zlgl{
+    height: 11px;
+    background-position: -78px -79px;
+}
+.left-bar .curli .lbl-zlgl{
+    background-position: -112px -10px;
+}
+.lbl-yymk{
+    height: 15px;
+    background-position: -10px -10px;
+}
+.left-bar .curli .lbl-yymk{
+    background-position: -44px -10px;
+}
+.lbl-jcgn{
+    background-position: -44px -45px;
+}
+.left-bar .curli .lbl-jcgn{
+    background-position: -78px -45px;
+}
+.lbl-msgl{
+    margin: -2px 5px 0 0;
+    background:url('../img/lft_bar/lft_msgl.png') no-repeat;
 }
 .lbl-right{
     position: absolute;
     right: 15px;
     top: 22px;
-    background-position: -236px -66px;
+    background-position: -112px -41px;
 }
 /* 当前菜单展开标题样式 */
-.curitem .lbl-right{
-    background-position: -236px -20px;
-}
 .curitem .lb-listinner{
     display: block;
 }
-/* 主体容器 */
+.curitem .lbl-right{
+    background-position: -112px -67px;
+}
 .row-main{
     height: 100%;
     margin-left: 200px;
@@ -176,7 +172,7 @@ html,body{
 .main{
     height: 100%;
     padding: 0;
-    background: #1F2024;
+    background: #F1F3F6;
 }
 #iframeMain{
     width: 100%;
@@ -186,16 +182,15 @@ html,body{
 .navbar-inverse{
     border:none;
     background-color: #27282E;
-    box-shadow: 0px 1px 3px #1B1B1F;
     /* background-color: red; */
 }
 .navbar{
     min-height: 60px;
-    padding-left: 20px;
 }
 .navbar-brand{
     height: 60px;
     line-height: 25px;
+    padding-left: 30px;
 }
 .navbar-inverse .navbar-brand{
     color: #fff;
@@ -215,22 +210,4 @@ html,body{
         padding-top: 17px;
         height: 60px;
     }
-}
-
-
-/* 脚部 */
-.footer{
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    color: #787880;
-    position: fixed;
-    left: 200px;
-    right: 0;
-    bottom: 0;
-    padding: 0 20px;
-    background: #1F2024;
-}
-.footer p{
-    border-top: 1px solid #32353E;
 }

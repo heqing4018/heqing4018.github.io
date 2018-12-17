@@ -1,97 +1,179 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>个人中心</title>
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/public.css">
-    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/personalCenter.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
     <script type="text/javascript" src="js/jquery.tips.js"></script>
-    
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
 </head>
 <body>
-    <section class="secmain">
-        <!-- 标题 -->
-        <div class="topTitl">
-            <h2 >修改密码</h2>
-            <hr/>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="#">个人中心</a>
+            </h2>
         </div>
-        <!-- 修改密码 -->
-        <table class="grzxtbl" id="editpwd">
-            <tr>
-                <td>原密码：</td>
-                <td>
-                    <input id="oldPwd" type="password"/>
-                </td>
-            </tr>
-            <tr>
-                <td>新密码：</td>
-                <td>
-                    <input id="newPwd" type="password"/>
-                </td>
-            </tr>
-            <tr>
-                <td>确认密码：</td>
-                <td>
-                    <input id="confmPwd" type="password"/>
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <button id="savePwd" class="obtn">保存</button>
-                </td>
-            </tr>
-        </table>
-    </section>
-    
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p>个人中心</p>
+            </div>
+            <div class="contBox">
+                <section class="infoSec">
+                    <p class="titlp">基本信息</p>
+                    <div class="seCont">
+                        <table class="basicInfo">
+                            <tr>
+                                <td>账号:</td>
+                                <td>
+                                    <input id="hotelId" class="bckipt" type="text" value="admin" readonly/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>警员号:</td>
+                                <td>
+                                    <input class="bckipt" type="text" value="1000001"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>所属警员:</td>
+                                <td>
+                                    <input class="bckipt" type="text" value="张三"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>所属市局:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option>重庆市公安局</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>所属分局:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option>南岸分局</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>所属派出所:</td>
+                                <td>
+                                    <select class="defaultSel">
+                                        <option>南坪派出所</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <div class="btndv">
+                    <button id="saveInfo" class="obtn">保存</button>
+                    <button id="changePwd" class="obtn">修改密码</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 遮罩 -->
+    <div class="shade" ></div>
+    <!-- 修改密码 style="margin-top: -317px;"-->
+    <div class="shadeBox" id="pwdBox" >
+        <h2>
+            <i class="sdbxclose" id="pwdclose"></i>
+            修改密码
+        </h2>
+        <div class="sdbcont">
+            <table style="width:440px;">
+                <tr>
+                    <td class="w100">
+                        <span class="">原密码：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" type="password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">新密码：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" type="password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">确认密码：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" type="password" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="sdbfoot">
+            <input id="pwdsurn" class="obtn" type="button" value="确定">
+            <input id="pwdcancel" class="obtn obtnBl" type="button" value="取消">
+        </div>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
     <script type="text/javascript">
-       
-       $('#savePwd').on('click', function(){
-            // $('#oldPwd').tips({
-            //     msg: '原密码输入错误', 
-            //     side: 2, //提示窗显示位置 1，2，3，4 分别代表 上右下左 默认为1（上） 可选
-            //     time: 500,//自动关闭时间 默认2秒 设置0则不自动关闭 可选
-            //     theme: 1, // 提示框样式，1、3是红色的 1有底色 3没有，2、4是绿色的 2有底色 4没有
-            //     x: 21
-            // });
-            // $('#newPwd').tips({
-            //     msg: '请输入新密码', 
-            //     side: 2, //提示窗显示位置 1，2，3，4 分别代表 上右下左 默认为1（上） 可选
-            //     time: 500,//自动关闭时间 默认2秒 设置0则不自动关闭 可选
-            //     theme: 1, // 提示框样式，1、3是红色的 1有底色 3没有，2、4是绿色的 2有底色 4没有
-            //     x: 21
-            // });
-            // $('#confmPwd').tips({
-            //     msg: '两次输入密码不一样', 
-            //     side: 2, //提示窗显示位置 1，2，3，4 分别代表 上右下左 默认为1（上） 可选
-            //     time: 500,//自动关闭时间 默认2秒 设置0则不自动关闭 可选
-            //     theme: 1, // 提示框样式，1、3是红色的 1有底色 3没有，2、4是绿色的 2有底色 4没有
-            //     x: 21
-            // });
-            $('#tip_center').tips({
-                msg: '请按提示输入正确的数值', 
-                side: 1, //提示窗显示位置 1，2，3，4 分别代表 上右下左 默认为1（上） 可选
-                minW: 220,
-                align: 'center',
-                time: 500,//自动关闭时间 默认2秒 设置0则不自动关闭 可选
-                theme: 1, // 提示框样式，1、3是红色的 1有底色 3没有，2、4是绿色的 2有底色 4没有
+
+        $(function(){
+
+            //普通select2初始化
+            $(".defaultSel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 340
             });
-            // $('#tip_center').tips({
-            //     msg: '修改成功', 
-            //     side: 1, //提示窗显示位置 1，2，3，4 分别代表 上右下左 默认为1（上） 可选
-            //     align: 'center',
-            //     time: 2,//自动关闭时间 默认2秒 设置0则不自动关闭 可选
-            //     theme: 2, // 提示框样式，1、3是红色的 1有底色 3没有，2、4是绿色的 2有底色 4没有
-            // });
-       });
+
+            // select2 赋值
+            //$('#id选择器').val('所要赋的值').trigger("change");
+            
+        });
+
+        //返回
+        $('.goBack').on('click', function(e){
+            PrtIframeTo('orgManage.html');
+        });
+
+        var opwdBox = $('#pwdBox');    //修改密码
+
+        //修改密码
+        $('#changePwd').on('click', function(e){
+            ShadeShow(opwdBox);
+        });
+
+        //修改密码，确认
+        $('#pwdsurn').on('click', function(){
+            ShadeClose(opwdBox);
+        });
+
+        //修改密码，取消
+        $('#pwdcancel').on('click', function(){
+            ShadeClose(opwdBox);
+        });
+
+        //修改密码，关闭
+        $('#pwdclose').on('click', function(){
+            ShadeClose(opwdBox);
+        });
+
         
-	</script>
+
+    </script>
 </body>
 </html>

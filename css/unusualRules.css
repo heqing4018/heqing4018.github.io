@@ -1,0 +1,110 @@
+.contBox{
+    padding: 10px 0 10px 40px;
+}
+.infoSec{
+    margin: 0 0 30px 0;
+}
+.infoTitl::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #1492FF;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 5px 0 0;
+}
+.seCont{
+    padding: 15px 0 0 40px;
+}
+.twoCont{
+    padding: 15px 0 0 0;
+}
+.left, .right{
+    float: left;
+}
+.basicInfo{
+    margin: 10px 80px 0 0;
+}
+.basicInfo td{
+    height: 50px;
+}
+.basicInfo td:first-child{
+    color: #666;
+    width: 180px;
+}
+.basicInfo td:last-child{
+    padding-left: 10px;
+}
+.bckipt{
+    width: 250px;
+    height: 34px;
+    border: 1px solid #C5CED6;
+    border-radius: 3px;
+}
+.datadv{
+    width: 250px;
+    height: 34px;
+}
+.datadv i{
+    height: 34px;
+}
+/* 右侧 */
+.tipsDv{
+    position: relative;
+    width: 510px;
+    height: 370px;
+    line-height: 25px;
+    background: #F6F7FB;
+    padding: 20px 34px;
+}
+.corner{
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1492FF;
+}
+.topCorner{
+    left: 0;
+    top: 0;
+    border-right: none;
+    border-bottom: none;
+}
+.ritCorner{
+    right: 0;
+    top: 0;
+    border-left: none;
+    border-bottom: none;
+}
+.botmCorner{
+    right: 0;
+    bottom: 0;
+    border-top: none;
+    border-left: none;
+}
+.lftCorner{
+    left: 0;
+    bottom: 0;
+    border-top: none;
+    border-right: none;
+}
+.tipBlock{
+    padding: 0 0 0 10px;
+}
+.tipBlock ul{
+    margin: 10px 0 15px 0;
+}
+.tipsItem{
+    margin: 0 0 5px 0;
+}
+.tipTitl{
+    font-weight: bold;
+}
+/* 按钮 */
+.btndv{
+    padding: 80px 0 0 40px;
+}
+.btndv .obtn{
+    width: 100px;
+    margin: 0 40px 0 0;
+}

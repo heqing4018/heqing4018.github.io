@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>经营者资料管理</title>
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="#">经营者资料管理</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p>经营者资料</p>
+                <!-- <div class="tptbtns">
+                    <a class="tptbtn importbtn"><i class="icons tptimport"></i>导入人员名单</a>
+                    <a class="tptbtn addbtn"><i class="icons tptadd"></i>添加人员</a>
+                </div> -->
+            </div>
+            <div class="contBox">
+                <!-- 菜单栏 -->
+                <table class="menutb">
+                    <tr>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入姓名">
+                        </td>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入身份证号">
+                        </td>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入手机号">
+                        </td>
+                        <td>
+                            <input class="obtn searchbtn" type="button" value="查询" />
+                            <input class="obtn resetbtn" type="reset" value="重置" />
+                        </td>
+                    </tr>
+                </table>
+                <!-- 数据列表 -->
+                <table class="datatb">
+                    <thead>
+                        <tr>
+                            <th class="wNumid">序号</th>
+                            <th>姓名</th>
+                            <th>身份证号</th>
+                            <th>手机号</th>
+                            <th>OpenID</th>
+                            <th style="padding: 0;">
+                                <select class="mnipt defaultSel">
+                                    <option value="">全部状态</option>
+                                    <option value="">通过</option>
+                                    <option value="">驳回</option>
+                                    <option value="">待审核</option>
+                                </select>
+                            </th>
+                            <th>提交日期</th>
+                            <th class="w110">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>张三</td>
+                            <td>159685488896523669</td>
+                            <td>15987569826</td>
+                            <td>1209kldj89usyu0opu08</td>
+                            <td><span class="greenFt">通过</span></td>
+                            <td>2017-10-10 20:23:23</td>
+                            <td><a class="tblbtn ckdetailico">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>张三</td>
+                            <td>159685488896523669</td>
+                            <td>15987569826</td>
+                            <td>1209kldj89usyu0opu08</td>
+                            <td><span class="redFt">驳回</span></td>
+                            <td>2017-10-10 20:23:23</td>
+                            <td><a class="tblbtn ckdetailico">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>张三</td>
+                            <td>159685488896523669</td>
+                            <td>15987569826</td>
+                            <td>1209kldj89usyu0opu08</td>
+                            <td><span class="blueFt">待审核</span></td>
+                            <td>2017-10-10 20:23:23</td>
+                            <td><a class="tblbtn ckdetailico">查看</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 无数据时的占位图 -->
+                <!-- <div class="nodatadv"> 
+                    暂无数据
+                </div> -->
+                <!-- 分页 -->
+                <div class="pagegation">
+                    <ul>
+                        <li>
+                            <a class="curpage">1</a>
+                        </li>
+                        <li>
+                            <a>2</a>
+                        </li>
+                        <li>
+                            <a>3</a>
+                        </li>
+                        <li>
+                            <a>4</a>
+                        </li>
+                        <li>
+                            <a>5</a>
+                        </li>
+                        <li>
+                            <a>···</a>
+                        </li>
+                        <li>
+                            <a>10</a>
+                        </li>
+                        <li>
+                            <a>11</a>
+                        </li>
+                        <li>
+                            <a>&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 遮罩 -->
+    <!-- <div class="shade"></div> -->
+    <!-- 添加人员 -->
+    <!-- <div class="shadeBox" id="addBox" style="margin-top: -317px;">
+        <h2>
+            <i class="sdbxclose" id="addclose"></i>
+            添加人员
+        </h2>
+        <div class="sdbcont">
+            <table style="width:440px;">
+                <tr>
+                    <td class="w100">
+                        <span class="">姓名：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" id="nameAdd" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">身份证号：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">手机号：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" type="text">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="sdbfoot">
+            <input id="addsurn" class="obtn" type="button" value="确定">
+            <input id="addcancel" class="obtn obtnBl" type="button" value="取消">
+        </div>
+    </div> -->
+    <!-- 编辑人员 -->
+    <!-- <div class="shadeBox" id="editBox" style="margin-top: -317px;">
+        <h2>
+            <i class="sdbxclose" id="editclose"></i>
+            编辑人员
+        </h2>
+        <div class="sdbcont">
+            <table style="width:440px;">
+                <tr>
+                    <td class="w100">
+                        <span class="">姓名：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">身份证号：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">手机号：</span>
+                    </td>
+                    <td>
+                        <input class="sdipt" type="text">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="sdbfoot">
+            <input id="editsurn" class="obtn" type="button" value="确认">
+            <input id="editcancel" class="obtn obtnBl" type="button" value="取消">
+        </div>
+    </div> -->
+    <i id="tip_center" class="tip_center"></i>
+    <script type="text/javascript">
+
+        $(function(){
+            
+            //普通select2初始化
+            $(".defaultSel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 100
+            });
+
+            // select2 赋值
+            //$('#id选择器').val('所要赋的值').trigger("change");
+            
+        });
+
+        // 查看详情-----------------------------------
+        $('.datatb').on('click', '.ckdetailico', function(){
+            PrtIframeTo('operatorInfo_detail.html');
+        });
+
+        // var oaddBox = $('#addBox'), //添加人员
+        //     oeditBox = $('#editBox'); //编辑人员
+
+        // // 添加人员------------------------------
+        // $('.addbtn').on('click', function(){
+        //     ShadeShow(oaddBox);
+        // });
+        // //添加人员，确认
+        // $('#addsurn').on('click', function(){
+        //     $('#nameAdd').tips({
+        //         msg: '请输入用户名', 
+        //         side: 2, //提示窗显示位置 1，2，3，4 分别代表 上右下左 默认为1（上） 可选
+        //         time: 2,//自动关闭时间 默认2秒 设置0则不自动关闭 可选
+        //         theme: 1, // 提示框样式，1、3是红色的 1有底色 3没有，2、4是绿色的 2有底色 4没有
+        //         x: 21
+        //     });
+        //     //ShadeClose(oaddBox);
+        // });
+        // //添加人员，取消
+        // $('#addcancel').on('click', function(){
+        //     ShadeClose(oaddBox);
+        // });
+        // // 添加人员，关闭
+        // $('#addclose').on('click', function(){
+        //     ShadeClose(oaddBox);
+        // });
+
+        // // 编辑人员-----------------------------------
+        // $('.datatb').on('click', '.editico', function(){
+        //     ShadeShow(oeditBox);
+        // });
+        // //编辑人员，确认
+        // $('#editsurn').on('click', function(){
+        //     ShadeClose(oeditBox);
+        // });
+        // //编辑人员，取消
+        // $('#editcancel').on('click', function(){
+        //     ShadeClose(oeditBox);
+        // });
+        // //编辑人员，关闭
+        // $('#editclose').on('click', function(){
+        //     ShadeClose(oeditBox);
+        // });
+
+    </script>
+</body>
+</html>

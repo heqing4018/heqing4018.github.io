@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>云安 · 临住管理系统面板</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/controlPanel.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="plugins/echarts.min.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+    
+</head>
+<body>
+    <section class="outer">
+        <div class="pg_top">云安 · 临住管理系统面板</div>
+        <section class="sec1">
+            <section class="sec3">
+                <div class="btndv">
+                    <a class="hmbtn">首页</a>
+                </div>
+                <div class="cornerdv dv1">
+                    <div class="cntitle">
+                        <p class="titlep">异常旅店</p>
+                    </div>
+                    <div class="cncont">
+                        <dl class="yclgdl clear">
+                            <dd><div class="yclgico"></div></dd>
+                            <dt>
+                                <div class="clear">长期未报
+                                    <p class="rivalp"><span class="valspan" title="18">18</span>家</p>
+                                </div>
+                                <div class="clear">抓拍异常
+                                    <p class="rivalp"><span class="valspan" title="12">12</span>家</p>
+                                </div>
+                            </dt>
+                        </dl>
+                    </div>
+                    <span class="corner cnTop"></span>
+                    <span class="corner cnRt"></span>
+                    <span class="corner cnBtm"></span>
+                    <span class="corner cnLft"></span>
+                </div>
+                <!-- 省级账号 -->
+                <div class="cornerdv dv2 dcldv" style="display:none">
+                    <div class="cntitle">
+                        <p class="titlep">待处理</p>
+                    </div>
+                    <div class="cncont">
+                        <div class="dclitem clear">
+                            <div class="dcllft">
+                                <p>待认领旅店</p>
+                                <p class="progressBar"></p>
+                            </div>
+                            <div class="dclrt">
+                                <span class="valspan" title="120">120</span>家
+                            </div>
+                        </div>
+                        <div class="dclitem clear">
+                            <div class="dcllft">
+                                <p>待审核旅店</p>
+                                <p class="progressBar"></p>
+                            </div>
+                            <div class="dclrt">
+                                <span class="valspan" title="80">80</span>家
+                            </div>
+                        </div>
+                        <div class="dclitem clear">
+                            <div class="dcllft">
+                                <p>待认领旅店</p>
+                                <p class="progressBar"></p>
+                            </div>
+                            <div class="dclrt">
+                                <span class="valspan" title="90">90</span>位
+                            </div>
+                        </div>
+                    </div>
+                    <span class="corner cnTop"></span>
+                    <span class="corner cnRt"></span>
+                    <span class="corner cnBtm"></span>
+                    <span class="corner cnLft"></span>
+                </div>
+                <!-- 派出所账号 -->
+                <div class="cornerdv dv2 dcldv">
+                    <div class="cntitle">
+                        <p class="titlep">待认领</p>
+                    </div>
+                    <div class="cncont">
+                        <div class="drlitem">
+                            <span class="valspan" title="120">120</span>
+                            <p>待认领旅店</p>
+                        </div>
+                    </div>
+                    <span class="corner cnTop"></span>
+                    <span class="corner cnRt"></span>
+                    <span class="corner cnBtm"></span>
+                    <span class="corner cnLft"></span>
+                </div>
+            </section>
+            <section class="sec4">
+                <div class="cornerdv dv3">
+                    <div class="mapTitle clear">
+                        <div class="mapLft clear">
+                            <dl class="clear">
+                                <dt>
+                                    <div class="mapico jrrzico"></div>
+                                </dt>
+                                <dd>
+                                    <p>今日入住</p>
+                                    <div class="valdv">
+                                        <span class="dayspan">1</span>
+                                        <span class="dayspan">7</span>
+                                        <span class="dayspan">2</span>
+                                        <span class="dayspan">7</span>
+                                        <span>人</span>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="clear">
+                                <dt>
+                                    <div class="mapico zrzico"></div>
+                                </dt>
+                                <dd>
+                                    <p>总入住</p>
+                                    <div class="valdv">
+                                        <span class="dayspan">1</span>
+                                        <span class="dayspan">7</span>
+                                        <span class="dayspan">2</span>
+                                        <span class="dayspan">7</span>
+                                        <span>人</span>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- 只有在省级账号下显示 -->
+                        <div class="mapRt" style="display:none;">
+                                <select class="pnlSel">
+                                    <option value="">山西省</option>
+                                    <option value="">河北省</option>
+                                    <option value="">重庆市</option>
+                                </select>
+                                <select class="pnlSel">
+                                    <option value="">长治县</option>
+                                </select>
+                                <select class="pnlSel">
+                                    <option value="">八义镇派出所</option>
+                                </select>
+                            </div>
+                    </div>
+                    <div class="mapcont">
+                        <div id="mapChart"></div>
+                    </div>
+                    <span class="corner cnTop"></span>
+                    <span class="corner cnRt"></span>
+                    <span class="corner cnBtm"></span>
+                    <span class="corner cnLft"></span>
+                </div>
+            </section>
+            <section class="sec5">
+                <div class="btndv">
+                    <a class="tmbtn">2018-12-7 13:58:58</a>
+                </div>
+                <div class="cornerdv dv1 zptjdv">
+                    <div class="cntitle">
+                        <a class="pnsee"></a>
+                        <p class="titlep">抓拍统计</p>
+                    </div>
+                    <div class="cncont clear">
+                        <div class="jrzpdv">
+                            <p class="zptjp">今日抓拍</p>
+                            <p class="rivalp"><span class="valspan" title="2175">2175</span>次</p>
+                        </div>
+                        <div class="zptlzzpdv">
+                            <p class="zptjp">总抓拍</p>
+                            <p class="rivalp"><span class="valspan" title="3502">3502</span>次</p>
+                        </div>
+                    </div>
+                    <span class="corner cnTop"></span>
+                    <span class="corner cnRt"></span>
+                    <span class="corner cnBtm"></span>
+                    <span class="corner cnLft"></span>
+                </div>
+                <div class="cornerdv dv2 ldtjdv">
+                    <div class="cntitle">
+                        <a class="pnsee"></a>
+                        <p class="titlep">旅店统计</p>
+                    </div>
+                    <div class="cncont clear">
+                        <dl>
+                            <dt>
+                                <div class="lgtjcircle">
+                                    <div class="circleinner">
+                                        <span class="valspan" title="50">50</span>
+                                    </div>
+                                </div>
+                            </dt>
+                            <dd>旅店总数</dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <div class="chartCircle">
+                                    <!-- 1920下是隐藏的 -->
+                                    <div class="circleinner">
+                                        <span class="valspan" title="30">30</span>
+                                    </div>
+                                    <div class="chartdv" id="businessChart"></div>
+                                </div>
+                            </dt>
+                            <dd>正常营业</dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <div class="chartCircle">
+                                    <!-- 1920下是隐藏的 -->
+                                    <div class="circleinner">
+                                        <span class="valspan" title="20">20</span>
+                                    </div>
+                                    <div class="chartdv" id="closeChart"></div>
+                                </div>
+                            </dt>
+                            <dd>停业旅店</dd>
+                        </dl>
+                    </div>
+                    <span class="corner cnTop"></span>
+                    <span class="corner cnRt"></span>
+                    <span class="corner cnBtm"></span>
+                    <span class="corner cnLft"></span>
+                </div>
+            </section>
+        </section>
+        <section class="sec2">
+            <!-- 今日入住排行榜  只有派出所账号登录显示 style="display: none;"-->
+            <div class="sec2L">
+                <div class="cornerdv dv5 jrrzdv">
+                    <div class="cntitle">
+                        <p class="titlep">今日入住排行榜</p>
+                    </div>
+                    <div class="cncont">
+                        <table class="jrrztbl">
+                            <thead>
+                                <tr>
+                                    <th class="tblid">序号</th>
+                                    <th>旅馆名称</th>
+                                    <th class="tohide">旅馆地址</th>
+                                    <th>数量</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="csblok csblok1">1
+                                            <i class="pstshadow"></i>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="tblval mxw1">齐家大院</span>
+                                    </td>
+                                    <td class="tohide">
+                                        <span class="tblval mxw2">海淀区花园东路15号</span>
+                                    </td>
+                                    <td><span class="tblval mxw3">20</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="csblok csblok2">2
+                                            <i class="pstshadow"></i>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="tblval mxw1">齐家大院齐家大院</span>
+                                    </td>
+                                    <td class="tohide">
+                                        <span class="tblval mxw2">海淀区花园东路15号齐家大院</span>
+                                    </td>
+                                    <td><span class="tblval mxw3">202356</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="csblok csblok3">3
+                                            <i class="pstshadow"></i>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="tblval mxw1">齐家大院</span>
+                                    </td>
+                                    <td class="tohide">
+                                        <span class="tblval mxw2">海淀区花园东路15号</span>
+                                    </td>
+                                    <td><span class="tblval mxw3">20</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <span class="tblval mxw1">齐家大院</span>
+                                    </td>
+                                    <td class="tohide">
+                                        <span class="tblval mxw2">海淀区花园东路15号</span>
+                                    </td>
+                                    <td><span class="tblval mxw3">20</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <span class="tblval mxw1">齐家大院</span>
+                                    </td>
+                                    <td class="tohide">
+                                        <span class="tblval mxw2">海淀区花园东路15号</span>
+                                    </td>
+                                    <td><span class="tblval mxw3">20</span></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <span class="tblval mxw1">齐家大院</span>
+                                    </td>
+                                    <td class="tohide">
+                                        <span class="tblval mxw2">海淀区花园东路15号</span>
+                                    </td>
+                                    <td><span class="tblval mxw3">20</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <span class="corner cnTop"></span>
+                    <span class="corner cnRt"></span>
+                    <span class="corner cnBtm"></span>
+                    <span class="corner cnLft"></span>
+                </div>
+            </div>
+            <div class="cornerdv dv4 rzqsdv">
+                <div class="cntitle">
+                    <div class="menuedv">
+                        <div class="daybtns">
+                            <a href="javascript:void(0)">今天</a>
+                            <a href="javascript:void(0)">昨天</a>
+                            <a href="javascript:void(0)">最近7天</a>
+                            <a href="javascript:void(0)">最近30天</a>
+                        </div>
+                        <div class="dtdv">
+                            <!-- <div class="datadv">
+                                <i></i>
+                                <input type="text" onclick="WdatePicker()" placeholder="起始时间">
+                            </div>
+                            <div class="hline" style="vertical-align:middle;">一</div>
+                            <div class="datadv">
+                                <i></i>
+                                <input type="text" onclick="WdatePicker()" placeholder="结束时间">
+                            </div> -->
+                            <div class="datadv">
+                                <i></i>
+                                <input class="form_datetime" type="text" value="起始日期" id="startDate"  data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd" readonly />
+                            </div>
+                            <div class="hline" style="vertical-align:middle;">一</div>
+                            <div class="datadv">
+                                <i></i>
+                                <input class="form_datetime" type="text" value="结束日期" id="endDate" data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd" readonly />
+                            </div>
+                        </div>
+
+                        <select class="pnlSel">
+                            <option value="">山西省</option>
+                            <option value="">河北省</option>
+                            <option value="">重庆市</option>
+                        </select>
+                        <select class="pnlSel">
+                            <option value="">长治县</option>
+                        </select>
+                        <select class="pnlSel">
+                            <option value="">八义镇派出所</option>
+                        </select>
+                    </div>
+                    <p class="titlep">入住趋势</p>
+                </div>
+                <div class="cncont">
+                    <div id="rzqsChart"></div>
+                </div>
+                <span class="corner cnTop"></span>
+                <span class="corner cnRt"></span>
+                <span class="corner cnBtm"></span>
+                <span class="corner cnLft"></span>
+            </div>
+        </section>
+    </section>
+    <script>
+
+
+        // 首页
+        $('.hmbtn').on('click', function(){
+            $(location).attr('href', 'home.html');
+        });
+
+        
+        $(function(){
+
+            //select2初始化
+            $(".pnlSel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 120
+            });
+
+            $('#startDate').datetimepicker({
+                language: 'zh-CN',
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
+            $('#endDate').datetimepicker({
+                language: 'zh-CN',
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
+
+            
+            var OmapChart = echarts.init(document.getElementById('mapChart')),//入住人数
+                OrzqsChart = echarts.init(document.getElementById('rzqsChart')),// 入住趋势
+                ObusinessChart = echarts.init(document.getElementById('businessChart')),// 正常营业旅店统计
+                OcloseChart = echarts.init(document.getElementById('closeChart'));// 停止营业旅店统计
+
+            
+            //入住人数设置 ,省级账号
+            $.get('js/bj.json', function (geoJson) {
+
+                echarts.registerMap('bj', geoJson);
+
+                // OmapChart.setOption(option = {
+                //     tooltip: {
+                //         trigger: 'item',
+                //         formatter: '{b}<br/>{c} (人)'
+                //     },
+                //     visualMap: {
+                //         min: 1,
+                //         max: 500,
+                //         realtime: false,
+                //         textStyle: {
+                //             color: '#c0c0cc'
+                //         },
+                //         itemWidth: 10,
+                //         inRange: {
+                //             color: ['#0944A2','#4D72EB']
+                //         }
+                //     },
+                //     series: [
+                //         {
+                //             // 14BAAC
+                //             name: '',
+                //             type: 'map',
+                //             mapType: 'bj', // 自定义扩展图表类型
+                //             itemStyle:{
+                //                 normal:{
+                //                     label:{
+                //                         show:true,
+                //                         formatter: '{c}',
+                //                         backgroundColor: '#08D4C6',
+                //                         color: '#000',
+                //                         borderRadius: 5,
+                //                         padding:[1,2]
+                //                     },
+                //                     // borderColor: '#7EFAF7',
+                //                     borderColor: '#fff',
+                //                     borderWidth: 1,
+                //                 },
+                //                 emphasis:{
+                //                     label:{
+                //                         show:true
+                //                     },
+                //                     areaColor: '#08D4C6',
+                //                 }
+                //             },
+                //             data:[
+                //                 {name: '东城区', value: 20},
+                //                 {name: '西城区', value: 1},
+                //                 {name: '海淀区', value: 31},
+                //                 {name: '昌平区', value: 69},
+                //                 {name: '房山区', value: 44},
+                //                 {name: '丰台区', value: 40},
+                //                 {name: '石景山区', value: 376},
+                //                 {name: '通州区', value: 451},
+                //                 {name: '顺义区', value: 55},
+                //                 {name: '平谷区', value: 219},
+                //                 {name: '门头沟区', value: 491},
+                //                 {name: '大兴区', value: 58},
+                //                 {name: '朝阳区', value: 417},
+                //                 {name: '延庆区', value: 22},
+                //                 {name: '怀柔区', value: 21},
+                //                 {name: '密云区', value: 91},
+                //             ]
+                //         }
+                //     ]
+                // });
+            });
+
+            //入住人数设置 ,派出所账号(北京区域数据)
+            $.get('js/bj.json', function(geoJson) {
+                echarts.registerMap('bj', geoJson);
+                var geoCoordMap = {
+                    '东城区':[116.418757,39.917544],
+                    '西城区':[116.366794,39.915309],
+                    '丰台区':[116.286968,39.863642],
+                    '朝阳区':[116.4977,39.949],
+                    '石景山区':[116.195445,39.914601],
+                    '海淀区':[116.2202,40.0239],
+                    '门头沟区':[115.8,39.9957],
+                    '房山区':[115.8453,39.7163],
+                    '通州区':[116.7297,39.8131],
+                    '顺义区':[116.653525,40.128936],
+                    '昌平区':[116.235906,40.218085],
+                    '大兴区':[116.4716,39.6352],
+                    '平谷区':[117.112335,40.144783],
+                    '怀柔区':[116.6377,40.6219],
+                    '密云区':[117.0923,40.5121],
+                    '延庆区':[115.985006,40.465325],
+                }
+                
+                var data = [
+                    {name: '东城区', value: 390},
+                    {name: '西城区', value: 158},
+                    {name: '丰台区', value: 99},
+                    {name: '朝阳区', value: 252},
+                    {name: '石景山区', value: 189},
+                    {name: '海淀区', value: 52},
+                    {name: '门头沟区', value: 158},
+                    {name: '房山区', value: 152},
+                    {name: '通州区', value: 152},
+                    {name: '顺义区', value: 152},
+                    {name: '昌平区', value: 189},
+                    {name: '大兴区', value: 189},
+                    {name: '平谷区', value: 189},
+                    {name: '怀柔区', value: 189},
+                    {name: '密云区', value: 189},
+                    {name: '延庆区', value: 189},
+                ];
+
+                var convertData = function (data) {
+                    var res = [];
+                    for (var i = 0; i < data.length; i++) {
+                        var geoCoord = geoCoordMap[data[i].name];
+                        if (geoCoord) {
+                            res.push({
+                                name: data[i].name,
+                                value: geoCoord.concat(data[i].value)
+                            });
+                        }
+                    }
+                    return res;
+                };
+
+                OmapChart.setOption({
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: function (params) {
+                            return params.name + ' : ' + params.value[2] + ' 人';//散点高亮显示的内容 
+                        }
+                    },
+                    geo: {
+                        show: true,
+                        map: 'bj',
+                        label: {
+                            normal: {
+                                show: false,
+                            },
+                            emphasis: {
+                                show: false,
+                            }
+                        },
+                        roam: true,
+                        itemStyle: {
+                            normal: {
+                                areaColor: '#308AA3',
+                                borderWidth: 0, //区域分界线宽度
+                                // borderColor: '#3fdaff', //区域分界线颜色
+                                // shadowColor: 'rgba(63, 218, 255, .8)', //整个地图阴影
+                                // shadowBlur: 30
+                            },
+                            emphasis: {
+                                areaColor: '#308AA3' //区域高亮颜色
+                            }
+                        }
+                    },
+                    series : [
+                        {
+                            type: 'scatter',
+                            coordinateSystem: 'geo',
+                            data: convertData(data),
+                            symbol: 'circle',
+                            symbolSize: 4,
+                            label: {
+                                normal: {
+                                    formatter: '{b}',
+                                    position: 'right'
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: '#FFF211',//散点图形的颜色和字体颜色
+                                    borderWidth: 8,
+                                    borderRadius: '50%',
+                                    borderColor: 'rgba(255, 242, 0, .6)' //border系列圆中圆效果
+
+                                }
+                            }
+                        }
+                    ]
+                });
+            });
+
+            //入住趋势，加载数据-----------------------------------
+            // X轴相关数据
+            var Xdays = [   '2018/11/01','2018/11/02','2018/11/03','2018/11/04'
+                            ,'2018/11/05','2018/11/06','2018/11/07','2018/11/08'
+                            ,'2018/11/09','2018/11/10','2018/11/11','2018/11/12'
+                            ,'2018/11/13','2018/11/14','2018/11/15'];
+            //Y轴数据
+            var jbdata = [100,150,140,160,170,190,230,300,280,150,140,130,190,140,230];
+
+			OrzqsChart.setOption({
+                backgroundColor: 'transparent',
+                color: ['#129E9E'],
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: {
+                    top:'40px',
+                    left: '20px', //绘画距离容器左边距离
+                    right:'20px',
+                    bottom: '20px', 
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: Xdays,
+                    axisLine:{
+                        show:   false   //不显示坐标轴轴线
+                    },
+                    axisTick:{
+                        show:   false   //不显示坐标轴刻度线
+                    },
+                    axisLabel:{
+                        color: '#a8a8b2'   //刻度值的颜色
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    splitNumber: 4,
+                    max: 400,
+                    nameTextStyle: {
+                        color:'#333'
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#062A70' //值对应的横线的颜色
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#062A70' //坐标轴轴线颜色
+                        }
+                    },
+                    axisTick:{
+                        show: false     //是否显示坐标轴刻度
+                    },
+                    axisLabel:{
+                        color: '#a8a8b2'   //刻度值的颜色
+                    }
+                },
+                series: [
+                    {
+                        type: 'line',
+                        symbol: 'circle',
+                        symbolSize: 7,
+                        data: jbdata
+                    }
+                ]
+
+            }); 
+
+            var hotelTotal = 50, businessNum = 20, stopNum = 30;
+
+            // 正常营业旅店统计,加载数据---------------------------------
+            ObusinessChart.setOption({
+				series: [
+					{
+						type:'pie',
+						radius: ['78%', '100%'],
+						avoidLabelOverlap: false,
+                        hoverAnimation: false,
+						labelLine: {
+							normal: {
+							    show: false
+							}
+						},
+						data:[
+							{
+                                value: businessNum,  //正常营业的个数
+                                name:'正常营业',
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        formatter: '{c}',
+                                        position: 'center',
+                                        color: '#fff',
+                                        fontSize: 24,
+                                        fontWeight: 700
+                                    },
+                                },
+                                itemStyle: {
+                                    normal: {
+                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                            offset: 0,
+                                            color: '#00D7D7'
+                                        }, {
+                                            offset: 1,
+                                            color: '#00A1EA'
+                                        }]),
+                                    }
+                                },
+                            },
+                            {
+                                value: stopNum,  //停止营业的个数
+                                name:'停止营业',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#243053'
+                                    }
+                                },
+                            }
+						]
+					}
+				]
+            });
+
+            // 停止营业旅店统计,加载数据---------------------------------
+            OcloseChart.setOption({
+				series: [
+					{
+						type:'pie',
+						radius: ['78%', '100%'],
+						avoidLabelOverlap: false,
+                        hoverAnimation: false,
+						labelLine: {
+							normal: {
+							    show: false
+							}
+						},
+						data:[
+							{
+                                value: stopNum,  //停止营业的个数
+                                name:'停止营业',
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        formatter: '{c}',
+                                        position: 'center',
+                                        color: '#fff',
+                                        fontSize: 24,
+                                        fontWeight: 700
+                                    },
+                                },
+                                itemStyle: {
+                                    normal: {
+                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                            offset: 0,
+                                            color: '#927BFF'
+                                        }, {
+                                            offset: 1,
+                                            color: '#8396FF'
+                                        }]),
+                                    }
+                                },
+                            },
+                            {
+                                value: businessNum,  //正常营业的个数
+                                name:'正常营业',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#243053'
+                                    }
+                                },
+                            }
+						]
+					}
+				]
+            });
+
+            // 图标自适应----------------------------
+            window.onresize=function(){
+                OrzqsChart.resize();
+                OmapChart.resize();
+            }
+
+        });
+
+        
+
+       
+        
+    </script>
+</body>
+</html> 

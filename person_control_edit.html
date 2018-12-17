@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>布控详情</title>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/person_control_edit.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/magnify-master/jquery.magnify.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="person_control.html">人员布控</a>
+                <a href="#">/ 布控详情</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p><i class="goBack"></i>详情</p>
+            </div>
+            <div class="contBox clear">
+                <div class="left">
+                    <div class="imgDv">
+                        <div class="imgOuter">
+                            <input id="imgfile" type="file" style="display:none">
+                            <!-- <img id="imgupld" src="./img/imgSel.png"> -->
+                            <img id="imgupld" src="./img/timg.jpg">
+                        </div>
+                        <p class="upld">点击选择图片</p>
+                        <p class="tips">支持jpg、png、jpeg格式的图片，大小不超过1M。</p>
+                    </div>
+                    <div id="editdv" class="btndv">
+                        <input class="obtn editbtn" type="reset" value="编辑"/>
+                    </div>
+                    <div id="suredv" class="btndv">
+                        <input class="obtn surebtn" type="reset" value="确定"/>
+                        <input class="obtn obtnBl cancelbtn" type="reset" value="取消"/>
+                    </div>
+                </div>
+                <div class="right">
+                    <table class="infotbl">
+                        <tbody><tr>
+                            <td>布控名称：</td>
+                            <td>
+                                <input type="text" class="pcipt"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>姓名：</td>
+                            <td>
+                                <input type="text" class="pcipt"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>性别：</td>
+                            <td>
+                                <input type="text" class="pcipt"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>身份证号：</td>
+                            <td>
+                                <input type="text" class="pcipt"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>民族：</td>
+                            <td>
+                                <input type="text" class="pcipt"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;padding-top:10px;">备注：</td>
+                            <td>
+                                <textarea class="pcipt"></textarea>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
+    <!-- 遮罩 -->
+    <div class="shade"></div>
+    <script type="text/javascript">
+
+        //返回
+        $('.goBack').on('click', function(e){
+            PrtIframeTo('person_control.html');
+        });
+
+        var oeditdv = $('#editdv'), //编辑按钮容器
+            osuredv= $('#suredv');//保存按钮容器
+
+        //编辑
+        $('.editbtn').on('click', function(e){
+            oeditdv.hide();
+            osuredv.show();
+        });
+
+        //保存
+        $('.surebtn').on('click', function(e){
+            oeditdv.show();
+            osuredv.hide();
+        });
+
+        //取消
+        $('.cancelbtn').on('click', function(e){
+            oeditdv.show();
+            osuredv.hide();
+        });
+
+        // 点击图片
+        $('#imgupld').on('click', function(){
+            $('#imgfile').click();
+        });
+
+    </script>
+</body>
+</html>

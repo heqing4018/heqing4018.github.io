@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>人员布控</title>
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/person_control.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/magnify-master/jquery.magnify.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="#">人员布控</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p>人员布控</p>
+                <div class="tptbtns">
+                    <div class="plbtns">
+                        <button class="plbtn pldelbtn">删除</button>
+                        <button class="plbtn selallbtn">全选</button>
+                        <button class="plbtn backselbtn">反选</button>
+                        <button class="plbtn cancelbtn">取消</button>
+                    </div>
+                    <a class="tptbtn selectbtn"><i class="icons tptselect"></i>批量选择</a>
+                    <a class="tptbtn importbtn"><i class="icons tptimport"></i>批量导入</a>
+                    <a class="tptbtn addbtn"><i class="icons tptadd"></i>添加布控</a>
+                </div>
+            </div>
+            <div class="contBox">
+                <!-- 菜单栏 -->
+                <table class="menutb">
+                    <tr>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入姓名">
+                        </td>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入布控名称">
+                        </td>
+                        <td>
+                            <input class="obtn searchbtn" type="button" value="查询" />
+                            <input class="obtn resetbtn" type="reset" value="重置" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="htlist clear">
+                    <dl class="peplitem">
+                        <dt>
+                            <label class="htzhlb">
+                                <span class="ckbox">
+                                    <input type="checkbox" name="alarmItem">
+                                    <i></i>
+                                </span>
+                            </label>
+                            <img src="./img/people1.jpg"/>
+                        </dt>
+                        <dd>
+                            <p class="bkname ellipsis" title="麦迪娜">麦迪娜</p>
+                            <div class="changedv">
+                                <div class="infodv">
+                                    <p class="idcardp ellipsis" title="2018-08-10 08:23:20">2018-08-10 08:23:20</p>
+                                    <p class="bknamep ellipsis" title="东门入口1号监控点">东门入口1号监控点</p>
+                                </div>
+                                <div class="infobtns">
+                                    <button class="obtn setbtn">设置</button>
+                                    <button class="obtn delinfobtn">删除</button>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="peplitem">
+                        <dt>
+                            <label class="htzhlb">
+                                <span class="ckbox">
+                                    <input type="checkbox" name="alarmItem">
+                                    <i></i>
+                                </span>
+                            </label>
+                            <img src="./img/people1.jpg"/>
+                        </dt>
+                        <dd>
+                            <p class="bkname ellipsis" title="麦迪娜">麦迪娜</p>
+                            <div class="changedv">
+                                <div class="infodv">
+                                    <p class="idcardp ellipsis" title="2018-08-10 08:23:20">2018-08-10 08:23:20</p>
+                                    <p class="bknamep ellipsis" title="东门入口1号监控点">东门入口1号监控点</p>
+                                </div>
+                                <div class="infobtns">
+                                    <button class="obtn setbtn">设置</button>
+                                    <button class="obtn delinfobtn">删除</button>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                    <dl class="peplitem"></dl>
+                </div>
+                <!-- 无数据时的占位图 -->
+                <!-- <div class="nodatadv"> 
+                    暂无数据
+                </div> -->
+                <!-- 分页 -->
+                <div class="pagegation">
+                    <ul>
+                        <li>
+                            <a class="curpage">1</a>
+                        </li>
+                        <li>
+                            <a>2</a>
+                        </li>
+                        <li>
+                            <a>3</a>
+                        </li>
+                        <li>
+                            <a>4</a>
+                        </li>
+                        <li>
+                            <a>5</a>
+                        </li>
+                        <li>
+                            <a>···</a>
+                        </li>
+                        <li>
+                            <a>10</a>
+                        </li>
+                        <li>
+                            <a>11</a>
+                        </li>
+                        <li>
+                            <a>&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
+    <!-- 遮罩 -->
+    <div class="shade"></div>
+    <!-- 删除布控信息 -->
+    <div class="shadeBox" id="delBox">
+        <h2>
+            <i class="sdbxclose" id="delclose"></i>
+            删除
+        </h2>
+        <div class="sdbcont delcont">
+                <i class="sdtipdeli "></i>确认删除此人员布控信息？
+        </div>
+        <div class="sdbfoot">
+            <input id="delsurn" class="obtn" type="button" value="确认"/>
+            <input id="delcancel" class="obtn obtnBl" type="button" value="取消"/>
+        </div>
+    </div>
+    <!-- 批量导入导入 -->
+    <div class="shadeBox batchImport" id="batchImport">
+        <h2>
+            <i class="sdbxclose icos" id="importclose"></i>
+            批量导入
+        </h2>
+        <div class="sdbcont">
+            <div class="dldv">
+                <!-- 选择文件后显示 -->
+                <div class="exportEIdiv">
+                    <i class="excelPic"></i>
+                    <span class="excelSpan" id="fileNameSpan">Excel文件名称（500K）</span>
+                    <a class="excelA" > 删除</a>
+                </div>
+                <!-- 选择图片后显示 -->
+                <div  class="ImageEIdiv">
+                    <i class="imagePic"></i>
+                    <span  class="excelSpan" id="imageNumSpan">已导<span class="imgnum">0</span>入张图片 </span> 
+                    <a  class="excelA" >删除 </a>
+                </div>
+            </div>
+            <div class="dldv">
+                <a class="templateDl" href="excel/template/人员布控模板.xlsx" >下载模板</a>
+                <a class="upFileBtnOuter">
+                    <input type="file"   name="" id="localupld" accept=".xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" >
+                    选择文件
+                </a>
+                <a class="upFileBtnOuter">
+                   <input type="file"  multiple  name="" id="imgUpload"/>上传图片</a>
+                </a>
+            </div>
+            <p class="markp">注：请按照模板规格填写信息，以防导入出错。文件大小需小于10M。</p>
+        </div>
+        <div class="sdbfoot">
+            <input id="importsurn" class="obtn" type="button" value="确认">
+            <input id="importcancel" class="obtn obtnBl" type="button" value="取消">
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+    
+
+        //添加布控
+        $('.addbtn').on('click', function(e){
+            PrtIframeTo('person_control_add.html');
+        });
+
+        //编辑布控
+        $('.htlist').on('click', '.peplitem img', function(e){
+            PrtIframeTo('person_control_edit.html');
+        });
+
+        //设置布控
+        $('.htlist').on('click', '.setbtn', function(e){
+            PrtIframeTo('person_control_set.html');
+        });
+
+
+        var oplbtns = $('.plbtns'), //批量操作按钮
+            oselectbtn =  $('.selectbtn'); //批量导出按钮
+
+        // 批量导出
+        $('.selectbtn').on('click', function(e){
+            oplbtns.show();
+            $(this).hide();
+            $('.htzhlb', '.htlist').show();
+        });
+
+        // 全选
+        $('.selallbtn').on('click', function(e){
+            $('input[name = "alarmItem"]').prop('checked', true);
+        });
+
+        // 反选
+        $('.backselbtn').on('click', function(e){
+            $('input[name = "alarmItem"]').each(function(){
+                var oval = $(this).prop('checked');
+                $(this).prop('checked', !oval);
+            });
+        });
+
+        // 取消
+        $('.cancelbtn').on('click', function(e){
+            oplbtns.hide();
+            oselectbtn.show();
+            $('.htzhlb', '.htlist').hide();
+            $('input[name = "alarmItem"]').prop('checked', false);
+        });
+
+        var obatchImport = $('#batchImport'), //批量导入
+            odelBox = $('#delBox');     //删除摄像头
+
+        //批量导入--------------------------------------
+        $('.importbtn').on('click', function(){
+            ShadeShow(obatchImport);
+        });
+        
+        //批量导入，确认
+        $('#importsurn').on('click', function(){
+            ShadeClose(obatchImport);
+        });
+        //批量导入，取消
+        $('#importcancel').on('click', function(){
+            ShadeClose(obatchImport);
+        });
+        //批量导入，关闭
+        $('#importclose').on('click', function(){
+            ShadeClose(obatchImport);
+        });
+
+        //删除摄像头--------------------------------------
+        $('.htlist').on('click', '.delinfobtn', function(){
+            ShadeShow(odelBox);
+        });
+        //删除摄像头，确认
+        $('#delsurn').on('click', function(){
+            ShadeClose(odelBox);
+        });
+        //删除摄像头，取消
+        $('#delcancel').on('click', function(){
+            ShadeClose(odelBox);
+        });
+        //删除摄像头，关闭
+        $('#delclose').on('click', function(){
+            ShadeClose(odelBox);
+        });
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+.secmain{
+    padding: 0 0 30px 0;
+    border-color: #F1F3F6;
+    position: relative;
+}
+.contBox{
+    padding: 30px 0 40px 40px;
+}
+.infoSec{
+    margin: 0 0 30px 0;
+}
+.infoTitl::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #1492FF;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 5px 0 0;
+}
+.seCont{
+    padding: 0 0 0 15px;
+}
+.basicInfo{
+    width: 455px;
+    margin: 15px 0 0 0;
+    border: 1px solid #E5EBF1;
+}
+.basicInfo td{
+    height: 40px;
+    border-bottom: 1px solid #E5EBF1;
+}
+.policeInfo{
+    border: none;
+}
+.policeInfo td{
+    height: 50px;
+    border-bottom: none;
+}
+.basicInfo td:first-child{
+    color: #666;
+    width: 120px;
+    padding: 0 20px;
+}
+.dftipt{
+    width: 340px;
+    height: 34px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+.dftxtar{
+    width: 340px;
+    height: 60px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+    resize: none;
+    overflow: hidden;
+}
+.qrcodedv{
+    position: relative;
+    width: 275px;
+    height: 275px;
+    border: 1px solid #DBDBDB;
+    margin: 25px 0 0 15px;
+}
+.qrcodedv img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    height: auto;
+    max-height: 80%;
+    width: auto;
+}
+.dwbtn{
+    position: absolute;
+    right: -60px;
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: url('../img/dlqrcode.png') center no-repeat;
+}
+.btndv{
+    padding: 15px 0 0 30px;
+}
+.btndv .obtn{
+    margin: 0 15px 0 0;
+}
+.select2-container--default .select2-selection--single{
+    height: 34px;
+    border: 1px solid #e0e0e0;
+}

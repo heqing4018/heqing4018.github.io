@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>新建群发</title>
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/groupMsg_add.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="groupMsg.html">群发消息</a>
+                <a href="#">/ 新建群发</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p><i class="goBack"></i>新建群发</p>
+            </div>
+            <div class="contBox clear">
+                <div class="left">
+                    <table class="tbl1">
+                        <tr>
+                            <td>
+                                <span class="redStar">消息标题：</span>
+                            </td>
+                            <td>
+                                <select class="mnipt defaultSel">
+                                    <option>请选择消息标题</option>
+                                    <option value="">标题1</option>
+                                    <option value="">标题2</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;padding-top:15px;">
+                                <span class="redStar">消息内容：</span>
+                            </td>
+                            <td>
+                                <textarea class="msgtxt"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;padding-top:12px;">
+                                <span class="redStar">推送名单：</span>
+                            </td>
+                            <td style="padding-top:12px;">
+                                <span class="blueft">从右侧列表中选择要推送的联系人</span>
+                                <div class="selResult">
+                                    <table id="resultList" class="infotbl">
+                                        <tr>
+                                            <td style="width:70px;padding-left:20px;">序号</td>
+                                            <td>旅店名称</td>
+                                            <td>姓名</td>
+                                            <td class="hiddenTd">手机号</td>
+                                            <td class="hiddenTd">身份证号</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="delitem"></i>1</td>
+                                            <td><span class="infoval mw130">旅店名称1</span></td>
+                                            <td><span class="infoval mw70">张三</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="delitem"></i>2</td>
+                                            <td><span class="infoval mw130">旅店名称1</span></td>
+                                            <td><span class="infoval mw70">张三</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="delitem"></i>3</td>
+                                            <td><span class="infoval mw130">旅店名称1</span></td>
+                                            <td><span class="infoval mw70">张三</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                                        </tr>
+                                        <tr>
+                                           <td><i class="delitem"></i>4</td>
+                                            <td><span class="infoval mw130">旅店名称1</span></td>
+                                            <td><span class="infoval mw70">张三</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="delitem"></i>5</td>
+                                            <td><span class="infoval mw130">旅店名称1</span></td>
+                                            <td><span class="infoval mw70">张三</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="delitem"></i>6</td>
+                                            <td><span class="infoval mw130">旅店名称1</span></td>
+                                            <td><span class="infoval mw70">张三</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="delitem"></i>7</td>
+                                            <td><span class="infoval mw130">旅店名称1</span></td>
+                                            <td><span class="infoval mw70">张三</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="delitem"></i>8</td>
+                                            <td><span class="infoval mw130">旅店名称1</span></td>
+                                            <td><span class="infoval mw70">张三</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                            <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                                        </tr>
+                                    </table>
+                                    <!-- 小分页 -->
+                                    <div class="litPage">
+                                        <a class="pgbtn"><</a>
+                                        <span class="curpage">2</span>/5
+                                        <a class="pgbtn">></a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <div class="btndv">
+                                    <button id="saveInfo" class="obtn">确定</button>
+                                    <button class="obtn obtnBl">取消</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="right">
+                    <div class="oprbar">
+                        <div class="oprdv">
+                            <button id="selallbtn" class="obtn">全选</button>
+                            <button id="selbackbtn" class="obtn obtnBl">反选</button>
+                            <button id="nonebtn" class="obtn obtnBl">清空</button>
+                            <div class="searchDv">
+                                <input type="text" />
+                                <i></i>
+                            </div>
+                        </div>
+                        <span>推送人列表：</span>
+                    </div>
+                    <div class="peaplelist">
+                        <table class="infotbl">
+                            <tr>
+                                <td style="width:70px;padding-left:20px;">序号</td>
+                                <td>旅店名称</td>
+                                <td>姓名</td>
+                                <td class="hiddenTd">手机号</td>
+                                <td class="hiddenTd">身份证号</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    1</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    2</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    3</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    4</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    5</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    6</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    7</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    8</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                    <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    9</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    10</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    11</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="htzhlb">
+                                        <span class="ckbox">
+                                            <input type="checkbox" name="peapleinfo" >
+                                            <i></i>
+                                        </span>
+                                    </label>
+                                    12</td>
+                                <td><span class="infoval mw130">旅店名称1</span></td>
+                                <td><span class="infoval mw70">张三</span></td>
+                                <td class="hiddenTd"><span class="infoval mw105">13589652104</span></td>
+                                <td class="hiddenTd"><span class="infoval mw175">123659874569852336</span></td>
+                            </tr>
+                        </table>
+                        <!-- 小分页 -->
+                        <div class="litPage">
+                            <a class="pgbtn"><</a>
+                            <span class="curpage">2</span>/5
+                            <a class="pgbtn">></a>
+                        </div>
+                        <div class="btndv">
+                            <button id="addbtn" class="obtn">添加</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 遮罩  style="display:block"-->
+    <div class="shade"></div>
+    <i id="tip_center" class="tip_center"></i>
+    <script type="text/javascript">
+
+        $(function(){
+
+            //普通select2初始化
+            $(".defaultSel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 340
+            });
+
+            // select2 赋值
+            //$('#id选择器').val('所要赋的值').trigger("change");
+            
+        });
+
+        //返回
+        $('.goBack').on('click', function(e){
+            PrtIframeTo('groupMsg.html');
+        });
+
+        //删除
+        $('.selResult').on('click', '.delitem', function(e){
+            $(this).closest('tr').remove();
+        });
+
+        //全选
+        $('#selallbtn').on('click', function(e){
+
+            $('input[name="peapleinfo"]').prop('checked', true);
+        });
+
+        //反选
+        $('#selbackbtn ').on('click', function(e){
+
+            $('input[name="peapleinfo"]').each(function(){
+                var vl = $(this).prop('checked');
+                $(this).prop('checked', !vl);
+            });
+        });
+
+        //清空
+        $('#nonebtn').on('click', function(e){
+            
+            $('input[name="peapleinfo"]').prop('checked', false);
+        });
+
+        // 添加
+        $('#addbtn').on('click', function(e){
+            var otr = '<tr>\
+                            <td><i class="delitem"></i>2</td>\
+                            <td><span class="infoval mw130">旅店名称1</span></td>\
+                            <td><span class="infoval mw70">张三</span></td>\
+                            <td><span class="infoval mw105">13589652104</span></td>\
+                            <td><span class="infoval mw175">123659874569852336</span></td>\
+                        </tr>';
+            
+            $('#resultList').append(otr);
+        });
+    </script>
+</body>
+</html>

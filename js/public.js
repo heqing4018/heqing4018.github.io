@@ -23,61 +23,12 @@ function ShadeClose(oSdBox){
     
 }
 
-// loading蒙层，显示
-function loadingShow(tips){
-    
-    if(!tips){
-        tips='loading';
-    }
-
-    var str = '<div class="ldshade">';
-        str += '<div class="ldcont">';
-        str += '<img src="./img/lding.gif"/>';
-        str += '<p>'+ tips +'</p>';
-        str += '</div>';
-        str += '</div>';
-    $('body').append(str);
-}
-
-// loading蒙层，关闭
-function loadingClose(){
-    if($('.ldshade').length>0){
-        $('.ldshade').remove();
-    }
-}
-
-
-// 可编辑框点击相关,在具体页面直接调用方法即可---------------------------------------------------
-function mkeditipt(){
-	
-	$('.editipt').on('focus', function(){
-		$(this).addClass('bgfff');
-	});
-
-	$('.editipt').on('blur', function(){
-		$(this).removeClass('bgfff');
-	});
-}
-
-// 图片放大缩小按钮Js
-function doZoomButtonClicK(){
-    $('#zoomInButton,#zoomOutButton').on("click", zoomButtonClickHandler);
-}
-
-function zoomButtonClickHandler(e){
-    var scaleToAdd = 0.8;
-    if(e.target.id == 'zoomOutButton')
-        scaleToAdd = -scaleToAdd;
-    $('#imageFullScreen').smartZoom('zoom', scaleToAdd);
-} 
-//页面调用doZoomButtonClicK()即可
-
 
 // 当前页跳转
 function iframeTo(goToPage){
-    
+
     $("#iframeMain").attr('src', goToPage);
-    sessionStorage.setItem('curPage', goToPage);
+
 }
 
 // 子页跳转
@@ -86,4 +37,45 @@ function PrtIframeTo(goToPage){
     $("#iframeMain",window.parent.document).attr('src', goToPage);
     sessionStorage.setItem('curPage', goToPage);
 
+}
+
+// 清除本地缓存 ，当前页信息
+function clearSessionStorage(){
+    sessionStorage.setItem('menuid', '');
+    sessionStorage.setItem('curPage', '');
+}
+
+//设置当前页名字和索引缓存,iframeTo方法和home页菜单跳转执行之前调用(子页面跳转不需调用此方法)
+function setSessionStorage(menuid, curPage){
+    sessionStorage.setItem('menuid', menuid);
+    sessionStorage.setItem('curPage', curPage);
+}
+
+//获取左侧总菜单信息
+function getMnpages(){
+    var mnpages = [];
+    $('a[menuid]').each(function(index){
+        mnpages.push($(this).attr('href'));
+    })
+    sessionStorage.setItem('mnpages', mnpages);
+    //本地存储的mnpages是字符串类型
+}
+
+//根据菜单页名字获取在总菜单项目中索引
+function getTargetMnpage(curPage){
+
+    var mnpages = sessionStorage.getItem('mnpages').split(',');
+
+    if(!Array.indexOf){
+        Array.prototype.indexOf = function(el){
+            for (var i=0,n=this.length; i<n; i++){
+                if (this[i] === el){
+                    return i;
+                }
+            }
+            return -1;
+        } 
+    }
+    return mnpages.indexOf(curPage);
+    
 }

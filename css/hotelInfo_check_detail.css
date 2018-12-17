@@ -1,0 +1,125 @@
+.secmain{
+    padding: 0 0 30px 0;
+    border-color: #F1F3F6;
+    position: relative;
+}
+.contBox{
+    padding: 10px 0 40px 40px;
+}
+.infoSec{
+    margin: 0 0 30px 0;
+}
+.infoTitl::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #1492FF;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 5px 0 0;
+}
+.seCont{
+    padding: 15px 0 0 40px;
+}
+.twoCont{
+    padding: 15px 0 0 0;
+}
+.left, .right{
+    float: left;
+}
+.left{
+    margin: 0 50px 0 0;
+}
+.basicInfo{
+    width: 455px;
+    margin: 15px 0 0 40px;
+    border: 1px solid #E5EBF1;
+}
+.basicInfo td{
+    height: 40px;
+    border-bottom: 1px solid #E5EBF1;
+}
+.policeInfo{
+    border: none;
+}
+.policeInfo td{
+    height: 50px;
+    border-bottom: none;
+}
+.basicInfo td:first-child{
+    color: #666;
+    width: 120px;
+    padding: 0 20px;
+}
+.htval{
+    color: #333;
+    max-width: 300px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;    
+    vertical-align: middle;
+}
+.remark{
+    width: 590px;
+    height: 80px;
+    border: 1px solid #E5EBF1;
+    resize: none;
+    overflow: hidden;
+}
+.infoTbl{
+    width: 590px;
+    /* display: none; */
+}
+.infoTbl tr:first-child{
+    color: #666;
+}
+.infoTbl td{
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    padding: 0 0 0 15px;
+}
+.infoTbl td:first-child{
+    width: 75px;
+}
+.infoTbl .hdipt{
+    font-size: 14px;
+    padding: 0;
+    border: none;
+}
+.w100{
+    width: 100px;
+}
+.w185{
+    width: 185px;
+}
+.w140{
+    width: 140px;
+}
+.btndv{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    padding: 15px 40px 0;
+    background: #F1F3F6;
+}
+.btndv .obtn{
+    width: 120px;
+    margin: 0 40px 0 0;
+}
+.passbtn{
+    background: #52C41A;
+    border-color: #52C41A;
+}
+.rejectbtn{
+    background: #F5222D;
+    border-color: #F5222D;
+}
+.passbtns{
+    display: none; 
+}
+.select2-container--default .select2-selection--single{
+    height: 34px;
+    border: 1px solid #e0e0e0;
+}

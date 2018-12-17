@@ -3,966 +3,218 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>摄像头管理</title>
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/css/jquery.multiselect.css" />
-	<link rel="stylesheet" type="text/css" href="plugins/jquery-ui/css/jquery.multiselect.filter.css" />
-    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/css/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/public.css">
-    <link rel="stylesheet" type="text/css" href="css/my-bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/device.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/public.js"></script>
     <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
-    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="plugins/jquery-ui/jquery.multiselect.min.js"></script>
-	<script type="text/javascript" src="plugins/jquery-ui/jquery.multiselect.filter.min.js"></script>
-    <script type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
     <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
 </head>
 <body>
-    <section class="secmain">
-        <!-- 标题 -->
-        <div class="topTitl">
-            <h2 >摄像头管理</h2>
-            <hr/>
-            <div class="tptbtns">
-                <label class="rdlb">
-                    <span class="rdbox">
-                        <input type="radio" name="deviceType" value="0"  checked/>
-                        <i></i>
-                    </span>
-                    图片摄像头
-                </label>
-                <label class="rdlb">
-                    <span class="rdbox">
-                        <input type="radio" name="deviceType" value="1" />
-                        <i></i>
-                    </span>
-                    视频摄像头
-                </label>
-                <a class="tptbtn importbtn"><i class="icons tptimport"></i>导入</a>
-                <a class="tptbtn addsxtbtn"><i class="icons tptadd"></i>添加摄像头</a>
-            </div>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="#">摄像头管理</a>
+            </h2>
         </div>
-        <!-- 菜单栏 -->
-        <form class="form-inline form-menu">
-            <div class="form-group">
-                <input type="text" class="mnipt" placeholder="请输入摄像头名称">
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p>摄像头管理</p>
+                <div class="tptbtns">
+                    <!-- <a class="tptbtn importbtn"><i class="icons tptimport"></i>导入摄像头</a> -->
+                    <a class="tptbtn addbtn"><i class="icons tptadd"></i>添加摄像头</a>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="text" class="mnipt" placeholder="请输入摄像头编码">
+            <div class="contBox">
+                <!-- 菜单栏 -->
+                <table class="menutb">
+                    <tr>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入摄像头名称">
+                        </td>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入设备ID">
+                        </td>
+                        <td class="wmntd">
+                            <select class="mnipt defaultSel">
+                                <option>请选择使用状态</option>
+                                <option value="">状态1</option>
+                                <option value="">状态2</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="obtn searchbtn" type="button" value="查询" />
+                            <input class="obtn resetbtn" type="reset" value="重置" />
+                        </td>
+                    </tr>
+                </table>
+                <!-- 数据列表 -->
+                <table class="datatb">
+                    <thead>
+                        <tr>
+                            <th class="wNumid">序号</th>
+                            <th>设备ID</th>
+                            <th>摄像头名称</th>
+                            <th>启用状态</th>
+                            <th class="w180">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>DEF100381</td>
+                            <td>摄像头1</td>
+                            <td>启用</td>
+                            <td>
+                                <a class="tblbtn editico">编辑</a>
+                                <a class="tblbtn delico">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>DEF100381</td>
+                            <td>摄像头1</td>
+                            <td>停用</td>
+                            <td>
+                                <a class="tblbtn editico">编辑</a>
+                                <a class="tblbtn delico">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>DEF100381</td>
+                            <td>摄像头1</td>
+                            <td>启用</td>
+                            <td>
+                                <a class="tblbtn editico">编辑</a>
+                                <a class="tblbtn delico">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 无数据时的占位图 -->
+                <!-- <div class="nodatadv"> 
+                    暂无数据
+                </div> -->
+                <!-- 分页 -->
+                <div class="pagegation">
+                    <ul>
+                        <li>
+                            <a class="curpage">1</a>
+                        </li>
+                        <li>
+                            <a>2</a>
+                        </li>
+                        <li>
+                            <a>3</a>
+                        </li>
+                        <li>
+                            <a>4</a>
+                        </li>
+                        <li>
+                            <a>5</a>
+                        </li>
+                        <li>
+                            <a>···</a>
+                        </li>
+                        <li>
+                            <a>10</a>
+                        </li>
+                        <li>
+                            <a>11</a>
+                        </li>
+                        <li>
+                            <a>&gt;</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="form-group">
-                <select id="changeTest" class="mnipt defaultSel">
-                    <option>请选择接通状态</option>
-                    <option value="1">接通状态1</option>
-                    <option value="2">接通状态2</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <select class="mnipt defaultSel" onchange="cgtest()">
-                    <option>请选择使用状态</option>
-                    <option value="">使用状态1</option>
-                    <option value="">使用状态2</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <select class="mnipt defaultSel">
-                    <option>请选择地点</option>
-                    <option value="">地点1</option>
-                    <option value="">地点2</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <input class="obtn searchbtn" type="button" value="查询" />
-                <input class="obtn resetbtn" type="reset" value="重置" />
-            </div>
-        </form>
-
-        <!-- 图片摄像头结果 -->
-        <div class="imgResult">
-            <table class="datatb">
-                <thead>
-                    <tr>
-                        <th>序号</th>
-                        <th>摄像头编码</th>
-                        <th>摄像头名称</th>
-                        <th>上级分组</th>
-                        <th>所属分组</th>
-                        <th>所属地点</th>
-                        <th>接通状态</th>
-                        <th>使用状态</th>
-                        <th class="w450">管理</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <span class="greenDot">接通</span>
-                            <!-- <span class="redDot">断开</span> -->
-                        </td>
-                        <td>
-                            <!-- 选中状态 -->
-                            <span class="kg_btn">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" checked/>
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn sszpico">实时抓拍</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 视频摄像头结果 -->
-        <div class="videoResult">
-            <table class="datatb">
-                <thead>
-                    <tr>
-                        <th>序号</th>
-                        <th>摄像头编码</th>
-                        <th>摄像头名称</th>
-                        <th>上级分组</th>
-                        <th>所属分组</th>
-                        <th>所属地点</th>
-                        <th>接通状态</th>
-                        <th>使用状态</th>
-                        <th class="w450">管理</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <span class="greenDot">接通</span>
-                            <!-- <span class="redDot">断开</span> -->
-                        </td>
-                        <td>
-                            <!-- 选中状态 -->
-                            <span class="kg_btn">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" checked checkId='1' value="4"/>
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>DFGDF5415615</td>
-                        <td>摄像头1</td>
-                        <td>分组1</td>
-                        <td>分组1</td>
-                        <td>牡丹园</td>
-                        <td>
-                            <!-- <span class="greenDot">接通</span> -->
-                            <span class="redDot">断开</span>
-                        </td>
-                        <td>
-                            <!-- 未选中状态 -->
-                            <span class="kg_btn kg_btn_unck">
-                                <span class="spdot">
-                                    <i></i>
-                                    <input type="checkbox" />
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <a class="tblbtn editico">编辑</a>
-                            <a class="tblbtn ssspico">实时视频</a>
-                            <a class="tblbtn fxjgico">分析结果</a>
-                            <a class="tblbtn delico">删除</a>
-                        </td>
-                    </tr>
-                
-                </tbody>
-            </table>
-        </div>
-        <!-- 分页 -->
-        <div class="pagegation">
-            <ul>
-                <li>
-                    <a class="curpage">1</a>
-                </li>
-                <li>
-                    <a>2</a>
-                </li>
-                <li>
-                    <a>3</a>
-                </li>
-                <li>
-                    <a>4</a>
-                </li>
-                <li>
-                    <a>5</a>
-                </li>
-                <li>
-                    <a>···</a>
-                </li>
-                <li>
-                    <a>10</a>
-                </li>
-                <li>
-                    <a>11</a>
-                </li>
-                <li>
-                    <a>&gt;</a>
-                </li>
-            </ul>
-        </div>
-    </section>
+        </section>
+    </div>
     <!-- 遮罩 -->
     <div class="shade"></div>
     <!-- 添加摄像头 -->
-    <div class="shadeBox" id="addBox" style="margin-top: -240px;">
+    <div class="shadeBox" id="addBox" >
         <h2>
             <i class="sdbxclose" id="addclose"></i>
             添加摄像头
         </h2>
         <div class="sdbcont">
-            <table style="width:510px;">
+            <table style="width:440px;">
                 <tr>
                     <td class="w100">
-                        <span class="redStart">摄像头编码：</span>
+                        <span class="">设备ID：</span>
                     </td>
                     <td>
                         <input class="sdipt" type="text">
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">摄像头名称：</span>
-                    </td>
-                    <td>
-                        <input class="sdipt" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">摄像头类型：</span>
-                    </td>
-                    <td>
-                        <select class="sdipt boxselbig">
-                            <option>类型1</option>
-                            <option>类型2</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">分析算法：</span>
-                    </td>
-                    <td>
-                        <select id="boxfxsf" multiple="multiple" style="width:400px">
-                            <option value="">分析算法1</option>
-                            <option value="">分析算法2</option>
-                            <option value="">分析算法3</option>
-                            <option value="">分析算法4</option>
-                            <option value="">分析算法5</option>
-                            <option value="">分析算法6</option>
-                            <option value="">分析算法7</option>
-                            <option value="">分析算法8</option>
-                            <option value="">分析算法9</option>
-                            <option value="">分析算法10</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">登录端口：</span>
-                    </td>
-                    <td>
-                        <input class="sdipt" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">取流端口：</span>
-                    </td>
-                    <td>
-                        <input class="sdipt" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">IP地址：</span>
-                    </td>
-                    <td>
-                        <input class="sdipt" type="text">
-                    </td>
-                </tr>
-                
-            </table>
-            <table style="width:510px; margin-top:15px;">
                 <tr>
                     <td class="w100">
-                        <span class="redStart">账号：</span>
+                        <span class="">摄像头名称：</span>
                     </td>
-                    <td> 
-                        <input class="sdipt sdiptmin" type="text">
-                    </td>
-                    <td><span class="redStart">密码：</span></td>
-                    <td> 
-                        <input class="sdipt sdiptmin" type="password">
+                    <td>
+                        <input class="sdipt" type="text">
                     </td>
                 </tr>
                 <tr>
-                    <td>经度：</td>
-                    <td> 
-                        <input class="sdipt sdiptmin" type="text">
+                    <td class="w100">
+                        <span class="">是否启用：</span>
                     </td>
-                    <td>纬度：</td>
-                    <td> 
-                        <input class="sdipt sdiptmin" type="text">
-                    </td>
-                </tr>
-            </table>
-            <table style="width:510px;">
-                <tr>
-                    <td class="w100"><span class="redStart">上级分组：</span></td>
                     <td>
                         <select class="sdipt boxselbig">
-                            <option>分组1</option>
-                            <option>分组2</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="redStart">地点分组：</span></td>
-                    <td>
-                        <select class="sdipt boxselbig">
-                            <option>分组1</option>
-                            <option>分组2</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="redStart">所属地点：</span></td>
-                    <td>
-                        <select class="sdipt boxselbig">
-                            <option>地点1</option>
-                            <option>地点2</option>
-                            <option>地点3</option>
-                            <option>地点4</option>
-                            <option>地点5</option>
+                            <option>启用</option>
+                            <option>停用</option>
                         </select>
                     </td>
                 </tr>
             </table>
         </div>
         <div class="sdbfoot">
-            <input id="addsurn" class="obtn" type="button" value="确认">
+            <input id="addsurn" class="obtn" type="button" value="确定">
             <input id="addcancel" class="obtn obtnBl" type="button" value="取消">
         </div>
     </div>
     <!-- 编辑摄像头 -->
-    <div class="shadeBox" id="editBox" style="margin-top: -240px;">
+    <div class="shadeBox" id="editBox" >
         <h2>
             <i class="sdbxclose" id="editclose"></i>
             编辑摄像头
         </h2>
         <div class="sdbcont">
-            <table style="width:510px;">
+            <table style="width:440px;">
                 <tr>
                     <td class="w100">
-                        <span class="redStart">摄像头编码：</span>
+                        <span class="">设备ID：</span>
                     </td>
                     <td>
                         <input class="sdipt" type="text">
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">摄像头名称：</span>
-                    </td>
-                    <td>
-                        <input class="sdipt" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">摄像头类型：</span>
-                    </td>
-                    <td>
-                        <select class="sdipt boxselbig">
-                            <option>类型1</option>
-                            <option>类型2</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">分析算法：</span>
-                    </td>
-                    <td>
-                        <select class="sdipt boxselbig">
-                            <option>算法1</option>
-                            <option>算法2</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">登录端口：</span>
-                    </td>
-                    <td>
-                        <input class="sdipt" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">取流端口：</span>
-                    </td>
-                    <td>
-                        <input class="sdipt" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="redStart">IP地址：</span>
-                    </td>
-                    <td>
-                        <input class="sdipt" type="text">
-                    </td>
-                </tr>
-            </table>
-            <table style="width:510px; margin-top:15px;">
                 <tr>
                     <td class="w100">
-                        <span class="redStart">账号：</span>
+                        <span class="">摄像头名称：</span>
                     </td>
-                    <td> 
-                        <input class="sdipt sdiptmin" type="text">
-                    </td>
-                    <td><span class="redStart">密码：</span></td>
-                    <td> 
-                        <input class="sdipt sdiptmin" type="password">
+                    <td>
+                        <input class="sdipt" type="text">
                     </td>
                 </tr>
                 <tr>
-                    <td>经度：</td>
-                    <td> 
-                        <input class="sdipt sdiptmin" type="text">
+                    <td class="w100">
+                        <span class="">是否启用：</span>
                     </td>
-                    <td>纬度：</td>
-                    <td> 
-                        <input class="sdipt sdiptmin" type="text">
-                    </td>
-                </tr>
-            </table>
-            <table style="width:510px;">
-                <tr>
-                    <td class="w100"><span class="redStart">上级分组：</span></td>
                     <td>
                         <select class="sdipt boxselbig">
-                            <option>分组1</option>
-                            <option>分组2</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="redStart">地点分组：</span></td>
-                    <td>
-                        <select class="sdipt boxselbig">
-                            <option>分组1</option>
-                            <option>分组2</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="redStart">所属地点：</span></td>
-                    <td>
-                        <select class="sdipt boxselbig">
-                            <option>地点1</option>
-                            <option>地点2</option>
+                            <option>启用</option>
+                            <option>停用</option>
                         </select>
                     </td>
                 </tr>
@@ -987,100 +239,50 @@
             <input id="delcancel" class="obtn obtnBl" type="button" value="取消"/>
         </div>
     </div>
-    <script type="text/javascript">
-
+    <i id="tip_center" class="tip_center"></i>
+    <script>
+        
         $(function(){
 
             //普通select2初始化
-			$(".defaultSel").select2({
-				//隐藏搜索框
+            $(".defaultSel").select2({
+                //隐藏搜索框
                 minimumResultsForSearch: Infinity,
-                width: 220
+                width: 210
             });
-            
-            // 弹框内select2初始化
+
+            //表头select2初始化
+            $(".dtsel").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 100
+            });
+
+            //弹框select2初始化
             $(".boxselbig").select2({
-				//隐藏搜索框
+                //隐藏搜索框
                 minimumResultsForSearch: Infinity,
-                width: 400
+                width: 340
             });
+
             
+        });  
 
-            // select2 赋值
-            //$('#id选择器').val('所要赋的值').trigger("change");
-            
-        });
-
-        // select2 onchange事件测试
-        
-        $('#changeTest').on('change', function(){
-            alert($('#changeTest').val());
-        });
-
-        function cgtest(){
-            alert(1);
-        }
-        
-        var ovideoResult = $('.videoResult'),   //视频摄像头结果
-            oimgResult = $('.imgResult');       //图片摄像头结果
-
-        // 图片摄像头和视频摄像头切换查询
-        $('input[name="deviceType"]').on('click', function(){
-
-            var oval = $(this).val(); //value=0 是图片摄像头，value=1 是视频摄像头 可以根据需求修改
-
-            if(oval==1){
-                ovideoResult.show();
-                oimgResult.hide();
-                
-            }else{
-                oimgResult.show();
-                ovideoResult.hide();
-            }
-
-        });
-        
         //开关按钮
 		$('.kg_btn').off('click', '**');	//绑定事件之前先删除一次，不然开发那边火狐会走两次事件
 		$('.kg_btn').on('click', '.spdot', function(e){
             var ckval = $(this).find('input').prop('checked');
             $(this).closest('.kg_btn').toggleClass('kg_btn_unck');
 			$(this).find('input').prop('checked', !ckval);
-		});
-        
-
-        // 实时视频
-        $('.datatb').on('click', '.ssspico', function(){
-            
-            PrtIframeTo('deviceVideo.html');
-            // PrtIframeTo('deviceVideo.html');
-            // window.open('deviceVideo.html');
         });
-
-        // 实时抓拍
-        $('.datatb').on('click', '.sszpico', function(){
-            PrtIframeTo('deviceImg.html');
-        });
-
-        // 分析结果
-        $('.datatb').on('click', '.fxjgico', function(){
-            PrtIframeTo('alalyzeResult.html');
-        });
-
-        var oaddBox = $('#addBox'),   //添加摄像头
+    
+        var oaddBox = $('#addBox'),     //添加摄像头
             oeditBox = $('#editBox'),   //编辑摄像头
-            odelBox = $('#delBox');   //删除摄像头
-
+            odelBox = $('#delBox');     //删除摄像头
+    
         // 添加摄像头------------------------------
-        $('.addsxtbtn').on('click', function(){
+        $('.addbtn').on('click', function(){
             ShadeShow(oaddBox);
-
-            //单个下拉框多选初始化
-			$("#boxfxsf").multiselect({
-				noneSelectedText: "请选择分析算法",
-				header: false,
-		        selectedList:4
-			});
         });
         //添加摄像头，确认
         $('#addsurn').on('click', function(){
@@ -1106,7 +308,7 @@
         $('#editcancel').on('click', function(){
             ShadeClose(oeditBox);
         });
-        // 编辑摄像头，关闭
+        //编辑摄像头，关闭
         $('#editclose').on('click', function(){
             ShadeClose(oeditBox);
         });
@@ -1122,11 +324,11 @@
         $('#delcancel').on('click', function(){
             ShadeClose(odelBox);
         });
-        // 删除摄像头，关闭
+        //删除摄像头，关闭
         $('#delclose').on('click', function(){
             ShadeClose(odelBox);
         });
         
-	</script>
+    </script>
 </body>
 </html>

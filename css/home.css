@@ -1,196 +1,286 @@
-.secmain{
-    padding-bottom: 0;
+html,body{
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    max-width: 1920px !important;
+    min-width: 1366px !important;
+    background:#0B0B38;
 }
-.sec2{
-    margin: 10px 0 30px 0; 
-}
-.tldv{
-    color: #e0e0e0;
-    font-size: 18px;
-    padding: 0 0 10px 10px;
-}
-.cckjlst, .flexsec{
-    display: flex;
-    justify-content: space-between;
-}
-.cckjlst li{
+.outer{
     position: relative;
-    float: left;
-    color: #333;
-    width: 340px;
-    height: 200px;
-    text-align: center;
-    padding: 25px 25px;
-    margin: 0 30px 0 0;
-    background: #27282E;
-    overflow: hidden;
+    color: #fff;
+    height: 100%;
+    overflow-y: auto;
+    background:#0B0B38 url('../img/homebg.png') center no-repeat;
+    background-size: 100% 100%;
 }
-.btmborder{
+.top{
+    height: 60px;
+    background: rgba(0, 0, 0, .15);
+    padding: 0 20px;
+}
+.sysName{
+    line-height: 60px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    float: left;
+}
+.topRt{
+    float: right;
+    line-height: 60px;
+}
+.topRt a{
+    color: #fff;
+    margin: 0 0 0 15px;
+}
+.topRt .ctrpnbtn{
+    width: 106px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 100px 0 0;
+    background: url('../img/pnlhome.png') center no-repeat;
+}
+.btm{
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 3px;
-    display: inline-block;
-    background: -webkit-linear-gradient(to right, #0E71FF, #1AB3FF); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(to right, #0E71FF, #1AB3FF); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(to right, #0E71FF, #1AB3FF); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right, #0E71FF, #1AB3FF); /* 标准的语法 */
-}
-.cckjlst .li6 .rldv{
-    font-size: 32px;
-}
-.cckjlst .rldv{
-    color: #fff;
-    font-size: 32px;
-    height: 60px;
-    margin: 10px 0 0 0;
-    max-width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;    
-}
-.cckjlst .kindv{
-    color: #a8a8b2;
-    font-size: 16px;
+    color: #909099;
+    line-height: 60px;
     text-align: center;
 }
-.cckj_ico{
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1220px;
+    height: 500px;
+    margin: 0 auto;
+}
+.titlUl{
+    margin: 0 0 20px 0;
+}
+.titlUl li{
+    float: left;
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-weight: 700px;   
+    font-size: 22px;
+    cursor: pointer;
+    background: url('../img/hm_titl.png') no-repeat;
+}
+.titlUl .curtitl{
+    background: url('../img/hm_curtitl.png') no-repeat;
+}
+.contitem{
+    display: none;
+}
+.contitem li{
+    position: relative;
+    float: left;
+    width: 395px;
+    height: 195px;
+    text-align: center;
+    font-size: 16px;
+    padding: 60px 0 0 0;
+    margin: 0 10px 10px 0;
+    background: rgba(0, 78, 204, .6);
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+.itmico{
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+}
+.topL{
+    left: 10px;
+    top: 10px;
+    background: url('../img/topL.png') center no-repeat;
+}
+.btmR{
+    right: 10px;
+    bottom: 10px;
+    background: url('../img/btmR.png') center no-repeat;
+}
+.mnico{
     width: 44px;
     height: 44px;
-    display: inline-block;
-    background-repeat: no-repeat;
+    display: block;
+    background-image: url('../img/home_icos.png');
+    margin: 0 auto 20px;
+    
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear;
 }
-.li1_ico{
-    background-image: url('../img/cckji.png');
+.rzjlico{
+    background-position: -10px -268px;
 }
-.li2_ico{
-    background-image: url('../img/yycckji.png');
+.drsbico{
+    background-position: -139px -139px;
 }
-.li3_ico{
-    background-image: url('../img/wycckji.png');
+.zkjkico{
+    background-position: -212px -138px;
 }
-.cckjlst .li4{
-    width: 507px;
-    line-height: 65px;
-    padding: 35px 45px 0 50px;
-    margin: 0;
+.fltjico{
+    background-position: -146px -74px;
 }
-.li4 .rldv{
-    float: right;
-    font-size: 24px;
-    margin: 0;
-    max-width: 150px;
+.cqwbico{
+    background-position: -75px -139px;
 }
-.li4 .kindv{
-    float: left
+.zpycico{
+    width: 49px;
+    background-position:  -10px -10px;
 }
-.dvbox{
-    width: 520px;
-    margin: 0 30px 0 0;
-    float: left;
+.lgzlglico{
+    background-position: -10px -139px;
 }
-.dvbox:last-child{
-    margin: 0;
+.jyzzlglico{
+    background-position: -212px -74px;
 }
-.dvbox .scmndv{
-    height: 280px;
-    padding: 60px 43px;
-    background: #27282E;
+.lgrlico{
+    background-position:  -73px -203px;
 }
-.dvbox .rwzt-scmndv{
-    padding: 25px 43px;
+.jyzzlshico{
+    background-position: -10px -203px;
 }
-.dvbox .scmndv img{
-    width: 146px;
-    height: 146px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 60px 0 0;
+.lgzlshico{
+    background-position:  -10px -74px;
 }
-.infolist{
-    display: inline-block;
-    width: 220px;
-    font-size: 16px;
-    color: #a8a8b2;
-    vertical-align: middle;
-    line-height: 35px;
+.xxtzlsico{
+    background-position: -136px -203px;
 }
-.dvrt{
-    float: right;
+.qfxxico{
+    background-position: -276px -10px;
+}
+.jgglico{
+    width: 47px;
+    background-position: -79px -10px;
+}
+.xxdzglico{
+    width: 46px; 
+    background-position: -146px -10px;
+}
+.sxtglico{
+    background-position:  -276px -74px;
+}
+.zhglico{
+    width: 47px;
+    background-position: -79px -74px;
+}
+.czrzico{
+    background-position: -199px -203px;
+}
+.grzxico{
+    background-position: -212px -10px;
+}
+.mname{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    width: 165px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto;
+}
+.mname a{
     color: #fff;
-    font-size: 20px;
-    max-width: 50px;
+}
+/* -------------菜单名字边框效果--------------------- */
+.mnline{
+    position: absolute;
+    background: #89A6DC;
     display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin: 3px 0 0 0;    
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear;
 }
-.dot-blue::before{
-    content: '';
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #0196F2;
-    vertical-align: middle;
-    margin: 0 4px 0 0;
+.top_line, .btm_line{
+    width: 40px;
+    height: 1px;
 }
-.dot-green::before{
-    content: '';
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #1CBA9A;
-    vertical-align: middle;
-    margin: 0 4px 0 0;
+.rit_line, .lft_line{
+    width: 1px;
+    height: 40px;
 }
-.dot-red::before{
-    content: '';
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #FF5662;
-    vertical-align: middle;
-    margin: 0 4px 0 0;
+.top_line{
+    top: 0;
+    right: -5px;
+    background: -webkit-linear-gradient(to left, #88AAE1, rgba(23, 89, 196, .5));
+    background: -o-linear-gradient(to left, #88AAE1, rgba(23, 89, 196, .5));
+    background: -moz-linear-gradient(to left, #88AAE1, rgba(23, 89, 196, .5));
+    background: linear-gradient(to left, #88AAE1, rgba(23, 89, 196, .5));
 }
-.dot-yellow::before{
-    content: '';
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #FDA336;
-    vertical-align: middle;
-    margin: 0 4px 0 0;
+.rit_line{
+    top: -5px;
+    right: 0;
+    background: -webkit-linear-gradient(to bottom, #88AAE1, rgba(23, 89, 196, .5));
+    background: -o-linear-gradient(to bottom, #88AAE1, rgba(23, 89, 196, .5));
+    background: -moz-linear-gradient(to bottom, #88AAE1, rgba(23, 89, 196, .5));
+    background: linear-gradient(to bottom, #88AAE1, rgba(23, 89, 196, .5));
 }
-
-.datatb{
-    margin: 0;
+.btm_line{
+    left: -5px;
+    bottom: 0;
+    background: -webkit-linear-gradient(to right, #88AAE1, rgba(23, 89, 196, .5));
+    background: -o-linear-gradient(to right, #88AAE1, rgba(23, 89, 196, .5));
+    background: -moz-linear-gradient(to right, #88AAE1, rgba(23, 89, 196, .5));
+    background: linear-gradient(to right, #88AAE1, rgba(23, 89, 196, .5));
 }
-.datatb td{
-    width: 25%;
-    height: 50px;
-    border: 1px solid #1F2024;
+.lft_line{
+    bottom: -5px;
+    left: 0;
+    background: -webkit-linear-gradient(to top, #88AAE1, rgba(23, 89, 196, .5));
+    background: -o-linear-gradient(to top, #88AAE1, rgba(23, 89, 196, .5));
+    background: -moz-linear-gradient(to top, #88AAE1, rgba(23, 89, 196, .5));
+    background: linear-gradient(to top, #88AAE1, rgba(23, 89, 196, .5));
 }
-
-@media (max-width: 1700px) {
-    .tohide{
-        display: none;
-    }
-    .dvbox .scmndv img{
-        display: block;
-        margin: 0 auto;
-    }
-    .infolist{
-        display: block;
-        margin: 20px auto 0;
-    }
-    .dvbox .scmndv{
-        height: 400px;
-        padding: 25px 43px;
-    }
+.contitem li:hover .mnline{
+    background: #88AAE1;
+}
+.contitem li:hover .top_line{
+    width: 100%;
+    right: 0;
+}
+.contitem li:hover .rit_line{
+    height: 100%;
+    top: 0;
+}
+.contitem li:hover .btm_line{
+    width: 100%;
+    left: 0;
+}
+.contitem li:hover .lft_line{
+    height: 100%;
+    bottom: 0;
+}
+/* -------------------------------------------- */
+.contitem li:hover{
+    padding-top: 55px;
+    background: -webkit-linear-gradient(to bottom, #31B5FF, #3679F6, rgba(23, 89, 196, .5));
+    background: -o-linear-gradient(to bottom, #31B5FF, #3679F6, rgba(23, 89, 196, .5));
+    background: -moz-linear-gradient(to bottom, #31B5FF, #3679F6, rgba(23, 89, 196, .5));
+    background: linear-gradient(to bottom, #31B5FF, #3679F6, rgba(23, 89, 196, .5));
+}
+.contitem li:hover .mnico{
+    top: 20px;
+}
+.curitem{
+    display: block;
 }

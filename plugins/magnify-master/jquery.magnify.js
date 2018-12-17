@@ -135,12 +135,10 @@ function getImageNameFromUrl(url) {
  * @return {[Number]}       [description]
  */
 function getNumFromCSSValue(value) {
-	var reg = /\d+/g,
-        arr = value.match(reg);
-    if(arr!=null)
-        var num = parseFloat(arr[0]);
-
-    return num;
+  var reg = /\d+/g,
+    arr = value.match(reg),
+    num = parseFloat(arr[0]);
+  return num;
 }
 
 /**
@@ -225,7 +223,7 @@ var $W = $(window),
   // plugin default options
   DEFAULTS = {
     // Enable modal to drag
-    draggable: false,
+    draggable: true,
 
     // Enable modal to resize
     resizable: true,
@@ -499,17 +497,15 @@ Magnify.prototype = {
     // magnify base HTML
     var magnifyHTML = '<div class="magnify-modal">\
                         <div class="magnify-header">\
-                          <div class="magnify-toolbar magnify-head-toolbar">' + this._creatBtns(this.options.headToolbar, btnsTpl) + '</div>' + this._creatTitle() + '\
+                          抓拍原图<div class="magnify-toolbar magnify-head-toolbar">' + this._creatBtns(this.options.headToolbar, btnsTpl) + '</div>' + this._creatTitle() + '\
                         </div>\
                         <div class="magnify-stage">\
                           <img class="magnify-image" src="" alt="" />\
-                          <img id="imgerror" style="display:none"  src="assets/img/carno.png"/>\
-                          </div>\
+                        </div>\
                         <div class="magnify-footer">\
-                          <div class="magnify-toolbar magnify-foot-toolbar">' + this._creatBtns(this.options.footToolbar, btnsTpl) + '<button class="dwbtn"><i></i></button></div>\
+                          <div class="magnify-toolbar magnify-foot-toolbar">' + this._creatBtns(this.options.footToolbar, btnsTpl) + '</div>\
                         </div>\
                       </div>';
-
     return magnifyHTML;
 
   },
@@ -543,12 +539,11 @@ Magnify.prototype = {
     this.$next = $magnify.find('.magnify-button-next');
 
     // Add class before image loaded
-    $('#imgerror').show();
     this.$stage.addClass('stage-ready');
     this.$image.addClass('image-ready');
 
     // Reset modal z-index with multiple instances
-    // this.$magnify.css('z-index', PUBLIC_VARS['zIndex']);
+    this.$magnify.css('z-index', PUBLIC_VARS['zIndex']);
 
     // Set handle element of draggable
     if (!this.options.dragHandle || this.options.dragHandle === '.magnify-modal') {
@@ -567,7 +562,7 @@ Magnify.prototype = {
     // Fixed modal position bug
     if (!$('.magnify-modal').length && this.options.fixedContent) {
 
-    //   $('html').css({ 'overflow': 'hidden' }); //20181204,hqq注释掉（车辆详情页面需要滚动条）
+      $('html').css({ 'overflow': 'hidden' });
 
       if (hasScrollbar()) {
         var scrollbarWidth = getScrollbarWidth();
@@ -583,8 +578,18 @@ Magnify.prototype = {
     this._triggerHook('beforeOpen', this.$el);
 
     // Add Magnify to DOM
-    // $('body').append(this.$magnify);
-    $('#magnifyImgContainer').append(this.$magnify);
+    $('body').append(this.$magnify);
+
+
+    //自定义，弹框后面的遮罩显示，都是页面上已有的元素  20180914 heqingqing
+    // $('body', parent.document).append(this.$magnify);
+
+    var oShadeIndex = $('.shade', parent.document);//主页面的遮罩
+    var oShade = $('.shade');//遮罩
+    oShadeIndex.show();
+    oShade.show();
+
+    //--------------------------------------------------------------|
 
     this.addEvents();
 
@@ -622,8 +627,14 @@ Magnify.prototype = {
       $D.off(KEYDOWN_EVENT + EVENT_NS);
       $W.off(RESIZE_EVENT + EVENT_NS);
     }
-
     this._triggerHook('closed', this.$el);
+
+    //自定义，弹框后面的遮罩关闭，都是页面上已有的元素  20180914 heqingqing
+    var oShadeIndex = $('.shade', parent.document);//主页面的遮罩
+    var oShade = $('.shade');//遮罩
+    oShadeIndex.hide();
+    oShade.hide();
+    //--------------------------------------------------------------|
 
   },
   setModalPos: function (modal) {
@@ -644,9 +655,10 @@ Magnify.prototype = {
       modal.css({
         width: '100%',
         height: '100%',
-        // left: 0,
-        // top: 0
+        left: 0,
+        top: 0
       });
+
       this.isOpened = true;
       this.isMaximized = true;
 
@@ -656,8 +668,8 @@ Magnify.prototype = {
       modal.css({
         width: modalWidth,
         height: modalHeight,
-        // left: (winWidth - modalWidth) / 2 + scrollLeft + 'px',
-        // top: (winHeight - modalHeight) / 2 + scrollTop + 'px'
+        left: (winWidth - modalWidth) / 2 + scrollLeft + 'px',
+        top: (winHeight - modalHeight) / 2 + scrollTop + 'px'
       });
 
     }
@@ -702,8 +714,8 @@ Magnify.prototype = {
     var modalCSSObj = {
       width: minWidth + 'px',
       height: minHeight + 'px',
-    //   left: (winWidth - minWidth) / 2 + scrollLeft + 'px',
-    //   top: (winHeight - minHeight) / 2 + scrollTop + 'px'
+      left: (winWidth - minWidth) / 2 + scrollLeft + 'px',
+      top: (winHeight - minHeight) / 2 + scrollTop + 'px'
     };
 
     // Add modal init animation
@@ -788,15 +800,16 @@ Magnify.prototype = {
     this.$magnify.append(loaderHTML);
 
     if (this.options.initAnimation) {
-     this.$image.hide();
-     $('#imgerror').show();
+        this.$image.hide();
     }
 
+
     if (isIE8()) {
-      this.$stage.html('<img class="magnify-image" id="magnify-image" src="' + imgSrc + '" alt=""/>')
+      this.$stage.html('<img class="magnify-image" id="magnify-image" src="' + imgSrc + '" alt="" />')
     } else {
       this.$image.attr('src', imgSrc);
     }
+
 
     preloadImg(imgSrc, function (img) {
 
@@ -811,14 +824,27 @@ Magnify.prototype = {
       } else {
         self.setModalSize(img);
       }
-      
-      $('#imgerror').hide();
+
       self.$stage.removeClass('stage-ready');
       self.$image.removeClass('image-ready');
+
+      //图片加载成功后删除占位图样式，20180914 heqingqing
+      self.$image.removeClass('image-error');
+      //------------------------------------------|
 
     }, function () {
       // loader end
       self.$magnify.find('.magnify-loader').remove();
+
+      //图片加载失败后显示占位图，20180914 heqingqing
+      self.$image.show();
+      self.$image.addClass('image-error');
+      self.$image.attr('src', './img/errorimg.png');
+      self.$stage.removeClass('stage-ready');
+      self.$image.removeClass('image-ready');
+
+      //-------------------------------------------|
+
     });
 
     if (this.options.title) {
@@ -1066,8 +1092,8 @@ Magnify.prototype = {
       this.modalData = {
         width: this.$magnify.width(),
         height: this.$magnify.height(),
-        // left: this.$magnify.offset().left,
-        // top: this.$magnify.offset().top
+        left: this.$magnify.offset().left,
+        top: this.$magnify.offset().top
       };
 
       this.$magnify.addClass('magnify-maximize');
@@ -1075,8 +1101,8 @@ Magnify.prototype = {
       this.$magnify.css({
         width: '100%',
         height: '100%',
-        // left: 0,
-        // top: 0
+        left: 0,
+        top: 0
       });
 
       this.isMaximized = true;
@@ -1088,8 +1114,8 @@ Magnify.prototype = {
       this.$magnify.css({
         width: this.modalData.width ? this.modalData.width : this.options.modalWidth,
         height: this.modalData.height ? this.modalData.height : this.options.modalHeight,
-        // left: this.modalData.left ? this.modalData.left : ($W.width() - this.options.modalWidth) / 2 + $D.scrollLeft(),
-        // top: this.modalData.top ? this.modalData.top : ($W.height() - this.options.modalHeight) / 2 + $D.scrollTop()
+        left: this.modalData.left ? this.modalData.left : ($W.width() - this.options.modalWidth) / 2 + $D.scrollLeft(),
+        top: this.modalData.top ? this.modalData.top : ($W.height() - this.options.modalHeight) / 2 + $D.scrollTop()
       });
 
       this.isMaximized = false;
@@ -1357,8 +1383,8 @@ var draggable = function (modal, dragHandle, dragCancel) {
         relativeY = endY - startY;
 
       $(modal).css({
-        // left: relativeX + left + 'px',
-        // top: relativeY + top + 'px'
+        left: relativeX + left + 'px',
+        top: relativeY + top + 'px'
       });
 
     }

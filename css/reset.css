@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 body{
-	color: #c0c0cc;
+	color: #333;
 	font-size: 14px;
 	font-family: 'Microsoft YaHei';
 }
@@ -15,9 +15,9 @@ ul,ol,li{
 	list-style: none;
 }
 button, input, select,textarea{
-	color: #c0c0cc;
+	color: #242b33;
     font-family: 'Microsoft YaHei';
-    background: #2E2E38;
+    background: #fff;
 }
 input[type='text'],input[type='password'], input[type='date'], select, textarea{
 	padding: 0 0 0 8px;
@@ -28,7 +28,7 @@ input[type='date'], input[type='button'], input[type='submit'], input[type='rese
 textarea{
     padding: 5px 8px;
 }
-button, input, select{
+button, input, select, textarea{
     font-size: 12px;
 }
 a, img, input, select, button, textarea{
@@ -69,14 +69,14 @@ select::-ms-expand{
 }
 /* placeholder颜色 */
 input::-webkit-input-placeholder{
-    color:#c0c0cc;
+    color:#242b33;
 }
 input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-    color:#c0c0cc;
+    color:#242b33;
 }
 input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-    color:#c0c0cc;
+    color:#242b33;
 }
 input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-    color:#c0c0cc;
+    color:#242b33;
 }

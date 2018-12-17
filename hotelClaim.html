@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>旅馆认领</title>
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/jquery.magnify.css" >
+    <link rel="stylesheet" type="text/css" href="plugins/magnify-master/css/magnify-white-theme.css" >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>   
+</head>
+<body>
+    <div class="innerContent">
+        <!-- 导航 -->
+        <div class="topNavi">
+            <h2>
+                <i class="nav icons"></i>
+                <a href="#">旅馆认领</a>
+            </h2>
+        </div>
+        <section class="secmain">
+            <!-- 标题 -->
+            <div class="topTitl">
+                <p>旅馆认领</p>
+            </div>
+            <div class="contBox">
+                <!-- 菜单栏 -->
+                <table class="menutb">
+                    <tr>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入旅店ID">
+                        </td>
+                        <td class="wmntd">
+                            <input type="text" class="mnipt" placeholder="请输入旅店名称">
+                        </td>
+                        <td>
+                            <input class="obtn searchbtn" type="button" value="查询" />
+                            <input class="obtn resetbtn" type="reset" value="重置" />
+                        </td>
+                    </tr>
+                </table>
+                <!-- 数据列表 -->
+                <table class="datatb">
+                    <thead>
+                        <tr>
+                            <th class="wNumid">序号</th>
+                            <th class="hiddenTd">旅馆ID</th>
+                            <th>旅馆名称</th>
+                            <th>地址</th>
+                            <th>所属分组</th>
+                            <th>所属派出所</th>
+                            <th>所属分局</th>
+                            <th>旅馆状态</th>
+                            <th class="w180">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="hiddenTd">SK2-12345566</td>
+                            <td>齐家大院</td>
+                            <td>北京市海淀区花园路16号</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>营业中</td>
+                            <td>
+                                <a class="tblbtn ckdetailico">查看</a>
+                                <a class="tblbtn claimico">认领</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="hiddenTd">SK2-12345566</td>
+                            <td>齐家大院</td>
+                            <td>北京市海淀区花园路16号</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>营业中</td>
+                            <td>
+                                <a class="tblbtn ckdetailico">查看</a>
+                                <a class="tblbtn claimico">认领</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="hiddenTd">SK2-12345566</td>
+                            <td>齐家大院</td>
+                            <td>北京市海淀区花园路16号</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>营业中</td>
+                            <td>
+                                <a class="tblbtn ckdetailico">查看</a>
+                                <a class="tblbtn claimico">认领</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 无数据时的占位图 -->
+                <!-- <div class="nodatadv"> 
+                    暂无数据
+                </div> -->
+                <!-- 分页 -->
+                <div class="pagegation">
+                    <ul>
+                        <li>
+                            <a class="curpage">1</a>
+                        </li>
+                        <li>
+                            <a>2</a>
+                        </li>
+                        <li>
+                            <a>3</a>
+                        </li>
+                        <li>
+                            <a>4</a>
+                        </li>
+                        <li>
+                            <a>5</a>
+                        </li>
+                        <li>
+                            <a>···</a>
+                        </li>
+                        <li>
+                            <a>10</a>
+                        </li>
+                        <li>
+                            <a>11</a>
+                        </li>
+                        <li>
+                            <a>&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 遮罩 -->
+    <div class="shade"></div>
+    <!-- 认领 style="margin-top: -317px;"-->
+    <div class="shadeBox" id="claimBox" >
+        <h2>
+            <i class="sdbxclose" id="claimclose"></i>
+            确认绑定
+        </h2>
+        <div class="sdbcont">
+            <table style="width:440px;">
+                <tr>
+                    <td class="w100">
+                        <span class="">所属市局：</span>
+                    </td>
+                    <td>
+                        <select class="sdipt boxselbig">
+                            <option>市局1</option>
+                            <option>市局2</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">所属分局：</span>
+                    </td>
+                    <td>
+                        <select class="sdipt boxselbig">
+                            <option>分局1</option>
+                            <option>分局2</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">所属派出所：</span>
+                    </td>
+                    <td>
+                        <select class="sdipt boxselbig">
+                            <option>派出所1</option>
+                            <option>派出所2</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w100">
+                        <span class="">所属分组：</span>
+                    </td>
+                    <td>
+                        <select class="sdipt boxselbig">
+                            <option>分组1</option>
+                            <option>分组2</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="sdbfoot">
+            <input id="claimsurn" class="obtn" type="button" value="确定">
+            <input id="claimcancel" class="obtn obtnBl" type="button" value="取消">
+        </div>
+    </div>
+    <i id="tip_center" class="tip_center"></i>
+    <script type="text/javascript">
+
+        $(function(){
+
+            //弹框select2初始化
+            $(".boxselbig").select2({
+                //隐藏搜索框
+                minimumResultsForSearch: Infinity,
+                width: 340
+            });
+
+            
+        });  
+
+        //查看
+        $('.datatb').on('click', '.ckdetailico', function(){
+            PrtIframeTo('hotelClaim_detail.html');
+        });
+
+        var oclaimBox = $('#claimBox');     //认领
+        
+        // 认领绑定------------------------------
+        $('.datatb').on('click', '.claimico', function(){
+            ShadeShow(oclaimBox);
+        });
+        //认领绑定，确认
+        $('#claimsurn').on('click', function(){
+            ShadeClose(oclaimBox);
+        });
+        //认领绑定，取消
+        $('#claimcancel').on('click', function(){
+            ShadeClose(oclaimBox);
+        });
+        // 认领绑定，关闭
+        $('#claimclose').on('click', function(){
+            ShadeClose(oclaimBox);
+        });
+        
+
+    </script>
+</body>
+</html>

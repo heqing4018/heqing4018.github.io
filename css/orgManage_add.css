@@ -1,0 +1,212 @@
+.contBox{
+    padding: 10px 40px;
+}
+.infoSec{
+    margin: 0 0 30px 0;
+}
+.seCont{
+    padding: 15px 0 0 0;
+}
+.basicInfo{
+    margin: 10px 0 0 40px;
+}
+.basicInfo td{
+    height: 50px;
+}
+.basicInfo td:first-child{
+    color: #666;
+    width: 90px;
+}
+.bckipt{
+    width: 340px;
+    height: 34px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background: #FCFDFF;
+}
+.mngbtn{
+    color: #1492ff;
+    margin: 0 0 0 30px;
+    cursor: pointer;
+}
+.infoTbl{
+    width: 590px;
+    /* display: none; */
+}
+.infoTbl tr:first-child{
+    color: #666;
+}
+.infoTbl td{
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    padding: 0 0 0 15px;
+}
+.infoTbl td:first-child{
+    width: 75px;
+}
+.infoTbl td:last-child{
+    position: relative;
+}
+.infoTbl .hdipt{
+    font-size: 14px;
+    padding: 0;
+    border: none;
+}
+.w100{
+    width: 100px;
+}
+.w185{
+    width: 185px;
+}
+.w140{
+    width: 140px;
+}
+.btndv{
+    padding: 20px 0 0 45px;
+}
+.btndv .obtn{
+    width: 120px;
+    height: 38px;
+    line-height: 36px;
+    margin: 0 30px 0 0;
+}
+.infoCard{
+    font-size: 12px;
+	margin-top: -250px;
+    margin-left: -220px;	/* 具体弹框位置具体定 */
+    width: 380px;
+    height: 460px;
+    background: #fff;
+}
+.infoCard h2{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.infoCard .sdbxclose{
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+}
+.inftop{
+    padding: 15px 20px 0;
+}
+.searchDv{
+    position: relative;
+    height: 34px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 0 40px 0 0;
+    margin: 0 0 10px 0;
+}
+.seaript{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.seari{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    background: #1492ff;
+    cursor: pointer;
+}
+.tbdv{
+    padding: 0 20px;
+    margin: 13px 0 0 0;
+}
+.dvclist{
+    height: 255px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.cell{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px 0 15px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;    
+}
+.infoCard .tblbtn{
+    margin: 0;
+}
+.tbtitle{
+    background: #E5EBF1;
+}
+.tbtitle .cell:first-child{
+    width: 65px;
+    border-right: 1px solid #CED8E0;
+}
+.tbtitle .cell:nth-child(2){
+    width: 180px;
+    padding-right: 30px;
+    border-right: 1px solid #CED8E0;
+}
+.dvcitem{
+    position: relative;
+}
+.dvcitem label{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.curitem{
+    background: #E8F4FF;
+}
+.dvcitem .cell:first-child{
+    width: 65px;
+}
+.dvcitem .cell:nth-child(2){
+    width: 180px;
+    padding-right: 30px;
+}
+.infoCard .sdbfoot{
+    height: 70px;
+    padding: 18px;
+    text-align: center;
+    background: #fff;
+}
+.infoCard .obtn{
+    margin: 0 15px;
+}
+.select2-container--default .select2-selection--single{
+    height: 34px;
+    background: #FCFDFF;
+    border: 1px solid #e0e0e0;
+}
+
+#substationBox{
+    width: 490px;
+    margin-left: -250px;
+}
+#substationBox .tbtitle .cell:nth-child(2),
+#substationBox .tbtitle .cell:nth-child(3),
+#substationBox .dvcitem .cell:nth-child(2),
+#substationBox .dvcitem .cell:nth-child(3)
+{
+    width: 145px;
+}
+#substationBox .tbtitle .cell:nth-child(3){
+    border-right: 1px solid #CED8E0;
+}
+#substationBox .topleft{
+    float: left;
+    padding: 0 15px 0 0;
+}
+#substationBox .select2-container--default .select2-selection--single{
+    height: 34px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
