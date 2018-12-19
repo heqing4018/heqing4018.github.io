@@ -16,7 +16,7 @@
     <script type="text/javascript" src="plugins/echarts.min.js"></script>
     <script language="javascript" type="text/javascript" src="plugins/My97DatePicker/WdatePicker.js"></script>
     <script type="text/javascript" src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script> 
-    <script type="text/javascript" src="plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
     <script type="text/javascript" src="plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
     
 </head>
@@ -357,15 +357,14 @@
                             </div> -->
                             <div class="datadv">
                                 <i></i>
-                                <input class="form_datetime" type="text" value="起始日期" id="startDate"  data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd" readonly />
+                                <input class="form_datetime" id="startDate" type="text" value="" placeholder="起始日期"   data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" readonly />
                             </div>
                             <div class="hline" style="vertical-align:middle;">一</div>
                             <div class="datadv">
                                 <i></i>
-                                <input class="form_datetime" type="text" value="结束日期" id="endDate" data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd" readonly />
+                                <input class="form_datetime" id="endDate" type="text" value="" placeholder="结束日期" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" readonly />
                             </div>
                         </div>
-
                         <select class="pnlSel">
                             <option value="">山西省</option>
                             <option value="">河北省</option>
@@ -411,7 +410,6 @@
             $('#startDate').datetimepicker({
                 language: 'zh-CN',
                 weekStart: 1,
-                todayBtn:  1,
                 autoclose: 1,
                 todayHighlight: 1,
                 startView: 2,
@@ -421,7 +419,6 @@
             $('#endDate').datetimepicker({
                 language: 'zh-CN',
                 weekStart: 1,
-                todayBtn:  1,
                 autoclose: 1,
                 todayHighlight: 1,
                 startView: 2,
