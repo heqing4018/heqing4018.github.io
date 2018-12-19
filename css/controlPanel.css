@@ -1,6 +1,6 @@
 html,body{
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     padding: 0 !important;
     max-width: 1920px !important;
     min-width: 1366px !important;
@@ -11,7 +11,7 @@ html,body{
     position: relative;
     color: #d3d3e0;
     min-height: 100%; 
-    overflow-y: auto; /* outer或者body只能一个有滚动条，body默认是会产生滚动条的，body无滚动条之后，datetimepiker定位会有问题 */
+    /*overflow-y: auto;  outer或者body只能一个有滚动条，body默认是会产生滚动条的，body无滚动条之后，datetimepiker定位会有问题 */
     background:#0B0B38 url('../img/pnlbg.png') center no-repeat;
     background-size: 100% 100%;
     padding: 70px 30px 0;
@@ -26,7 +26,7 @@ html,body{
 .sec2{
     display: flex;
     height: 360px;
-    margin: 0 0 25px 0;
+    /* margin: 0 0 25px 0; */
 }
 .sec3, .sec4, .sec5{
     height: 100%;
