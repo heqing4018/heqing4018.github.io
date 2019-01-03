@@ -15,19 +15,50 @@
         <div class="pgsBar">
             <ul class="clear">
                 <li class="curLi"><i class="pgsdot">1</i>上传证件<i class="pgsline"></i></li>
-                <li class="curLi"><i class="pgsdot">2</i>活体检测<i class="pgsline"></i></li>
+                <li><i class="pgsdot">2</i>活体检测<i class="pgsline"></i></li>
                 <li><i class="pgsdot">3</i>认证结果</li>
             </ul>
         </div>
         <div class="content">
-            <div class="phtdv">
-
+            
+            <div class="phtdv idFront hasTake">
+                <p>上传身份证人像面</p>
+                <div class="imgdv">
+                    <img src="./img/id1.jpg"/>
+                    <div class="imgshd">
+                        <!-- 照片符合规范对应样式 -->
+                        <i class="imgstatei passi"></i>
+                        <!-- 照片不符合规范，需重新上传对应样式 -->
+                        <!-- <i class="imgstatei notpassi"></i> -->
+                    </div>
+                </div>
+                <!-- 拍照按钮 -->
+                <a href="javascript:void(0)" class="tkphtbtn"></a>
             </div>
-            <div class="phtdv">
-                
+            <div class="phtdv idRear hasTake">
+                <p>上传身份证国徽面</p>
+                <div class="imgdv">
+                    <img src="./img/id2.jpg"/>
+                    <div class="imgshd">
+                        <!-- 照片符合规范对应样式 -->
+                        <!-- <i class="imgstatei passi"></i> -->
+                        <!-- 照片不符合规范，需重新上传对应样式 -->
+                        <i class="imgstatei notpassi"></i>
+                    </div>
+                </div>
+                <!-- 拍照按钮 -->
+                <a href="javascript:void(0)" class="tkphtbtn"></a>
+            </div>
+
+            <div class="infodv">
+                <p>请核对自动识别信息，若信息有误请重新上传</p>
+                <p class="idinfo clear">
+                    <span class="userName">张三</span>
+                    <span class="userId">130423169857425889</span>
+                </p>
             </div>
             <div class="btndv">
-                <input class="obtn" type="button" value="下一步" />
+                <input class="obtn" type="button" value="下一步" disabled />
                 <input id="rulebtn" class="obtn btnwt" type="button" value="拍摄规范"/>
             </div>
         </div>

@@ -2,11 +2,111 @@
     padding-bottom: 1.333333rem;
 }
 .phtdv{
-    /* width: 180px; */
-    /* height: 115px; */
+    position: relative;
     width: 5.066667rem;
     height: 3.066667rem;
+    color: #1890FF;
+    text-align: center;
+    font-size: .373333rem;
     border: 1px solid #A8D5FF;
     border-radius: 3px;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding-top: 2.186667rem;
+    background-size: 100% 100%;
+    background-color: #EDF7FF;
 }
+.idFront{
+    margin: .4rem auto .266667rem;
+    background-image: url('../img/zw_id.png');
+}
+.idRear{
+    background-image: url('../img/zw_id2.png');
+}
+.tkphtbtn{
+    position: absolute;
+    left: 50%;
+    top: .266667rem;
+    margin-left: -0.853333rem;
+    width: 1.733333rem;
+    height: 1.733333rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color:#1890FF; 
+    background-image:url('../img/tkphoto.png');
+    background-size: 100% 100%;
+}
+.imgdv{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #EDF7FF;
+    display: none;
+}
+.imgdv img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+}
+.imgshd{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .2);
+}
+.imgstatei{
+    position: absolute;
+    top: -0.266667rem;
+    right: -0.266667rem;
+    width: .533333rem;
+    height: .533333rem;
+    display: inline-block;
+    background-size: 100% 100%;
+}
+.passi{
+    background-image: url('../img/rt.png');
+}
+.notpassi{
+    background-image: url('../img/error.png');
+}
+.infodv{
+    color: #333;
+    font-size: .373333rem;
+    margin: .533333rem 0 .533333rem 0;
+}
+.idinfo{
+    text-align: right;
+    margin-top: .533333rem;
+    font-size: .426667rem;
+}
+.idinfo span{
+    display: inline-block;
+}
+.idinfo .userName{
+    float: left;
+    text-align: left;
+    word-wrap:break-word;
+    width: 40%;
+}
+.idinfo .userId{
+    width: 55%;
+}
+/* 拍摄照片后对应样式 */
+.hasTake .tkphtbtn{
+    top: 50%;
+    margin-top: -0.853333rem;
+    background-color: rgba(0, 0, 0, .2);
+    background-image:url('../img/tkphoto2.png');
+}
+.hasTake .imgdv{
+    display: block;
+}
+

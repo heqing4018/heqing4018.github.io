@@ -4,6 +4,7 @@ html{
 }
 body{
     height: 100%;
+    font-size: .373333rem;
     /* border: 1px solid blue; */
 }
 ul,ol,li{
@@ -112,7 +113,8 @@ ul,ol,li{
     color: #666;
     font-size: .373333rem;
     text-align: center;
-    padding: .266667rem 0;
+    height: 1.333333rem;
+    line-height: 1.333333rem;
 }
 .btmi{
    width: .48rem;
@@ -176,7 +178,7 @@ ul,ol,li{
 }
 .sdbtm{
     text-align: center;
-    padding: 1.066667rem 0;
+    padding: .8rem 0;
 }
 .sdbtm .obtn{
     border-radius: .666667rem;
