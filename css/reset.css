@@ -1,12 +1,12 @@
-*{
+﻿*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 body{
-	color: #333;
 	font-size: 14px;
-	font-family: 'Microsoft YaHei';
+    font-family: 'Microsoft YaHei';
+    /* font-family: 'SimSun'; */
 }
 table{
 	border-collapse: collapse;
@@ -15,9 +15,10 @@ ul,ol,li{
 	list-style: none;
 }
 button, input, select,textarea{
-	color: #242b33;
+	color: #c0c0cc;
     font-family: 'Microsoft YaHei';
-    background: #fff;
+    /* font-family: 'SimSun'; */
+    background: #222642;
 }
 input[type='text'],input[type='password'], input[type='date'], select, textarea{
 	padding: 0 0 0 8px;
@@ -28,7 +29,7 @@ input[type='date'], input[type='button'], input[type='submit'], input[type='rese
 textarea{
     padding: 5px 8px;
 }
-button, input, select, textarea{
+button, input, select{
     font-size: 12px;
 }
 a, img, input, select, button, textarea{
@@ -50,33 +51,3 @@ i{
 	font-style: normal;
 }
 
-/* IE去掉自带的叉号等图标 -------------------------------------*/
-
-input::-ms-clear{ display:none; }
-input::-ms-reveal{ display:none; }
-
-/* 下拉框样式修改,主要是IE8下右边下拉箭头样式，现改为统一-------- */
-select{
-	appearance:none;
-	padding: 0 35px 0 8px;
-	-moz-appearance:none;
-	-webkit-appearance:none;
-	background: url('../img/selectarow.png') no-repeat;
-	background-position: right center;
-}
-select::-ms-expand{
-	display: none;
-}
-/* placeholder颜色 */
-input::-webkit-input-placeholder{
-    color:#242b33;
-}
-input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-    color:#242b33;
-}
-input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-    color:#242b33;
-}
-input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-    color:#242b33;
-}
