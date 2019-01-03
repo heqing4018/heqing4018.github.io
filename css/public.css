@@ -1,7 +1,10 @@
-html, body{
-    min-height: 100%;
-    border: 1px solid blue;
+html{
+    height: 100%;
     font-size: .373333rem;
+}
+body{
+    height: 100%;
+    /* border: 1px solid blue; */
 }
 ul,ol,li{
 	list-style: none;
@@ -9,10 +12,9 @@ ul,ol,li{
 .container{
     position: relative;
     min-height: 100%;
-    /* overflow: hidden; */
     padding: 0;
     background: #fff;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .clear:after{
 	content: '.';
@@ -27,10 +29,10 @@ ul,ol,li{
     height: 1.333333rem;
     border-radius: 4px;
     background: #1890FF;
-    font-size: 18px;
+    font-size: .48rem;
     color: #fff;
     border: 1px solid #1890FF;
-    margin: 20px 0 0 0;
+    margin: .533333rem 0 0 0;
     -webkit-appearance : none ;  /*解决iphone safari上按钮的圆角问题*/
 }
 .btnbl{
@@ -120,4 +122,99 @@ ul,ol,li{
    display: inline-block;
    vertical-align: middle; 
    margin: -2px 5px 0 0;
+}
+/* 遮罩 */
+.boxshowing{
+    overflow: hidden;
+}
+.shade{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+}
+.shadeW{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}
+.sdTop{
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    font-size: .533333rem;
+    color: #333;
+    margin-bottom: .533333rem;
+    border-bottom: 1px solid #E0E0E0;
+}
+.dotp::before{
+    content: '';
+    width: .426667rem;
+    height: .266667rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 .4rem 0 0;
+    background: url('../img/dot_lft.png') center no-repeat;
+    background-size: 100% 100%;
+}
+.dotp::after{
+    content: '';
+    width: .426667rem;
+    height: .266667rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 .4rem;
+    background: url('../img/dot_rt.png') center no-repeat;
+    background-size: 100% 100%;
+}
+.sdCont{
+    font-size: .373333rem;
+}
+.sdbtm{
+    text-align: center;
+    padding: 1.066667rem 0;
+}
+.sdbtm .obtn{
+    border-radius: .666667rem;
+    width: 5.333333rem;
+}
+/* 规范提示 */
+.idl1{
+    width: 4.8rem;
+    margin: 0 auto .4rem;
+    text-align: center;
+}
+.idl1 dt{
+    height: 3.36rem;
+    background: url('../img/gf_id1.png') no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: .266667rem;
+}
+.dlW{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.066667rem;
+}
+.dlW dl{
+    width: 2.213333rem;
+    text-align: center;
+}
+.dlW dt{
+    height: 1.573333rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: .266667rem;
+}
+.idl2 dt{
+    background-image: url('../img/gf_id2.png');
+}
+.idl3 dt{
+    background-image: url('../img/gf_id3.png');
+}
+.idl4 dt{
+    background-image: url('../img/gf_id4.png');
 }

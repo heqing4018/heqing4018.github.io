@@ -28,22 +28,66 @@
             </div>
             <div class="btndv">
                 <input class="obtn" type="button" value="下一步" />
-                <input class="obtn btnwt" type="button" value="拍摄规范"/>
+                <input id="rulebtn" class="obtn btnwt" type="button" value="拍摄规范"/>
             </div>
         </div>
         <div class="btmtip">
             <i class="btmi"></i>中国电信物联网动态实名验证，保障您的信息安全 
         </div>
     </div>
-    <!-- 全局js -->
+    <!-- 遮罩 -->
+    <div class="shade" style="display:none"></div>
+    <!-- 拍摄规范 style="display:none"-->
+    <div class="shadeW" style="display:none">
+        <div class="sdTop">
+            <p class="dotp">拍摄规范</p>
+        </div>
+        <div class="sdCont">
+            <dl class="idl1">
+                <dt></dt>
+                <dd>标准</dd>
+            </dl>
+            <div class="dlW">
+                <dl class="idl2">
+                    <dt></dt>
+                    <dd>边框确实</dd>
+                </dl>
+                <dl class="idl3">
+                    <dt></dt>
+                    <dd>照片模糊</dd>
+                </dl>
+                <dl class="idl4">
+                    <dt></dt>
+                    <dd>闪光强烈</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="sdbtm">
+            <input id="closeRule" class="obtn" type="button" value="知道了"/>
+        </div>
+    </div>
     <script src="js/jquery.min.js?v=2.1.4"></script>
     <script src="js/plugins/flexible/flexible.js"></script>
+    <script src="js/public.js"></script>
     <!-- <script src="js/plugins/flexible/flexible_css.js"></script> -->
+    <!-- <script src="js/plugins/layer_mobile/layer.js"></script> -->
     
 
     <script>
 
-       
+        // 拍摄规范
+        var oshadeW = $('.shadeW');
+        $('#rulebtn').on('click', function(){
+            ShadeShow(oshadeW);
+        });
+
+        $('#closeRule').on('click', function(){
+            ShadeClose(oshadeW);
+        });
+        
+
+
+        
 
     </script>
 </body>
