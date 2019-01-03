@@ -1,13 +1,14 @@
 html, body{
     min-height: 100%;
     border: 1px solid blue;
+    font-size: .373333rem;
 }
 ul,ol,li{
 	list-style: none;
 }
 .container{
     position: relative;
-    height: 100%;
+    min-height: 100%;
     /* overflow: hidden; */
     padding: 0;
     background: #fff;
@@ -22,7 +23,8 @@ ul,ol,li{
 }
 .obtn{
     width: 100%;
-    height: 50px;
+    /* height: 50px; */
+    height: 1.333333rem;
     border-radius: 4px;
     background: #1890FF;
     font-size: 18px;
@@ -48,16 +50,18 @@ ul,ol,li{
     background-color: #E0E0E0;
 }
 .content{
-    padding: 0 20px;
+    padding: 0 .533333rem;
 }
 /* 进度提示================================ */
 .pgsBar{
     border: 1px solid #E2E2E2;
     border-left: 0;
     border-right: 0;
-    height: 50px;
-    line-height: 50px;
-    font-size: 14px;
+    /* height: 50px; */
+    /* line-height: 50px; */
+    height: 1.333333rem;
+    line-height: 1.333333rem;
+    font-size: .373333rem;
     text-align: center;
 }
 .pgsBar ul{
@@ -65,22 +69,22 @@ ul,ol,li{
     display: inline-block;
 }
 .pgsdot{
-    width: 23px;
-    height: 23px;
+    width: .613333rem;
+    height: .613333rem;
     border-radius: 50%;
     display: inline-block;
     background: #CCCCCC;
     color: #fff;
     text-align: center;
-    line-height: 23px;
-    margin: -2px 5px 0 0;
+    line-height: .613333rem;
+    margin: -0.053333rem .133333rem 0 0;
     vertical-align: middle;
 }
 .pgsline{
     width: 20px;
     border-top: 1px solid #999;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 .266667rem;
     vertical-align: middle;
 }
 .pgsBar li{
@@ -102,14 +106,15 @@ ul,ol,li{
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 15px;
+    bottom: 0;
     color: #666;
-    font-size: 14px;
+    font-size: .373333rem;
     text-align: center;
+    padding: .266667rem 0;
 }
 .btmi{
-   width: 18px;
-   height: 22px;
+   width: .48rem;
+   height: .586667rem;
    background: url('../img/tip.png') center no-repeat;
    background-size: 100% 100%;
    display: inline-block;

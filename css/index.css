@@ -1,9 +1,11 @@
 .container{
-    padding-bottom: 60px;
+    padding-bottom: 1.333333rem;
 }
 .phtdv{
-    width: 180px;
-    height: 115px;
+    /* width: 180px; */
+    /* height: 115px; */
+    width: 5.066667rem;
+    height: 3.066667rem;
     border: 1px solid #A8D5FF;
     border-radius: 3px;
     margin: 20px auto;
