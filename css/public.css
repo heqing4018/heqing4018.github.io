@@ -4,19 +4,6 @@ html, body{
 ul,ol,li{
 	list-style: none;
 }
-/* placeholder颜色 */
-input.form-control::-webkit-input-placeholder{
-    color:#000;
-}
-input.form-control::-moz-placeholder{   /* Mozilla Firefox 19+ */
-    color:#000;
-}
-input.form-control:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-    color:#000;
-}
-input.form-control:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-    color:#000;
-}
 .container{
     position: relative;
     height: 100%;
@@ -24,66 +11,86 @@ input.form-control:-ms-input-placeholder{  /* Internet Explorer 10-11 */
     padding: 0;
     background: #fff;
 }
-.menuBar{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.clear:after{
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+.obtn{
     width: 100%;
-    background: #fff;
-    height: 1.333333rem;
+    height: 50px;
+    border-radius: 4px;
+    background: #1890FF;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #1890FF;
+    margin: 20px 0 0 0;
+}
+.btnbl{
+    color: #1890FF;
+    border-color: #1890FF;
+    background-color: #fff;
+}
+.btnwt{
+    color: #1890FF;
+    border-color: transparent;
+    background-color: transparent;
+    margin: 5px 0 0 0;
+}
+.obtn:disabled{
+    color: #999999;
+    border-color: #E0E0E0;
+    background-color: #E0E0E0;
+}
+.content{
+    padding: 0 20px;
+}
+/* 进度提示================================ */
+.pgsBar{
+    border: 1px solid #E2E2E2;
+    border-left: 0;
+    border-right: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
     text-align: center;
-    font-size: .32rem;
-    border-top: 1px solid #999999;
 }
-.menuBar a{
-    color: #999;
-    cursor: pointer;
-    text-decoration: none;
+.pgsBar ul{
+    /* margin: 0 auto; */
+    display: inline-block;
 }
-.mni{
-    width: .4rem;
-    height: .48rem;
-    display: block;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: .186667rem auto .106667rem;
+.pgsdot{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #CCCCCC;
+    color: #fff;
+    text-align: center;
+    line-height: 23px;
+    margin: -2px 5px 0 0;
+    vertical-align: middle;
 }
-.rzsbi{
-    background-image: url('../img/in.png');
+.pgsline{
+    width: 20px;
+    border-top: 1px solid #999;
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
 }
-.sblsi{
-    background-image: url('../img/history.png');
+.pgsBar li{
+    float: left;
+    color: #999999;
 }
-.grzxi{
-    background-image: url('../img/my.png');
+.pgsBar .curLi{
+    color:#1890FF;
 }
-.menuBar .curMn{
-    color: #000;
+.curLi .pgsline{
+    border-color: #1890FF;
 }
-.curMn .rzsbi{
-    background-image: url('../img/in2.png');
+.curLi .pgsdot{
+    background: #1890FF;
 }
-.curMn .sblsi{
-    background-image: url('../img/history2.png');
-}
-.curMn .grzxi{
-    background-image: url('../img/my2.png');
-}
-select.form-control{
-    border: none;
-    outline: none;
-    box-shadow: none;
-    appearance:none;
-	padding: 0 35px 0 8px;
-	-moz-appearance:none;
-	-webkit-appearance:none;
-	background: url('../img/arowi.png') no-repeat;
-	background-position: right center;
-}
-.form-control:focus{
-    border: none;
-    outline: none;
-    box-shadow: none;
-}
+/* 进度提示============================= */
