@@ -48,9 +48,9 @@ ul,ol,li{
     margin: 5px 0 0 0;
 }
 .obtn:disabled{
-    color: #999999;
-    border-color: #E0E0E0;
-    background-color: #E0E0E0;
+    color: #666;
+    border-color: #ccc;
+    background-color: #ccc;
 }
 .content{
     padding: 0 .533333rem;
