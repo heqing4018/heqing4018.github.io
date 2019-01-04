@@ -181,6 +181,7 @@ ul,ol,li{
     padding: .8rem 0;
 }
 .sdbtm .obtn{
+    margin: 0 auto;
     border-radius: .666667rem;
     width: 5.333333rem;
 }

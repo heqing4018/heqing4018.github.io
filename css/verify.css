@@ -1,0 +1,11 @@
+.content{
+    padding: 1.333333rem .933333rem 0;
+    font-size: .373333rem;
+}
+.headv{
+    width: 3.333333rem;
+    height: 4.4rem;
+    background: url('../img/head.png');
+    background-size: 100% 100%;
+    margin: 0 auto 2.133333rem;
+}

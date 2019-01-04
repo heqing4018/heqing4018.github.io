@@ -1,0 +1,64 @@
+.container{
+    padding-bottom: 1.333333rem;
+}
+
+
+
+.tipdv{
+    color: #333;
+    text-align: center;
+}
+.tip1{
+    font-size: .533333rem;
+    margin: .533333rem 0 .266667rem 0;
+}
+.tip2{
+    color: #666;
+    font-size: .426667rem;
+    margin-bottom: .8rem;
+}
+.cknum{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.333333rem;
+}
+.cknum li{
+    width: 1.333333rem;
+    height: 1.333333rem;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 1.333333rem;
+    font-size: .8rem;
+    border: 1px solid #E4E4E4;
+}
+.videodv{
+    height: 4.533333rem;
+    /* background: #7F7F7F; */
+}
+
+/* 录制规范 */
+.lztip{
+    color: #333;
+    font-size: .373333rem;
+    text-align: center;
+    margin-bottom: .4rem;
+}
+.idl1 dt{
+    background-image: url('../img/gf_sp1.png');
+}
+.dlW dl{
+    width: 2.266667rem;
+}
+.dlW dt{
+    height: 1.621333rem;
+}
+.idl2 dt{
+    background-image: url('../img/gf_sp2.png');
+}
+.idl3 dt{
+    background-image: url('../img/gf_sp3.png');
+}
+.idl4 dt{
+    background-image: url('../img/gf_sp4.png');
+}
+

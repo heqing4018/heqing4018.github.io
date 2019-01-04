@@ -7,7 +7,7 @@
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/public.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/detection.css" rel="stylesheet">
     <link href="js/plugins/flexible/flexible.css" rel="stylesheet">
 </head>
 <body>
@@ -15,51 +15,30 @@
         <div class="pgsBar">
             <ul class="clear">
                 <li class="curLi"><i class="pgsdot">1</i>上传证件<i class="pgsline"></i></li>
-                <li><i class="pgsdot">2</i>活体检测<i class="pgsline"></i></li>
+                <li class="curLi"><i class="pgsdot">2</i>活体检测<i class="pgsline"></i></li>
                 <li><i class="pgsdot">3</i>认证结果</li>
             </ul>
         </div>
         <div class="content">
-
-            <div class="phtdv idFront hasTake">
-                <p>上传身份证人像面</p>
-                <div class="imgdv">
-                    <img src="./img/id1.jpg"/>
-                    <div class="imgshd">
-                        <!-- 照片符合规范对应样式 -->
-                        <i class="imgstatei passi"></i>
-                        <!-- 照片不符合规范，需重新上传对应样式 -->
-                        <!-- <i class="imgstatei notpassi"></i> -->
-                    </div>
-                </div>
-                <!-- 拍照按钮 -->
-                <a href="javascript:void(0)" class="tkphtbtn"></a>
+            <div class="tipdv">
+                <p class="tip1">请使用前置摄像头</p>
+                <p class="tip2">朗读下方数字，录制一段匀速的身份验证视频</p>
+                <ul class="cknum">
+                    <li>6</li>
+                    <li>3</li>
+                    <li>5</li>
+                    <li>8</li>
+                </ul>
+                <input class="obtn btnwt" type="button" value="查看演示视频"/>
+                <!-- <input class="obtn btnwt" type="button" value="关闭演示视频"/> -->
             </div>
-            <div class="phtdv idRear hasTake">
-                <p>上传身份证国徽面</p>
-                <div class="imgdv">
-                    <img src="./img/id2.jpg"/>
-                    <div class="imgshd">
-                        <!-- 照片符合规范对应样式 -->
-                        <!-- <i class="imgstatei passi"></i> -->
-                        <!-- 照片不符合规范，需重新上传对应样式 -->
-                        <i class="imgstatei notpassi"></i>
-                    </div>
-                </div>
-                <!-- 拍照按钮 -->
-                <a href="javascript:void(0)" class="tkphtbtn"></a>
-            </div>
+            <!-- 视频容器 -->
+            <div class="videodv">
 
-            <div class="infodv">
-                <p>请核对自动识别信息，若信息有误请重新上传</p>
-                <p class="idinfo clear">
-                    <span class="userName">张三</span>
-                    <span class="userId">130423169857425889</span>
-                </p>
             </div>
             <div class="btndv">
-                <input id="nextStep" class="obtn" type="button" value="下一步"  />
-                <input id="rulebtn" class="obtn btnwt" type="button" value="拍摄规范"/>
+                <input id="mkfilm" class="obtn" type="button" value="开始录制"  />
+                <input id="rulebtn" class="obtn btnwt" type="button" value="录制规范"/>
             </div>
         </div>
         <div class="btmtip">
@@ -68,12 +47,13 @@
     </div>
     <!-- 遮罩 -->
     <div class="shade" style="display:none"></div>
-    <!-- 拍摄规范 style="display:none"-->
+    <!-- 录制规范 style="display:none"-->
     <div class="shadeW" style="display:none">
         <div class="sdTop">
-            <p class="dotp">拍摄规范</p>
+            <p class="dotp">录制规范</p>
         </div>
         <div class="sdCont">
+            <p class="lztip">请在安静的环境下录制，确保正脸水平对准屏幕</p>
             <dl class="idl1">
                 <dt></dt>
                 <dd>标准</dd>
@@ -81,15 +61,15 @@
             <div class="dlW">
                 <dl class="idl2">
                     <dt></dt>
-                    <dd>边框缺失</dd>
+                    <dd>避免光线不佳</dd>
                 </dl>
                 <dl class="idl3">
                     <dt></dt>
-                    <dd>照片模糊</dd>
+                    <dd>避免眼睛反光</dd>
                 </dl>
                 <dl class="idl4">
                     <dt></dt>
-                    <dd>闪光强烈</dd>
+                    <dd>避免镜头晃动</dd>
                 </dl>
             </div>
         </div>
@@ -106,7 +86,7 @@
 
     <script>
 
-        // 拍摄规范
+        // 录制规范
         var oshadeW = $('.shadeW');
         $('#rulebtn').on('click', function(){
             ShadeShow(oshadeW);
@@ -115,14 +95,13 @@
         $('#closeRule').on('click', function(){
             ShadeClose(oshadeW);
         });
-        
 
-        // 下一步
-        $('#nextStep').on('click', function(){
-            $(location).attr('href', 'detection.html');
+        // 开始录制
+        $('#mkfilm').on('click', function(){
+            $(location).attr('href', 'verifySuccess.html');
         });
-        
 
+        
     </script>
 </body>
 </html>
