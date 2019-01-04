@@ -8,6 +8,10 @@
     font-size: .426667rem;
     border-bottom: 1px solid #E0E0E0;
 }
+.arrow{
+    display: inline-block;
+    float: right;
+}
 .iptpaper{
     text-align: right;
     border: none;
