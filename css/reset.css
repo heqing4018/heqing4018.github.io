@@ -15,10 +15,10 @@ ul,ol,li{
 	list-style: none;
 }
 button, input, select,textarea{
-	color: #c0c0cc;
+	color: #333;
     font-family: 'Microsoft YaHei';
     /* font-family: 'SimSun'; */
-    background: #222642;
+    background: #fff;
 }
 input[type='text'],input[type='password'], input[type='date'], select, textarea{
 	padding: 0 0 0 8px;

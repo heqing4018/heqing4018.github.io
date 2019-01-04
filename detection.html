@@ -48,9 +48,9 @@
         </div>
     </div>
     <!-- 遮罩 -->
-    <div class="shade" style="display:none"></div>
+    <div class="shade"></div>
     <!-- 录制规范 style="display:none"-->
-    <div class="shadeW" style="display:none">
+    <div class="shadeW" id="rules">
         <div class="sdTop">
             <p class="dotp">录制规范</p>
         </div>
@@ -82,20 +82,18 @@
     <script src="js/jquery.min.js?v=2.1.4"></script>
     <script src="js/plugins/flexible/flexible.js"></script>
     <script src="js/public.js"></script>
-    <!-- <script src="js/plugins/flexible/flexible_css.js"></script> -->
-    <!-- <script src="js/plugins/layer_mobile/layer.js"></script> -->
     
 
     <script>
 
         // 录制规范
-        var oshadeW = $('.shadeW');
+        var orules = $('#rules');
         $('#rulebtn').on('click', function(){
-            ShadeShow(oshadeW);
+            ShadeShow(orules);
         });
 
         $('#closeRule').on('click', function(){
-            ShadeClose(oshadeW);
+            ShadeClose(orules);
         });
 
         // 开始录制
@@ -103,10 +101,9 @@
             $(location).attr('href', 'verifySuccess.html');
         });
 
-        // 查看演示视频
+        // 查看/关闭演示视频
         $('#ckvideo').on('click', function(){
 
-            
             var flag = $(this).attr('flag');
 
             if(flag=='1'){

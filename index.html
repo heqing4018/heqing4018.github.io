@@ -20,8 +20,10 @@
             </ul>
         </div>
         <div class="content">
-
-            <div class="phtdv idFront hasTake">
+            <div class="selpaper arrow">请选择证件类型
+                <input type="text" class="iptpaper" id="iptpaper" value="身份证" paperid="1" readonly />
+            </div>
+            <div class="phtdv idFront">
                 <p>上传身份证人像面</p>
                 <div class="imgdv">
                     <img src="./img/id1.jpg"/>
@@ -35,7 +37,8 @@
                 <!-- 拍照按钮 -->
                 <a href="javascript:void(0)" class="tkphtbtn"></a>
             </div>
-            <div class="phtdv idRear hasTake">
+            <input type="file" class="iptfile" id="frontfile" />
+            <div class="phtdv idRear">
                 <p>上传身份证国徽面</p>
                 <div class="imgdv">
                     <img src="./img/id2.jpg"/>
@@ -49,13 +52,16 @@
                 <!-- 拍照按钮 -->
                 <a href="javascript:void(0)" class="tkphtbtn"></a>
             </div>
-
+            <input type="file" class="iptfile" id="rearfile"/>
             <div class="infodv">
-                <p>请核对自动识别信息，若信息有误请重新上传</p>
-                <p class="idinfo clear">
-                    <span class="userName">张三</span>
-                    <span class="userId">130423169857425889</span>
-                </p>
+                <!-- 识别出信息后显示 -->
+                <div class="infocont">
+                    <p>请核对自动识别信息，若信息有误请重新上传</p>
+                    <p class="idinfo clear">
+                        <span class="userName">张三</span>
+                        <span class="userId">130423169857425889</span>
+                    </p>
+                </div>
             </div>
             <div class="btndv">
                 <input id="nextStep" class="obtn" type="button" value="下一步" />
@@ -67,9 +73,9 @@
         </div>
     </div>
     <!-- 遮罩 -->
-    <div class="shade" style="display:none"></div>
-    <!-- 拍摄规范 style="display:none"-->
-    <div class="shadeW" style="display:none">
+    <div class="shade"></div>
+    <!-- 拍摄规范 style="display:block"-->
+    <div class="shadeW" id="rules" >
         <div class="sdTop">
             <p class="dotp">拍摄规范</p>
         </div>
@@ -97,23 +103,87 @@
             <input id="closeRule" class="obtn" type="button" value="知道了"/>
         </div>
     </div>
+    <!-- 证件类型 -->
+    <div class="shadeW" id="shdpaper">
+        <ul class="papers">
+            <li>请选择上传证件照片类型</li>
+            <li>
+                <label>
+                    <input type="radio" name="paper" value="1" lbl="身份证"/>
+                    <span class="">身份证</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="paper" value="2" lbl="护照"/>
+                    <span>护照</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="paper" value="3" lbl="军官证"/>
+                    <span>军官证</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="paper" value="4" lbl="学生证"/>
+                    <span>学生证</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="paper" value="5" lbl="港澳通行证"/>
+                    <span>港澳通行证</span>
+                </label>
+            </li>
+        </ul>
+    </div>
     <script src="js/jquery.min.js?v=2.1.4"></script>
     <script src="js/plugins/flexible/flexible.js"></script>
     <script src="js/public.js"></script>
-    <!-- <script src="js/plugins/flexible/flexible_css.js"></script> -->
-    <!-- <script src="js/plugins/layer_mobile/layer.js"></script> -->
     
 
     <script>
 
+        // 选择证件类型
+        var oshdpaper= $('#shdpaper');
+        $('.selpaper').on('click', function(){
+            ShadeShow(oshdpaper);
+        });
+
+        $('input[name="paper"]','.papers').on('click', function(){
+            $('#iptpaper').attr('paperid', $(this).val());
+            $('#iptpaper').val($(this).attr('lbl'));
+            ShadeClose(oshdpaper);
+        });
+
+        // 点击选择身份证正面照
+        $('.idFront').on('click', function(){
+            $('#frontfile').trigger('click');
+        });
+        $('#frontfile').on('change', function(){
+            $('.idFront').addClass('hasTake');
+            // 显示识别到的信息
+            $('.infocont').show();
+        });
+
+        // 点击选择身份证国徽照
+        $('.idRear').on('click', function(){
+            $('#rearfile').trigger('click');
+        });
+        $('#rearfile').on('change', function(){
+            $('.idRear').addClass('hasTake');
+        });
+
         // 拍摄规范
-        var oshadeW = $('.shadeW');
+        var orules = $('#rules');
         $('#rulebtn').on('click', function(){
-            ShadeShow(oshadeW);
+            ShadeShow(orules);
         });
 
         $('#closeRule').on('click', function(){
-            ShadeClose(oshadeW);
+            ShadeClose(orules);
         });
         
 
