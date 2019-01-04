@@ -141,7 +141,7 @@
     display: inline-block;
 }
 .papers input[type='radio']{
-    visibility: hidden;
+    display: none;
 }
 .papers input[type='radio']:checked~span{
     color: #1890FF;
