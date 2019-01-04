@@ -29,12 +29,14 @@
                     <li>5</li>
                     <li>8</li>
                 </ul>
-                <input class="obtn btnwt" type="button" value="查看演示视频"/>
+                <input id="ckvideo" class="obtn btnwt" flag="1" type="button" value="查看演示视频"/>
                 <!-- <input class="obtn btnwt" type="button" value="关闭演示视频"/> -->
             </div>
             <!-- 视频容器 -->
             <div class="videodv">
-
+                <video id="video" controls autoplay>
+                    <source src="video/movie.mp4" type="video/mp4" vFile>
+                </video>
             </div>
             <div class="btndv">
                 <input id="mkfilm" class="obtn" type="button" value="开始录制"  />
@@ -100,6 +102,24 @@
         $('#mkfilm').on('click', function(){
             $(location).attr('href', 'verifySuccess.html');
         });
+
+        // 查看演示视频
+        $('#ckvideo').on('click', function(){
+
+            
+            var flag = $(this).attr('flag');
+
+            if(flag=='1'){
+                $('#video').slideDown();
+                $(this).attr('flag','2');
+                $(this).attr('value','关闭演示视频');
+            }else if(flag=='2'){
+                $('#video').slideUp();
+                $(this).attr('flag','1');
+                $(this).attr('value','查看演示视频');
+            }
+
+        })
 
         
     </script>
