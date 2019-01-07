@@ -31,7 +31,7 @@
     background-color: #EDF7FF;
 }
 .iptfile{
-    visibility: hidden;
+    display: none;
 }
 .idFront{
     margin: .4rem auto .266667rem;
