@@ -225,6 +225,10 @@
         $('#nextStep').on('click', function(){
             window.opener=null;
             window.close();
+
+            if(WeixinJSBridge!=null){
+                WeixinJSBridge.call('closeWindow');
+            }
             // $('#overtimeModal').modal()
             // $('#lodingModal').modal()
             // $(location).attr('href', 'detection.html');
