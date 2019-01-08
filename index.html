@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="btndv">
-                <input id="nextStep" class="obtn" type="button" value="下一步"/>
+                <input id="nextStep" class="obtn" type="button" value="下一步2"/>
                 <input id="rulebtn" class="obtn btnwt" type="button" value="拍摄规范"/>
             </div>
         </div>
@@ -172,11 +172,11 @@
             </div>
         </div>
     </div>
+
     <script src="js/jquery.min.js?v=2.1.4"></script>
     <script src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script src="js/plugins/flexible/flexible.js"></script>
     <script src="js/public.js"></script>
-    
 
     <script>
 
@@ -213,8 +213,7 @@
         // 拍摄规范
         var orules = $('#rules');
         $('#rulebtn').on('click', function(){
-            // ShadeShow(orules);
-            $('#lodingModal').modal()
+            ShadeShow(orules);
         });
 
         $('#closeRule').on('click', function(){
@@ -224,7 +223,10 @@
 
         // 下一步
         $('#nextStep').on('click', function(){
-            $('#overtimeModal').modal()
+            window.opener=null;
+            window.close();
+            // $('#overtimeModal').modal()
+            // $('#lodingModal').modal()
             // $(location).attr('href', 'detection.html');
         });
         
