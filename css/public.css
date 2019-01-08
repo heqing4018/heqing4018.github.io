@@ -233,3 +233,32 @@ ul,ol,li{
 .idl4 dt{
     background-image: url('../img/gf_id4.png');
 }
+
+/* loding */
+#lodingModal{
+    height: 5.333333rem;
+    margin-top: -2.666667rem;
+}
+@-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+.popIco{
+	width: 1.333333rem;
+	height: 1.333333rem;
+	margin: 0 auto;
+    background: url(../img/IcoPop.png) no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    animation: rotation 2s linear infinite;
+	-moz-animation: rotation 2s linear infinite;
+	-webkit-animation: rotation 2s linear infinite;
+    -o-animation: rotation 2s linear infinite;
+}
+.popInfor{
+	color: #FFF;
+	font-size: .426667rem;
+	text-align: center;
+	margin-top: 1.066667rem;
+}

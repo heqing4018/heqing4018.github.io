@@ -26,44 +26,9 @@
     margin-left: 0;
     margin-right: 0;
 }
-.form-control{
-    color: #000;
-}
 label{
     font-weight: normal;
-}
-.btn-default{
-    color: #fff;
-    background-color: #1890FF;
-    border-color: #1890FF;
-}
-.btn-default:hover{
-    color: #fff;
-    background-color: #1890FF;
-    border-color: #1890FF;
-}
-.btn-default.active.focus, 
-.btn-default.active:focus, 
-.btn-default.active:hover, 
-.btn-default:active.focus, 
-.btn-default:active:focus, 
-.btn-default:active:hover, 
-.open>.dropdown-toggle.btn-default.focus, 
-.open>.dropdown-toggle.btn-default:focus, 
-.open>.dropdown-toggle.btn-default:hover{
-    color: #fff;
-    background-color: #1890FF;
-    border-color: #1890FF;
-}
-.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default{
-    color: #fff;
-    background-color: #1890FF;
-    border-color: #1890FF;
-}
-.btn-default.focus, .btn-default:focus{
-    color: #fff;
-    background-color: #1890FF;
-    border-color: #1890FF;
+    margin-bottom: 0;
 }
 .btn.active, .btn:active{
     box-shadow: none;
@@ -73,4 +38,7 @@ label{
 .btn:active:focus, .btn:focus{
     outline: 0;
     outline-offset: 0;
+}
+input[type=file]{
+    display: none;
 }

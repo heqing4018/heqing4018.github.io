@@ -151,3 +151,41 @@
     color: #1890FF;
 }
 
+/* 识别超时 */
+.bs-example-modal-sm{
+    padding: 0 .8rem;
+}
+.modal{
+    top: 50%;
+    margin-top: -4rem;
+}
+.modal-header{
+    border: 0;
+    padding-bottom: 0;
+}
+.overtimeimg{
+    height: 4.026667rem;
+}
+.overtimeimg img{
+    width: 5.333333rem;
+    height: 100%;
+}
+.modal-body{
+    color: #000;
+    font-size: .48rem;
+    text-align: center;
+    padding: 0;
+}
+.modal-footer{
+    border: 0;
+    text-align: center;
+    padding: .533333rem 0;
+}
+.modal-footer .btn-default{
+    width: 4rem;
+    height: 1.066667rem;
+    color: #fff;
+    border-radius: 3px;
+    background: #1890FF;
+    border-color: #1890FF;
+}

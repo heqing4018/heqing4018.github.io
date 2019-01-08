@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>动态实名认证</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="plugins/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/public.css" rel="stylesheet">
@@ -141,7 +142,38 @@
             </li>
         </ul>
     </div>
+    <!-- 超时提示 -->
+    <div id="overtimeModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <!-- <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4> -->
+                </div>
+                <div class="modal-body">
+                    <div class="overtimeimg">
+                        <img src="./img/overtimeimg.png"/>
+                    </div>
+                    识别超时，请重新上传
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 加载效果 -->
+    <div id="lodingModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="popIco">
+            </div>
+            <div class="popInfor">
+                数据上传中,请等待...
+            </div>
+        </div>
+    </div>
     <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script src="js/plugins/flexible/flexible.js"></script>
     <script src="js/public.js"></script>
     
@@ -181,7 +213,8 @@
         // 拍摄规范
         var orules = $('#rules');
         $('#rulebtn').on('click', function(){
-            ShadeShow(orules);
+            // ShadeShow(orules);
+            $('#lodingModal').modal()
         });
 
         $('#closeRule').on('click', function(){
@@ -191,7 +224,8 @@
 
         // 下一步
         $('#nextStep').on('click', function(){
-            $(location).attr('href', 'detection.html');
+            $('#overtimeModal').modal()
+            // $(location).attr('href', 'detection.html');
         });
         
 
