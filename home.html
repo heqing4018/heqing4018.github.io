@@ -14,8 +14,8 @@
     <!-- Bootstrap core CSS -->
     <link href="plugins/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Swiper core CSS -->
-    <link href="plugins/swiper-4.4.6/css/swiper.min.css" rel="stylesheet">
+    <!-- fullpage -->
+    <link href="plugins/fullpage/css/jquery.fullpage.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="plugins/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -33,181 +33,135 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">时代云英</a>
+    <div id="fullpage">
+      <div class="section">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">时代云英</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#">首页</a></li>
+                  <li><a href="#about">产品中心</a></li>
+                  <li><a href="#contact">解决方案</a></li>
+                  <li><a href="#about">成功案例</a></li>
+                  <li><a href="#contact">战略合作</a></li>
+                  <li><a href="#about">关于我们</a></li>
+                  <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+          </div>
+        </nav>
+        <div class="banner">
+          <div class="container">
+            <div class="bncont">
+              <p class="bnp">视频大数据时代持续创新者</p>
+              <p class="bnctp">时代云英是一家专注于视频大数据分析与应用的创新型国家级高新技术企业。公司致力于将视频大数据分析技术与AI深度学习 相结合，为客户提供基于视频大数据分析与应用的全方位解决方案和数据增值服务。</p>
+              <p><a class="btn btn-default knowmore">了解更多</a></p>
+              <div class="bnbtm">
+                <span class="mouse"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">首页</a></li>
-              <li><a href="#about">产品中心</a></li>
-              <li><a href="#contact">解决方案</a></li>
-              <li><a href="#about">成功案例</a></li>
-              <li><a href="#contact">战略合作</a></li>
-              <li><a href="#about">关于我们</a></li>
-              <li><a href="#contact">联系我们</a></li>
+      </div>
+      <div class="section">
+        <div class="page2">
+          <div class="page2_row">
+            <div class="page2_cell page2_cell1">
+                <div class="container">
+                  <p class="prdp">安全、稳定、可信赖的视频大数据产品</p>
+                  <p>计算、存储、网络、大数据，优质IT资源为您的业务腾飞保驾护航</p>
+                  <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#businessHall" data-toggle="tab">云鹰</a></li>
+                    <li><a href="#authentication" data-toggle="tab">云视</a></li>
+                    <li><a href="#messageService" data-toggle="tab">云安</a></li>
+                    <li><a href="#traffic" data-toggle="tab">云讯</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+          <div class="page2_row page2_btm">
+            <div class="page2_cell">
+              <div class="container">
+                <div id="myTabContent" class="tab-content">
+                  <div class="tab-pane fade in active" id="businessHall">
+                    <div class="row">
+                      <div class="col-md-6">
+                          <p class="h3">智慧营业厅</p>
+                          <div class="solu-cont">智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅</div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="pg2img">
+                          <img src="./img/yunying.jpg"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="authentication">
+                    <p class="h3">实名制认证</p>
+                    <div class="solu-cont">实名制认证实名制认证实名制认证实名制认证实名制认证实名制认证实名制认证</div>
+                  </div>
+                  <div class="tab-pane fade" id="messageService">
+                    <p class="h3">综合信息服务</p>
+                    <div class="solu-cont">综合信息服务综合信息服务综合信息服务综合信息服务</div>
+                  </div>
+                  <div class="tab-pane fade" id="traffic">
+                    <p class="h3">智慧交通</p>
+                    <div class="solu-cont">智慧交通智慧交通智慧交通智慧交通</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="solution">
+          <div class="container">
+            <p class="h3">成熟、领先的解决方案</p>
+            <p>行业纵深，直达痛点，专业经验为您解决多种业务难题</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="partner">
+          <div class="container">
+            <p class="h3">专业可靠的合作伙伴</p>
+            <p>合作共赢，携手合作伙伴共同成长</p>
+            <ul class="partlist clearfix">
+              <li>
+                <a><img src="./img/cpt2.jpg"/></a>
+              </li>
+              <li>
+                <a><img src="./img/cpt2.jpg"/></a>
+              </li>
+              <li>
+                <a><img src="./img/cpt2.jpg"/></a>
+              </li>
+              <li>
+                <a><img src="./img/cpt2.jpg"/></a>
+              </li>
+              <li>
+                <a><img src="./img/cpt2.jpg"/></a>
+              </li>
+              <li>
+                <a><img src="./img/cpt2.jpg"/></a>
+              </li>
             </ul>
-        </div><!--/.navbar-collapse -->
+          </div>
+        </div>
       </div>
-    </nav>
+    </div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron banner">
-      <div class="container">
-        <div id="myCarousel" class="carousel slide">
-          <!-- 轮播（Carousel）指标 -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>   
-          <!-- 轮播（Carousel）项目 -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="./img/slide1.png" alt="First slide">
-            </div>
-            <div class="item">
-              <img src="./img/slide2.png" alt="Second slide">
-            </div>
-            <div class="item">
-              <img src="./img/slide3.png" alt="Third slide">
-            </div>
-          </div>
-          <!-- 轮播（Carousel）导航 -->
-          <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a> -->
-        </div> 
-      </div>
-    </div>
-    <div class="notice">
-      <div class="container">
-        <a class="pull-right">更多</a>
-        <a>最新资讯</a>
-        <ul class="notilist clearfix">
-          <li>智能视频车辆大数据分析系统成功升级</li>
-          <li>智能视频车辆大数据分析系统成功升级2</li>
-          <li>智能视频车辆大数据分析系统成功升级3</li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
-      <div class="product">
-        <p class="h3">安全、稳定、可信赖的视频大数据产品</p>
-        <p>计算、存储、网络、大数据，优质IT资源为您的业务腾飞保驾护航</p>
-        <ul class="prolist clearfix">
-          <li>
-            <img src=""/>
-            <p>云鹰</p>
-          </li>
-          <li>
-            <img src=""/>
-            <p>云视</p>
-          </li>
-          <li>
-            <img src=""/>
-            <p>云安</p>
-          </li>
-          <li>
-            <img src=""/>
-            <p>云讯</p>
-          </li>
-          <li>
-            <img src=""/>
-            <p>云侦</p>
-          </li>
-        </ul>
-        <p><a class="btn btn-default morebtn">更多产品</a></p>
-      </div>
-    </div>
-    <div class="solution">
-      <div class="container">
-        <p class="h3">成熟、领先的解决方案</p>
-        <p>行业纵深，直达痛点，专业经验为您解决多种业务难题</p>
-        <ul id="myTab" class="nav nav-tabs">
-          <li class="active"><a href="#businessHall" data-toggle="tab">智慧营业厅</a></li>
-          <li><a href="#authentication" data-toggle="tab">实名制认证</a></li>
-          <li><a href="#messageService" data-toggle="tab">综合信息服务</a></li>
-          <li><a href="#traffic" data-toggle="tab">智慧交通</a></li>
-        </ul>
-        <div id="myTabContent" class="tab-content">
-          <div class="tab-pane fade in active" id="businessHall">
-            <p class="h3">智慧营业厅</p>
-            <div class="solu-cont">智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅智慧营业厅</div>
-          </div>
-          <div class="tab-pane fade" id="authentication">
-            <p class="h3">实名制认证</p>
-            <div class="solu-cont">实名制认证实名制认证实名制认证实名制认证实名制认证实名制认证实名制认证</div>
-          </div>
-          <div class="tab-pane fade" id="messageService">
-            <p class="h3">综合信息服务</p>
-            <div class="solu-cont">综合信息服务综合信息服务综合信息服务综合信息服务</div>
-          </div>
-          <div class="tab-pane fade" id="traffic">
-            <p class="h3">智慧交通</p>
-            <div class="solu-cont">智慧交通智慧交通智慧交通智慧交通</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="case">
-        <div class="container">
-          <p class="h3">成功案例展示</p>
-          <p>行业领先的视频大数据服务商</p>
-          <div class="swiper-container" id="case-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-            </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-    </div>
-    <div class="partner">
-      <div class="container">
-        <p class="h3">专业可靠的合作伙伴</p>
-        <p>合作共赢，携手合作伙伴共同成长</p>
-        <ul class="partlist clearfix">
-          <li>
-            <a><img src="./img/cpt2.jpg"/></a>
-          </li>
-          <li>
-            <a><img src="./img/cpt2.jpg"/></a>
-          </li>
-          <li>
-            <a><img src="./img/cpt2.jpg"/></a>
-          </li>
-          <li>
-            <a><img src="./img/cpt2.jpg"/></a>
-          </li>
-          <li>
-            <a><img src="./img/cpt2.jpg"/></a>
-          </li>
-          <li>
-            <a><img src="./img/cpt2.jpg"/></a>
-          </li>
-        </ul>
-      </div>
-    </div>
     <div class="infouter">
       <div class="container">
         <div class="info clearfix">
@@ -269,37 +223,27 @@
       </div>
     </div>
 
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="plugins/jquery/2.1.4/jquery.min.js"></script>
     <script src="plugins/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script src="plugins/swiper-4.4.6/js/swiper.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="plugins/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- fullpage -->
+    <script src="plugins/fullpage/js/jquery.easings.min.js"></script>
+    <script src="plugins/fullpage/js/jquery.slimscroll.min.js"></script>
+    <script src="plugins/fullpage/js/jquery.fullpage.min.js"></script>
+    <script src="plugins/fullpage/js/jquery.fullpage.extensions.min.js"></script>
   </body>
   <script>
-    $(function() {
-      function e() {
-          var e = $(window).scrollTop() > 64;
-          e !== t && (t = e,t ? $("body").addClass("fixed") : $("body").removeClass("fixed"))
-      }
-      var t;
-      e();
-      $(document).on("scroll", function() {e()});
-    })
 
-    var caseSwiper = new Swiper('#case-swiper', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+    $(function(){
+      $('#fullpage').fullpage({
+        navigation: true
+      });
     });
+    
   </script>
 </html>

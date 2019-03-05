@@ -25,11 +25,7 @@
   background-color: transparent;
   border-bottom: 2px solid #D93335;
 }
-.jumbotron{
-  padding-top: 60px;
-  padding-bottom: 0px;
-  margin: 0;
-}
+
 
 .infouter{
   color: #e0e0e0;
@@ -87,10 +83,7 @@
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .jumbotron{
-    padding-top: 60px;
-    padding-bottom: 0px;
-  }
+  
 }
 
 @media screen and (max-width: 1210px){
