@@ -1,264 +1,114 @@
-html{
-    height: 100%;
-    font-size: .373333rem;
+.navbar{
+  min-height: 60px;
 }
-body{
-    height: 100%;
-    font-size: .373333rem;
-    /* border: 1px solid blue; */
+.navbar-inverse .navbar-brand{
+  color: #fff;
 }
-ul,ol,li{
-	list-style: none;
+.navbar-inverse .navbar-nav>li>a{
+  color: #fff;
 }
-.container{
-    position: relative;
-    min-height: 100%;
-    padding: 0;
-    background: #fff;
-    /* border: 1px solid red; */
+.navbar-nav>li>a{
+  line-height: 29px;
+  margin-bottom: -1px;
 }
-.clear:after{
-	content: '.';
-	display: block;
-	visibility: hidden;
-	height: 0;
-	clear: both;
+.navbar-inverse{
+  background-color: transparent;
+  border-color: #3A3D5C;
 }
-.arrow::after{
-    content: '';
-    display: inline-block;
-    border: 1px solid #666;
-    width: .266667rem;
-    height: .266667rem;
-    transform: rotateZ(45deg);
-    border-left: none;
-    border-bottom: none;
+.fixed .navbar-inverse{
+  background-color: #242949;
 }
-.obtn{
-    width: 100%;
-    /* height: 50px; */
-    height: 1.333333rem;
-    border-radius: 4px;
-    background: #1890FF;
-    font-size: .48rem;
-    color: #fff;
-    border: 1px solid #1890FF;
-    margin: .533333rem 0 0 0;
-    -webkit-appearance : none ;  /*解决iphone safari上按钮的圆角问题*/
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:focus, 
+.navbar-inverse .navbar-nav>.active>a:hover{
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 2px solid #D93335;
 }
-.btnbl{
-    color: #1890FF;
-    border-color: #1890FF;
-    background-color: #fff;
-}
-.btnwt{
-    color: #1890FF;
-    border-color: transparent;
-    background-color: transparent;
-    margin: 5px 0 0 0;
-}
-.obtn:disabled{
-    color: #666;
-    border-color: #ccc;
-    background-color: #ccc;
-}
-.content{
-    padding: 0 .533333rem;
-}
-/* 进度提示================================ */
-.pgsBar{
-    border: 1px solid #E2E2E2;
-    border-left: 0;
-    border-right: 0;
-    /* height: 50px; */
-    /* line-height: 50px; */
-    height: 1.333333rem;
-    line-height: 1.333333rem;
-    font-size: .373333rem;
-    text-align: center;
-}
-.pgsBar ul{
-    /* margin: 0 auto; */
-    display: inline-block;
-}
-.pgsdot{
-    width: .613333rem;
-    height: .613333rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #CCCCCC;
-    color: #fff;
-    text-align: center;
-    line-height: .613333rem;
-    margin: -0.053333rem .133333rem 0 0;
-    vertical-align: middle;
-}
-.pgsline{
-    width: 20px;
-    border-top: 1px solid #999;
-    display: inline-block;
-    margin: 0 .266667rem;
-    vertical-align: middle;
-}
-.pgsBar li{
-    float: left;
-    color: #999999;
-}
-.pgsBar .curLi{
-    color:#1890FF;
-}
-.curLi .pgsline{
-    border-color: #1890FF;
-}
-.curLi .pgsdot{
-    background: #1890FF;
-}
-/* 进度提示============================= */
-/* 底部提示 */
-.btmtip{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: #666;
-    font-size: .373333rem;
-    text-align: center;
-    height: 1.333333rem;
-    line-height: 1.333333rem;
-}
-.btmi{
-   width: .48rem;
-   height: .586667rem;
-   background: url('../img/tip.png') center no-repeat;
-   background-size: 100% 100%;
-   display: inline-block;
-   vertical-align: middle; 
-   margin: -2px 5px 0 0;
-}
-/* 遮罩 */
-.boxshowing{
-    overflow: hidden;
-}
-.shade{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .3);
-    display: none;
-}
-.shadeW{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: #fff;
-    display: none;
-}
-.sdTop{
-    height: 1.6rem;
-    line-height: 1.6rem;
-    text-align: center;
-    font-size: .533333rem;
-    color: #333;
-    margin-bottom: .533333rem;
-    border-bottom: 1px solid #E0E0E0;
-}
-.dotp::before{
-    content: '';
-    width: .426667rem;
-    height: .266667rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 .4rem 0 0;
-    background: url('../img/dot_lft.png') center no-repeat;
-    background-size: 100% 100%;
-}
-.dotp::after{
-    content: '';
-    width: .426667rem;
-    height: .266667rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 0 0 .4rem;
-    background: url('../img/dot_rt.png') center no-repeat;
-    background-size: 100% 100%;
-}
-.sdCont{
-    font-size: .373333rem;
-}
-.sdbtm{
-    text-align: center;
-    padding: .8rem 0;
-}
-.sdbtm .obtn{
-    margin: 0 auto;
-    border-radius: .666667rem;
-    width: 5.333333rem;
-}
-/* 规范提示 */
-.idl1{
-    width: 4.8rem;
-    margin: 0 auto .4rem;
-    text-align: center;
-}
-.idl1 dt{
-    height: 3.36rem;
-    background: url('../img/gf_id1.png') no-repeat;
-    background-size: 100% 100%;
-    margin-bottom: .266667rem;
-}
-.dlW{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1.066667rem;
-}
-.dlW dl{
-    width: 2.213333rem;
-    text-align: center;
-}
-.dlW dt{
-    height: 1.573333rem;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-bottom: .266667rem;
-}
-.idl2 dt{
-    background-image: url('../img/gf_id2.png');
-}
-.idl3 dt{
-    background-image: url('../img/gf_id3.png');
-}
-.idl4 dt{
-    background-image: url('../img/gf_id4.png');
+.jumbotron{
+  padding-top: 60px;
+  padding-bottom: 0px;
+  margin: 0;
 }
 
-/* loding */
-#lodingModal{
-    height: 5.333333rem;
-    margin-top: -2.666667rem;
+.infouter{
+  color: #e0e0e0;
+  background: #000;
+  padding: 60px 0 30px 0;
+  line-height: 28px;
 }
-@-webkit-keyframes rotation{
-    from {-webkit-transform: rotate(0deg);}
-    to {-webkit-transform: rotate(360deg);}
+.infouter .info{
+  position: relative;
+  margin-bottom: 30px;
 }
-.popIco{
-	width: 1.333333rem;
-	height: 1.333333rem;
-	margin: 0 auto;
-    background: url(../img/IcoPop.png) no-repeat;
-    background-size: 100% 100%;
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    animation: rotation 2s linear infinite;
-	-moz-animation: rotation 2s linear infinite;
-	-webkit-animation: rotation 2s linear infinite;
-    -o-animation: rotation 2s linear infinite;
+.infouter .infoL{
+  float: left;
 }
-.popInfor{
-	color: #FFF;
-	font-size: .426667rem;
-	text-align: center;
-	margin-top: 1.066667rem;
+.infouter .infoR{
+  float: right;
+  text-align: center;
+}
+.infolist{
+  float: left;
+  border: 1px solid #272727;
+  border-bottom: 0;
+  border-top: 0;
+  padding: 0 40px;
+  margin: 0 40px;
+}
+.infolist>li{
+  float: left;
+  margin-right: 30px;
+}
+.infotitle{
+  font-size: 16px;
+}
+.infolist .listmin{
+  margin-top: 15px;
+}
+.infolist .listmin a{
+  color: #999;
+  cursor: pointer;
+}
+.infouter .compname{
+  margin-bottom: 20px;
+}
+.infouter .comp{
+  margin-bottom: 20px;
+}
+.infouter .p1{
+  font-size: 16px;
+}
+.infouter .p2{
+  color: #999;
+}
+.copyR{
+  color: #666;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron{
+    padding-top: 60px;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 1210px){
+  .info{
+    font-size: 12px;
+    padding-bottom: 300px;
+  }
+  .infoL{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .infoR{
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+  }
+  .infouter .p1{
+    font-size: 14px;
+  }
 }

@@ -1,240 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>动态实名认证</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="plugins/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./favicon.ico">
+
+    <title>北京时代云英科技有限公司</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="plugins/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Swiper core CSS -->
+    <link href="plugins/swiper-4.4.6/css/swiper.min.css" rel="stylesheet">
+
+    <!-- fullpage -->
+    <link href="plugins/fullpage/css/jquery.fullpage.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="plugins/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
     <link href="css/reset.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
     <link href="css/public.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <link href="js/plugins/flexible/flexible.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container" >
-        <div class="pgsBar">
-            <ul class="clear">
-                <li class="curLi"><i class="pgsdot">1</i>上传证件<i class="pgsline"></i></li>
-                <li><i class="pgsdot">2</i>活体检测<i class="pgsline"></i></li>
-                <li><i class="pgsdot">3</i>认证结果</li>
-            </ul>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+   
+    .section { text-align: center; font: 50px "Microsoft Yahei"; color: red;}
+  </style>
+  <body>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- <div class="jumbotron">
+      <div class="container">
+      </div>
+    </div> -->
+
+    <div id="fullpage">
+        <div class="section">
+          <h3>第一屏</h3>
+          <p>fullPage.js — 项目导航演示</p>
         </div>
-        <div class="content">
-            <div class="selpaper">
-                <div class="arrow">
-                    <input type="text" class="iptpaper" id="iptpaper" value="身份证" paperid="1" readonly unselectable="on" onfocus="this.blur()" />
-                </div>请选择证件类型
-            </div>
-            <div class="phtdv idFront">
-                <p>上传身份证人像面</p>
-                <div class="imgdv">
-                    <img src="./img/id1.jpg"/>
-                    <div class="imgshd">
-                        <!-- 照片符合规范对应样式 -->
-                        <i class="imgstatei passi"></i>
-                        <!-- 照片不符合规范，需重新上传对应样式 -->
-                        <!-- <i class="imgstatei notpassi"></i> -->
-                    </div>
-                </div>
-                <!-- 拍照按钮 -->
-                <a href="javascript:void(0)" class="tkphtbtn"></a>
-            </div>
-            <input type="file" class="iptfile" id="frontfile" />
-            <div class="phtdv idRear">
-                <p>上传身份证国徽面</p>
-                <div class="imgdv">
-                    <img src="./img/id2.jpg"/>
-                    <div class="imgshd">
-                        <!-- 照片符合规范对应样式 -->
-                        <!-- <i class="imgstatei passi"></i> -->
-                        <!-- 照片不符合规范，需重新上传对应样式 -->
-                        <i class="imgstatei notpassi"></i>
-                    </div>
-                </div>
-                <!-- 拍照按钮 -->
-                <a href="javascript:void(0)" class="tkphtbtn"></a>
-            </div>
-            <input type="file" class="iptfile" id="rearfile"/>
-            <div class="infodv">
-                <!-- 识别出信息后显示 -->
-                <div class="infocont">
-                    <p>请核对自动识别信息，若信息有误请重新上传</p>
-                    <p class="idinfo clear">
-                        <span class="userName">张三</span>
-                        <span class="userId">130423169857425889</span>
-                    </p>
-                </div>
-            </div>
-            <div class="btndv">
-                <input id="nextStep" class="obtn" type="button" value="下一步3"/>
-                <input id="rulebtn" class="obtn btnwt" type="button" value="拍摄规范"/>
-            </div>
+        <div class="section">
+          <h3>第二屏</h3>
+          <p>请查看右边的圆圈</p>
         </div>
-        <div class="btmtip">
-            <i class="btmi"></i>中国电信物联网动态实名验证，保障您的信息安全 
+        <div class="section">
+          <h3>第三屏</h3>
+          <p>圆圈还可以设置位置，颜色，加上 tip，点击可以控制</p>
         </div>
-    </div>
-    <!-- 遮罩 -->
-    <div class="shade"></div>
-    <!-- 拍摄规范 style="display:block"-->
-    <div class="shadeW" id="rules" >
-        <div class="sdTop">
-            <p class="dotp">拍摄规范</p>
-        </div>
-        <div class="sdCont">
-            <dl class="idl1">
-                <dt></dt>
-                <dd>标准</dd>
-            </dl>
-            <div class="dlW">
-                <dl class="idl2">
-                    <dt></dt>
-                    <dd>边框缺失</dd>
-                </dl>
-                <dl class="idl3">
-                    <dt></dt>
-                    <dd>照片模糊</dd>
-                </dl>
-                <dl class="idl4">
-                    <dt></dt>
-                    <dd>闪光强烈</dd>
-                </dl>
-            </div>
-        </div>
-        <div class="sdbtm">
-            <input id="closeRule" class="obtn" type="button" value="知道了"/>
-        </div>
-    </div>
-    <!-- 证件类型 -->
-    <div class="shadeW" id="shdpaper">
-        <ul class="papers">
-            <li>请选择上传证件照片类型</li>
-            <li>
-                <label>
-                    <input type="radio" name="paper" value="1" lbl="身份证" checked />
-                    <span class="">身份证</span>
-                </label>
-            </li>
-            <li>
-                <label>
-                    <input type="radio" name="paper" value="2" lbl="护照"/>
-                    <span>护照</span>
-                </label>
-            </li>
-            <li>
-                <label>
-                    <input type="radio" name="paper" value="3" lbl="军官证"/>
-                    <span>军官证</span>
-                </label>
-            </li>
-            <li>
-                <label>
-                    <input type="radio" name="paper" value="4" lbl="学生证"/>
-                    <span>学生证</span>
-                </label>
-            </li>
-            <li>
-                <label>
-                    <input type="radio" name="paper" value="5" lbl="港澳通行证"/>
-                    <span>港澳通行证</span>
-                </label>
-            </li>
-        </ul>
-    </div>
-    <!-- 超时提示 -->
-    <div id="overtimeModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <!-- <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4> -->
-                </div>
-                <div class="modal-body">
-                    <div class="overtimeimg">
-                        <img src="./img/overtimeimg.png"/>
-                    </div>
-                    识别超时，请重新上传
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 加载效果 -->
-    <div id="lodingModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="popIco">
-            </div>
-            <div class="popInfor">
-                数据上传中,请等待...
-            </div>
+        <div class="section">
+          <h3>第四屏</h3>
+          <p>这是最后一屏</p>
         </div>
     </div>
 
-    <script src="js/jquery.min.js?v=2.1.4"></script>
-    <script src="plugins/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/plugins/flexible/flexible.js"></script>
-    <script src="js/public.js"></script>
 
-    <script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="plugins/jquery/2.1.4/jquery.min.js"></script>
+    <script src="plugins/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="plugins/swiper-4.4.6/js/swiper.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="plugins/js/ie10-viewport-bug-workaround.js"></script>
 
-        // 选择证件类型
-        var oshdpaper= $('#shdpaper');
-        $('.selpaper').on('click', function(){
-            ShadeShow(oshdpaper);
-        });
+    <!-- fullpage -->
+    <script src="plugins/fullpage/js/jquery.easings.min.js"></script>
+    <script src="plugins/fullpage/js/jquery.slimscroll.min.js"></script>
+    <script src="plugins/fullpage/js/jquery.fullpage.min.js"></script>
+    <script src="plugins/fullpage/js/jquery.fullpage.extensions.min.js"></script>
 
-        $('input[name="paper"]','.papers').on('click', function(){
-            $('#iptpaper').attr('paperid', $(this).val());
-            $('#iptpaper').val($(this).attr('lbl'));
-            ShadeClose(oshdpaper);
-        });
+  </body>
+  <script>
+    $(function(){
+      $('#fullpage').fullpage({
+        slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+        anchors: ['page1', 'page2', 'page3', 'page4'],
+        navigation: true
+      });
+    });
 
-        // 点击选择身份证正面照
-        $('.idFront').on('click', function(){
-            $('#frontfile').trigger('click');
-        });
-        $('#frontfile').on('change', function(){
-            $('.idFront').addClass('hasTake');
-            // 显示识别到的信息
-            $('.infocont').show();
-        });
 
-        // 点击选择身份证国徽照
-        $('.idRear').on('click', function(){
-            $('#rearfile').trigger('click');
-        });
-        $('#rearfile').on('change', function(){
-            $('.idRear').addClass('hasTake');
-        });
-
-        // 拍摄规范
-        var orules = $('#rules');
-        $('#rulebtn').on('click', function(){
-            ShadeShow(orules);
-        });
-
-        $('#closeRule').on('click', function(){
-            ShadeClose(orules);
-        });
-        
-
-        // 下一步
-        $('#nextStep').on('click', function(){
-            window.opener=null;
-            window.close();
-
-            if(WeixinJSBridge!=null){
-                WeixinJSBridge.call('closeWindow');
-            }
-            // $('#overtimeModal').modal()
-            // $('#lodingModal').modal()
-            // $(location).attr('href', 'detection.html');
-        });
-        
-
-    </script>
-</body>
+  </script>
 </html>

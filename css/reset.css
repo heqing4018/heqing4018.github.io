@@ -1,53 +1,18 @@
-﻿*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-body{
-	font-size: 14px;
-    font-family: 'Microsoft YaHei';
-    /* font-family: 'SimSun'; */
-}
-table{
-	border-collapse: collapse;
+*{
+  margin: 0;
+  padding: 0;
 }
 ul,ol,li{
 	list-style: none;
 }
-button, input, select,textarea{
-	color: #333;
-    font-family: 'Microsoft YaHei';
-    /* font-family: 'SimSun'; */
-    background: #fff;
+p{
+  margin: 0;
 }
-input[type='text'],input[type='password'], input[type='date'], select, textarea{
-	padding: 0 0 0 8px;
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
-input[type='date'], input[type='button'], input[type='submit'], input[type='reset'], button{
-	cursor: pointer;
+.h4, .h5, .h6, h4, h5, h6{
+  margin-top: 0;
+  margin-bottom: 0;
 }
-textarea{
-    padding: 5px 8px;
-}
-button, input, select{
-    font-size: 12px;
-}
-a, img, input, select, button, textarea{
-	outline: none;
-}
-a{
-	text-decoration: none;
-}
-a:hover{
-      text-decoration:none;
-}
-h1, h2, h3, h4, h5, h6{
-	font-weight: normal;
-}
-header,nav,footer,aside,main{
-	display: block;
-}
-i{
-	font-style: normal;
-}
-
