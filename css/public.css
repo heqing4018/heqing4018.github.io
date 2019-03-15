@@ -28,39 +28,108 @@ html,body{
   background-color: transparent;
   border-bottom: 2px solid #D93335;
 }
-
-
+/* 基础按钮 方框红底 */
+.btn{
+  width: 150px;
+  height: 40px;
+  line-height: 38px;
+  color: #fff;
+  font-size: 16px;
+  padding: 0;
+  background: #E62E2E;
+  border-color: #E62E2E;
+  border-radius: 3px;
+}
+.btn:hover{
+  color: #fff;
+  background: #cc2929;
+  border-color: #cc2929;
+  transition: 0.4s;
+}
+.btn.active{
+  color: #fff;
+  background: #cc2929;
+  border-color: #cc2929;
+}
+/* 按钮2 圆角红底 */
+.btn_radius{
+  border-radius: 20px;
+}
+/* 按钮3 圆角红框透明底 */
+.btn_border_red{
+  color: #E62E2E;
+  border-radius: 20px;
+  background-color: transparent;
+}
+.btn_border_red:hover{
+  color: #cc2929;
+  background: transparent;
+  border-color: #cc2929;
+}
+.btn_border_red.active{
+  color: #cc2929;
+  background: transparent;
+  border-color: #cc2929;
+}
+/* 按钮4 方框白边 */
+.btn_border_white{
+  color: #fff;
+  border-color: #E1E1E1;
+  background-color: transparent;
+}
+.btn_border_white:hover{
+  color: #fff;
+  background: transparent;
+  border-color: #E1E1E1;
+}
+.btn_border_white.active{
+  color: #fff;
+  background: transparent;
+  border-color: #E1E1E1;
+}
+/* footer */
 .infouter{
+  position: relative;
   color: #e0e0e0;
-  background: #000;
+  background: #282424 url('../img/footer.png') center no-repeat;
   padding: 60px 0 30px 0;
   line-height: 28px;
 }
 .infouter .info{
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
-.infouter .infoL{
-  float: left;
+.qrcode{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.qrcodeimg{
+  margin-top: 45px;
 }
 .infouter .infoR{
   float: right;
-  text-align: center;
+  text-align: left;
 }
 .infolist{
   float: left;
-  border: 1px solid #272727;
-  border-bottom: 0;
-  border-top: 0;
   padding: 0 40px;
   margin: 0 40px;
 }
 .infolist>li{
   float: left;
-  margin-right: 30px;
+  margin-left: 50px;
 }
-.infotitle{
+.infolist .infotitle{
   font-size: 16px;
+}
+.infolist .infotitle::after{
+  content: '';
+  width: 15px;
+  height: 2px;
+  background: #D93335;
+  display: block;
+  margin: 10px 0 0 0;
 }
 .infolist .listmin{
   margin-top: 15px;
@@ -69,21 +138,9 @@ html,body{
   color: #999;
   cursor: pointer;
 }
-.infouter .compname{
-  margin-bottom: 20px;
-}
-.infouter .comp{
-  margin-bottom: 20px;
-}
-.infouter .p1{
-  font-size: 16px;
-}
-.infouter .p2{
-  color: #999;
-}
 .copyR{
   color: #666;
-  text-align: center;
+  text-align: left;
 }
 @media screen and (min-width: 768px) {
   
@@ -93,11 +150,6 @@ html,body{
   .info{
     font-size: 12px;
     padding-bottom: 300px;
-  }
-  .infoL{
-    position: absolute;
-    left: 0;
-    bottom: 0;
   }
   .infoR{
     position: absolute;
