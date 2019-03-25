@@ -1,0 +1,98 @@
+.navbar-inverse{
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, .3);
+}
+.navbar-fixed-bottom, .navbar-fixed-top{
+  position: absolute;
+}
+.banner{
+  color: #fff;
+  height: 450px;
+  text-align: right;
+}
+.bn_cont{
+  background: url('../img/aboutUs_bg.png') center no-repeat;
+  background-size: 100% 100%;
+  padding-top: 60px;
+}
+.bn_title{
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+.abcont{
+  background-color: #f5f5f5;
+  padding: 20px 0 100px;
+}
+.mnlist{
+  background: #fff;
+  padding: 30px 20px 50px 20px;
+}
+.tab-content{
+  background: #fff;
+  padding: 50px;
+}
+.cTitle{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.cTitle::before{
+  position: relative;
+  top: -3px;
+  right: 15px;
+  content: '';
+  height: 25px;
+  display: inline-block;
+  width: 0;
+  border-left: 3px solid #ccc;
+  vertical-align: middle;
+}
+.cText{
+  color: #666;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+.honorlist{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.honorlist>li{
+  /* flex: 1; */
+  margin-right: 15px;
+}
+.honorlist .imgdv{
+  padding: 3px;
+  -webkit-box-shadow: 0px 2px 6px 0px #EDEDED;
+  -moz-box-shadow: 0px 2px 6px 0px #EDEDED;
+  box-shadow: 0px 2px 6px 0px #EDEDED;
+}
+.honorlist p{
+  padding: 15px 0 30px;
+}
+.nav-tabs>li{
+  float: none;
+}
+.nav-tabs>li>a{
+  border: none;
+}
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a:hover{
+  color: #E62E2E;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.nav-tabs>li>a:hover {
+  color: #E62E2E;
+  font-size: 16px;
+  font-weight: bold;
+  border-color: transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+  color: #E62E2E;
+  font-size: 16px;
+  font-weight: bold;
+  background: #fff;
+}

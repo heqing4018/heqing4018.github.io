@@ -3,7 +3,8 @@
   padding: 0;
 }
 ul,ol,li{
-	list-style: none;
+  list-style: none;
+  margin: 0;
 }
 p{
   margin: 0;
@@ -18,4 +19,12 @@ p{
 }
 .btn{
   padding: 0;
+}
+a{
+  color: #333;
+  cursor: pointer;
+  transition: .8s;
+}
+a:focus, a:hover{
+  text-decoration: none;
 }

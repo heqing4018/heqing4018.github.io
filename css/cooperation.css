@@ -1,0 +1,144 @@
+.navbar-inverse{
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, .3);
+}
+.navbar-fixed-bottom, .navbar-fixed-top{
+  position: absolute;
+}
+.banner{
+  color: #fff;
+  height: 450px;
+  text-align: right;
+}
+.bn_cont{
+  background: url('../img/cop_bg.png') center no-repeat;
+  background-size: 100% 100%;
+  padding-top: 60px;
+}
+.bn_title{
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+.cop_block{
+  padding-top: 80px;
+}
+.coptitle{
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px
+}
+.pdilist{
+  display: flex;
+  justify-content: space-between;
+}
+.pdilist li{
+  flex: 1;
+  margin-right: 35px;
+  line-height: 28px;
+  padding: 10px 20px 0px;
+}
+.pdilist li:last-child{
+  margin: 0;
+}
+.pdikind{
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.pdi{
+  width: 120px;
+  height: 120px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto 30px;;
+}
+.pdi_sel1{
+  background-image: url('../img/cop_sp1.png');
+}
+.pdi_sel2{
+  background-image: url('../img/cop_sp2.png');
+}
+.pdi_sel3{
+  background-image: url('../img/cop_sp3.png');
+}
+.pdi_sel4{
+  background-image: url('../img/cop_sp4.png');
+}
+.selus{
+  padding: 45px 0;
+  min-height: 400px;
+  background: url('../img/cop_sel1.png') left center no-repeat;
+}
+.seltab{
+  float: right;
+  width: 615px;
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 6px 0px #E1E0E0;
+  -moz-box-shadow: 0px 2px 6px 0px #E1E0E0;
+  box-shadow: 0px 2px 6px 0px #E1E0E0;
+  padding: 30px 30px 30px 40px;
+}
+.seltp{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.selp{
+  position: relative;
+  padding: 0 0 0 15px;
+  margin: 0 0 10px 0;
+  line-height: 25px;
+}
+.selp::before{
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  bottom: 5px;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  border-left: 2px solid #E62E2E;
+  margin: 0 10px 0 0;
+}
+.cop_block3{
+  background: #F5F5F5;
+  margin-top: 80px;
+}
+.copTbl{
+  min-height: 400px;
+  margin-bottom: 80px;
+  background: url('../img/cop_sel2.png') left center no-repeat;
+}
+.copTitle{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.coptab{
+  width: 35%;
+  float: right;
+}
+.copTbl .form-control{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #D0D0D0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 5px;
+}
+.copTbl .form-text{
+  border: 1px solid #D0D0D0;
+  padding: 10px;
+}
+.copTbl label{
+  color: #999;
+  font-weight: normal;
+}
+.btndv{
+  text-align: center;
+}
+.submitbtn{
+  margin: 0 auto;
+}

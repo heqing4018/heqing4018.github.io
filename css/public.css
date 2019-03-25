@@ -1,6 +1,18 @@
 html,body{
   min-width: 1200px !important;
 }
+.as_table{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.as_tableRow{
+  display: table-row
+}
+.as_tableCell{
+  display: table-cell;
+  vertical-align: middle;
+}
 .navbar{
   min-height: 60px;
 }
@@ -40,16 +52,11 @@ html,body{
   border-color: #E62E2E;
   border-radius: 3px;
 }
-.btn:hover{
+.btn.focus, .btn:focus, .btn:hover, .btn.active{
   color: #fff;
   background: #cc2929;
   border-color: #cc2929;
   transition: 0.4s;
-}
-.btn.active{
-  color: #fff;
-  background: #cc2929;
-  border-color: #cc2929;
 }
 /* 按钮2 圆角红底 */
 .btn_radius{
@@ -61,11 +68,9 @@ html,body{
   border-radius: 20px;
   background-color: transparent;
 }
-.btn_border_red:hover{
-  color: #cc2929;
-  background: transparent;
-  border-color: #cc2929;
-}
+.btn_border_red.focus, 
+.btn_border_red:focus, 
+.btn_border_redtn:hover, 
 .btn_border_red.active{
   color: #cc2929;
   background: transparent;
@@ -77,11 +82,9 @@ html,body{
   border-color: #E1E1E1;
   background-color: transparent;
 }
-.btn_border_white:hover{
-  color: #fff;
-  background: transparent;
-  border-color: #E1E1E1;
-}
+.btn_border_white.focus, 
+.btn_border_white:focus, 
+.btn_border_white:hover, 
 .btn_border_white.active{
   color: #fff;
   background: transparent;
@@ -100,12 +103,12 @@ html,body{
   margin-bottom: 80px;
 }
 .qrcode{
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  top: 0;
+  top: 0; */
 }
 .qrcodeimg{
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 .infouter .infoR{
   float: right;
@@ -140,7 +143,43 @@ html,body{
 }
 .copyR{
   color: #666;
+  font-size: 12px;
   text-align: left;
+}
+.copyR span{
+  float: left;
+  margin-right: 20px;
+}
+.copyR .police::before{
+  content: '';
+  width: 14px;
+  height: 16px;
+  background: url('../img/icon-police.png') center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px 7px 0 0;
+}
+.copyR .fti{
+  position: relative;
+  width: 67px;
+  height: 25px;
+  display: inline-block;
+  margin: 0 0 0 5px;
+  background: url('../img/ft1.png') center no-repeat;
+}
+.copyR .fti2{
+  background-image: url('../img/ft2.png');
+}
+.copyR .fti3{
+  background-image: url('../img/ft3.png');
+}
+.copyR .ftic{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .4);
 }
 @media screen and (min-width: 768px) {
   
@@ -152,9 +191,9 @@ html,body{
     padding-bottom: 300px;
   }
   .infoR{
-    position: absolute;
+    /* position: absolute;
     right: 0;
-    bottom: 150px;
+    bottom: 150px; */
   }
   .infouter .p1{
     font-size: 14px;
