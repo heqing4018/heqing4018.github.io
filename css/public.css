@@ -48,13 +48,13 @@ html,body{
   top: 59px;
   border-top: 2px solid #E62E2E;
   padding: 15px 0;
-  width: 250px;
+  width: 280px;
 }
 .toparow{
   display: none;
   position: absolute;
   left: 30px;
-  bottom: -1px;
+  bottom: -2px;
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
@@ -63,7 +63,10 @@ html,body{
   border-left: 8px solid transparent;
 }
 .topinner li{
-  padding: 5px 0 5px 20px;
+  padding: 8px 0 8px 20px;
+}
+.topinner li:hover{
+  background: #f5f5f5;
 }
 .topinner li:hover a{
   color: #E62E2E;

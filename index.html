@@ -35,7 +35,7 @@
     <div id="fullpage">
       <div class="section">
         <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
+          <!-- <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -75,7 +75,7 @@
                   <li><a href="cooperation.html" target="_blank">战略邀约</a></li>
                 </ul>
             </div>
-          </div>
+          </div> -->
         </nav>
         <div class="banner">
           <video  playsinline="playsinline" loop="loop" preload="auto" autoplay="autoplay" autobuffer="autobuffer" muted="muted" tabindex="-1">
@@ -365,7 +365,20 @@
               <p class="bnctp">加快业务发展，共创辉煌</p>
             </div>
             <div class="container mapdv">
-              
+              <div class="cities">
+                <div class="city beijing">
+                  <div class="dot"></div>
+                  <div class="pulse"></div>
+                  <div class="pulse1"></div>
+                  <div class="city-name">北京</div>
+                </div>
+                <div class="city chongqing">
+                  <div class="dot"></div>
+                  <div class="pulse"></div>
+                  <div class="pulse1"></div>
+                  <div class="city-name">重庆</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -468,13 +481,9 @@
       });
     });
 
-    $("li",'.navbar-nav').on('mouseenter', function(){
-      $(this).find(".topinner").slideDown();
-    });
+    // 加载头部
+    $('.navbar').load('header.html');
 
-    $("li",'.navbar-nav').on('mouseleave', function(){
-      $(this).find(".topinner").slideUp();
-    });
-    
+
   </script>
 </html>
