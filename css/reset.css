@@ -23,7 +23,7 @@ p{
 a{
   color: #333;
   cursor: pointer;
-  transition: .8s;
+  /* transition: .8s; */
 }
 a:focus, a:hover{
   text-decoration: none;

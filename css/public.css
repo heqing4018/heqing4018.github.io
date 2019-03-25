@@ -40,6 +40,40 @@ html,body{
   background-color: transparent;
   border-bottom: 2px solid #D93335;
 }
+.topinner{
+  display: none;
+  position: absolute;
+  background: #fff;
+  left: 0;
+  top: 59px;
+  border-top: 2px solid #E62E2E;
+  padding: 15px 0;
+  width: 250px;
+}
+.toparow{
+  display: none;
+  position: absolute;
+  left: 30px;
+  bottom: -1px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #E62E2E;
+  border-left: 8px solid transparent;
+}
+.topinner li{
+  padding: 5px 0 5px 20px;
+}
+.navbar-nav>li{
+  position: relative;
+}
+.navbar-inverse .navbar-nav>li:hover>a{
+  color: #E62E2E;
+}
+.navbar-inverse .navbar-nav>li:hover .toparow{
+  display: block;
+}
 /* 基础按钮 方框红底 */
 .btn{
   width: 150px;
