@@ -65,6 +65,9 @@ html,body{
 .topinner li{
   padding: 5px 0 5px 20px;
 }
+.topinner li:hover a{
+  color: #E62E2E;
+}
 .navbar-nav>li{
   position: relative;
 }

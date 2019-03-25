@@ -13,8 +13,26 @@
   <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html">首页</a></li>
-        <li><a href="#about">产品中心</a></li>
-        <li><a href="#contact">解决方案</a></li>
+        <li>
+          <a href="#">产品中心</a>
+          <i class="toparow"></i>
+          <ol class="topinner">
+            <li><a href="yunying.html" target="_blank">云鹰-视频图像分析引擎</a></li>
+            <li><a href="yunshi.html" target="_blank">云视-智慧社区应用平台</a></li>
+            <li><a href="yunan.html" target="_blank">云安-大数据平台</a></li>
+            <li><a href="yunxun.html" target="_blank">云讯-智慧门店运营管理系统</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#">解决方案</a>
+          <i class="toparow"></i>
+          <ol class="topinner">
+            <li><a href="garden.html" target="_blank">智慧园区解决方案</a></li>
+            <li><a href="community.html" target="_blank">智慧社区应用平台解决方案</a></li>
+            <li><a href="shop.html" target="_blank">智慧门店解决方案</a></li>
+            <li><a href="hotel.html" target="_blank">临时住宿管控系统解决方案</a></li>
+          </ol>
+        </li>
         <li><a href="aboutUs.html" target="_blank">走进我们</a></li>
         <li><a href="contactUs.html" target="_blank">联系我们</a></li>
         <li><a href="cooperation.html" target="_blank">战略邀约</a></li>
@@ -25,5 +43,13 @@
 <script>
 
   // $('#navbar').find('li').eq($('.navbar').attr('my-index')).addClass('active');
+  
+  $("li",'.navbar-nav').on('mouseenter', function(){
+    $(this).find(".topinner").slideDown();
+  });
+
+  $("li",'.navbar-nav').on('mouseleave', function(){
+    $(this).find(".topinner").slideUp();
+  });
 
 </script>
